@@ -1,151 +1,322 @@
-  <!DOCTYPE html>
-  <html lang="en">
-    
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-    <link rel="Stylesheet" href="style.css">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- </head>
- 
- <body>
-  <div class="header">
-    <div class="logo">
-      <img alt="Logo" height="40" src="https://storage.googleapis.com/a1aa/image/Uo3Eiyodgf3Fa6SQN5Telx3IPOgf6NCWC67rBFP4iaBPm5knA.jpg" width="40"/>
-    </div>
-    <div class="search-bar">
-      <input placeholder="Bạn cần tìm gì?" type="text" />
-    </div>
-    <div class="icons">
-      <img src="img_avatar.png" alt="Avatar" class="avatar" />
-      <button style="font-size:24px"> <i class="fa fa-shopping-cart"></i></button>
-    </div>
-  </div>
-  
- </div>
-   <div class="icons">
-    <i class="fas fa-user">
-    </i>
-    <i class="fas fa-shopping-cart">
-    </i>
-   </div>
-  </div>
-  <div class="nav">
- 
-   <a href="#">
-    Build PC
-   </a>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login & Registration</title>
+	<link rel="stylesheet" href="styleindex.css">
+</head>
+<body>
+	<div class="container">
+		<div id="LoginAndRegistrationForm">
+			<h1 id="formTitle">Login</h1>
+			<div id="formSwitchBtn">
+				<button onclick="ShowLoginForm()"  id="ShowLoginBtn" class="active">Login</button>
+				<button onclick="ShowRegistrationForm()"  id="ShowRegistrationBtn">Registration</button>
+			</div>
+			<div id="LoginFrom">
+				<form action="Build.html">
+					<div class="center">
+						<input id="LoginEmail" class="input-text" type="text" placeholder="Email Address"> 
+						<input id="LoginPassword" class="mt-10 input-text" type="password" placeholder="Password">
+					</div>
+					
+					<div class="forgot-pass-remember-me mt-10">
+						<div class="forgot-pass">
+							<a id="ForgotPassword" href="JavaScript:void(0);" onclick="ShowForgotPasswordForm()" >Forgot Password?</a>
+						</div>
+						<div class="remember-me">
+							<input id="rememberMe" type="checkbox">
+							<label for="rememberMe">Remember Me</label>
+						</div>
+					</div>
 
-   <a href="#">
-    Linh kiện PC
-   </a>
+					<div class="center mt-20">
+						<input onclick="return ValidateLoginForm();"  class="Submit-Btn" type="submit" value="Login" id="LoginBtn">
+					</div>
+				</form>
+				<p class="center mt-20 dont-have-account">
+					Don't have an account? 
+					<a href="JavaScript:void(0);" onclick="ShowRegistrationForm()">Registration now</a>
+				</p>
+			</div>
+			<div id="RegistrationFrom">
+				<form action="#">
+					<div class="center">
+						<input id="RegiName" class="input-text" type="text" placeholder="Full Name">
+						<input id="RegiEmailAddres" class="input-text mt-10" type="email" placeholder="Email Address">
+						<input id="RegiPassword" class="mt-10 input-text" type="password" placeholder="Password">
+						<input id="RegiConfirmPassword" class="mt-10 input-text" type="password" placeholder="Confirm Password">
+					</div>
+					<div class="center mt-20">
+						<input onclick="return ValidateRegistrationForm();" class="Submit-Btn" type="submit" value="Registration" id="RegistrationitBtn">
+					</div>
+				</form>
+				<p class="center mt-20 already-have-account">
+					Already have an account? 
+					<a href="#" onclick="ShowLoginForm()">Login now</a>
+				</p>
+			</div>
+			<div id="ForgotPasswordForm">
+				<form action="">
+					<div class="center mt-20">
+						<input class="input-text " type="email" id="forgotPassEmail" placeholder="Email Address">
+					</div>
+					<div class="center mt-20">
+						<input onclick="return ValidateForgotPasswordForm();" class="Submit-Btn" type="submit" value="Reset Password" id="PasswordResetBtn" >
+					</div>
+				</form>
+				<p class="center mt-20 already-have-account">
+					Back to the 
+					<a href="JavaScript:void(0);" onclick="ShowLoginForm()">Login page</a> | <a href="JavaScript:void(0);" onclick="ShowRegistrationForm()">Registration page</a>
+				</p>
+			</div>
+		
 
-   <a href="laptop.html">
-    Laptop
-   </a>
- 
-   <a href="#">
-    Phím chuột ghế gear
-   </a>
-  </div>
-  <div class="breadcrumb">
+	<script>
+    function ShowLoginForm(){
+	
+	SetTitle("Login");
 
-  </div>
-  <div class="main-content">
-    
-   <h2>
-    Build PC - Xây dựng cấu hình máy tính PC chuẩn nhất
-   </h2>
-   <p>
-    Chọn linh kiện xây dựng cấu hình - Tự build PC
-   </p>
-   <div class="config-buttons">
-    <button class="active">
-     CẤU HÌNH 1
-    </button>
-    <button>
-     CẤU HÌNH 2
-    </button>
-    <button>
-     CẤU HÌNH 3
-    </button>
-    <button>
-     CẤU HÌNH 4
-    </button>
-    <button>
-     CẤU HÌNH 5
-    </button>
-    <button class="reset">
-     LÀM MỚI
-    </button>
-   </div>
-   <div class="config-list">
-    <div class="item">
-     <div class="title">
-      
-  
-      <div class="container">
-          <div class="component">
-              <div>
-                  <span class="title">1. CPU - BỘ VI XỬ LÝ</span><br>
-              </div>
-              <button class="button">+ Chọn CPU - Bộ Vi Xử Lý</button>
-          </div>
-          <div class="component">
-              <span class="title">2. MAIN - BO MẠCH CHỦ</span>
-              <button class="button">+ Chọn Main - Bo Mạch Chủ</button>
-          </div>
-          <div class="component">
-              <span class="title">3. RAM - BỘ NHỚ TRONG</span>
-              <button class="button">+ Chọn RAM - Bộ Nhớ Trong</button>
-          </div>
-          <div class="component">
-              <span class="title">4. Ổ CỨNG SSD 1</span>
-              <button class="button">+ Chọn Ổ Cứng SSD 1</button>
-          </div>
-          <div class="component">
-              <span class="title">5. Ổ CỨNG SSD 2</span>
-              <button class="button">+ Chọn Ổ Cứng SSD 2</button>
-          </div>
-          <div class="component">
-              <span class="title">6. Ổ CỨNG HDD</span>
-              <button class="button">+ Chọn Ổ Cứng HDD</button>
-          </div>
-          <div class="component">
-              <div>
-                  <span class="title">7. VGA - CARD MÀN HÌNH</span><br>
-              </div>
-              <button class="button">+ Chọn VGA - Card Màn Hình</button>
-          </div>
-          <div class="component">
-              <span class="title">8. PSU - NGUỒN MÁY TÍNH</span>
-              <button class="button">+ Chọn PSU - Nguồn Máy Tính</button>
-          </div>
-          <div class="component">
-              <span class="title">9. CASE - VỎ MÁY TÍNH</span>
-              <button class="button">+ Chọn Case - Vỏ Máy Tính</button>
-          </div>
-          <div class="component">
-              <span class="title">10. TẢN NHIỆT KHÍ</span>
-              <button class="button">+ Chọn Tản Nhiệt Khí</button>
-          </div>
-          <div class="component">
-              <span class="title">11. TẢN NHIỆT NƯỚC AIO</span>
-              <button class="button">+ Chọn Tản Nhiệt Nước AIO</button>
-          </div>
-          <div class="component">
-              <span class="title">12. TẢN NHIỆT NƯỚC CUSTOM</span>
-              <button class="button">+ Chọn Tản Nhiệt Nước Custom</button>
-          </div>
-      </div>
-      </ht
-    </div>
-        <div class="cost">
-          Chi phí dự tính: 0 đ
-        </div>
-      
-        </a>
-        </div>
-      
-      </html>
-      </body>
-  </html>
+	ShowHideForm("LoginFrom","Show");
+	ShowHideForm("RegistrationFrom","Hide");
+	ShowHideForm("ForgotPasswordForm","Hide");
+
+	ActiveInactiveBtn("ShowLoginBtn","Active");
+	ActiveInactiveBtn("ShowRegistrationBtn","Inactive");
+
+	ShowHideFromSwitchBtn("Show");
+};
+
+function ShowRegistrationForm(){
+	debugger;
+	SetTitle("Registration");
+
+	ShowHideForm("RegistrationFrom","Show");
+	ShowHideForm("LoginFrom","Hide");
+	ShowHideForm("ForgotPasswordForm","Hide");
+
+	ActiveInactiveBtn("ShowLoginBtn","Inactive");
+	ActiveInactiveBtn("ShowRegistrationBtn","Active");
+
+	ShowHideFromSwitchBtn("Show");
+};
+
+function ShowForgotPasswordForm() {
+	
+	SetTitle("Forgot Password");
+
+	ShowHideForm("RegistrationFrom","Hide");
+	ShowHideForm("LoginFrom","Hide");
+	ShowHideForm("ForgotPasswordForm","Show");
+
+	ActiveInactiveBtn("ShowLoginBtn","Inactive");
+	ActiveInactiveBtn("ShowRegistrationBtn","Inactive");
+	ShowHideFromSwitchBtn("Hide");
+}
+
+function SetTitle(Title){
+	var formTitle = document.getElementById('formTitle');
+	formTitle.innerHTML = Title;
+}
+
+function ShowHideForm(FormID,ShowOrHide){
+	var Form = document.getElementById(FormID);
+
+	if(ShowOrHide == "Show"){
+		Form.style.display = 'block';
+	}else{
+		Form.style.display = 'none';
+	}
+}
+
+function ActiveInactiveBtn(ButtonID,ActiveORInactive) {
+	debugger;
+	var Button = document.getElementById(ButtonID);
+
+	if(ActiveORInactive == "Active"){
+		Button.classList.add('active');
+	}else{
+		Button.classList.remove('active');
+	}
+}
+
+function ShowHideFromSwitchBtn(ShowOrHide) {
+	var formSwitchBtn = document.getElementById('formSwitchBtn');
+	if(ShowOrHide == 'Show'){
+		formSwitchBtn.style.display = '';
+	}else{
+		formSwitchBtn.style.display = 'none';
+	}
+}
+
+// end
+  </script>
+	<script >
+    function ValidateLoginForm() {
+	RemoveAllErrorMessage();
+
+	var LoginEmail = document.getElementById('LoginEmail').value;
+	var LoginPassword = document.getElementById('LoginPassword').value;
+	var PasswordValidationMessage;
+	var	emailValidationMessage;
+
+	emailValidationMessage = isValidEmail(LoginEmail);
+	if(emailValidationMessage != "valid"){
+		ShowErrorMessage('LoginEmail',emailValidationMessage);
+		return false;
+	}
+	
+	PasswordValidationMessage = isValidPassword(LoginPassword);
+	if(PasswordValidationMessage != "valid"){
+		ShowErrorMessage('LoginPassword',PasswordValidationMessage);
+		return false;
+	}
+	
+	return true;
+}
+
+function ValidateRegistrationForm(){
+
+	RemoveAllErrorMessage();
+
+	var RegiName = document.getElementById('RegiName').value;
+	var RegiEmailAddres = document.getElementById('RegiEmailAddres').value;
+	var RegiPassword = document.getElementById('RegiPassword').value;
+	var RegiConfirmPassword = document.getElementById('RegiConfirmPassword').value;
+
+	var PasswordValidationMessage;
+	var ConfirmPasswordMessage;
+	var	emailValidationMessage;
+
+	if(RegiName == ""){
+		ShowErrorMessage('RegiName',"Please fill the filed.");
+		return false;
+	}else if(RegiName.length < 3 || RegiName.length > 20){
+		ShowErrorMessage('RegiName',"Name should be minimum 3 and maximum 20 characters long.");
+		return false;
+	}
+
+	emailValidationMessage = isValidEmail(RegiEmailAddres);
+
+	if(emailValidationMessage != "valid"){
+		ShowErrorMessage('RegiEmailAddres',emailValidationMessage);
+		return false;
+	}
+	
+	PasswordValidationMessage = isValidPassword(RegiPassword);
+	if(PasswordValidationMessage != "valid"){
+		ShowErrorMessage('RegiPassword',PasswordValidationMessage);
+		return false;
+	}
+	
+	ConfirmPasswordMessage = isValidPassword(RegiConfirmPassword);
+	if(ConfirmPasswordMessage != "valid"){
+		ShowErrorMessage('RegiConfirmPassword',ConfirmPasswordMessage);
+		return false;
+	}
+
+	if(RegiPassword != RegiConfirmPassword){
+		ShowErrorMessage('RegiConfirmPassword',"Password not match.");
+		return false;
+	}
+
+	return true;
+}
+
+
+function ValidateForgotPasswordForm(){
+
+	RemoveAllErrorMessage();
+
+	var forgotPassEmail = document.getElementById('forgotPassEmail').value;
+	
+	var	emailValidationMessage;
+	emailValidationMessage = isValidEmail(forgotPassEmail);
+
+	if(emailValidationMessage != "valid"){
+		ShowErrorMessage('forgotPassEmail',emailValidationMessage);
+		return false;
+	}
+}
+
+
+
+function ValidateResetPasswordForm(){
+
+	RemoveAllErrorMessage();
+
+	var NewPassword = document.getElementById('NewPassword').value;
+	var ConfirmNewPassword = document.getElementById('ConfirmNewPassword').value;
+
+	var PasswordValidationMessage;
+	var ConfirmPasswordMessage;
+	
+	PasswordValidationMessage = isValidPassword(NewPassword);
+	if(PasswordValidationMessage != "valid"){
+		ShowErrorMessage('NewPassword',PasswordValidationMessage);
+		return false;
+	}
+	
+	ConfirmPasswordMessage = isValidPassword(ConfirmNewPassword);
+	if(ConfirmPasswordMessage != "valid"){
+		ShowErrorMessage('ConfirmNewPassword',ConfirmPasswordMessage);
+		return false;
+	}
+
+	if(NewPassword != ConfirmNewPassword){
+		ShowErrorMessage('ConfirmNewPassword',"Password not match.");
+		return false;
+	}
+
+	return true;
+}
+
+function RemoveAllErrorMessage(){
+
+	var allErrorMessage = document.getElementsByClassName('error-message');
+	var allErrorFiled = document.getElementsByClassName('error-input');
+	var i;
+
+	for(i=(allErrorMessage.length - 1); i>=0; i--){
+		allErrorMessage[i].remove();
+	}
+	
+	for(i=(allErrorFiled.length-1);i>=0;i--){
+		allErrorFiled[i].classList.remove('error-input');
+	}
+}
+
+function ShowErrorMessage(InputBoxID,Message){
+
+	var InputBox = document.getElementById(InputBoxID);
+	InputBox.classList.add('error-input');
+	InputBox.focus();
+
+	var ErrorMessageElement = document.createElement("p");
+	ErrorMessageElement.innerHTML = Message;
+	ErrorMessageElement.classList.add('error-message');
+	ErrorMessageElement.setAttribute("id",InputBoxID+'-error');
+
+	InputBox.parentNode.insertBefore(ErrorMessageElement, InputBox.nextSibling);
+	
+}
+
+function isValidEmail(email){
+
+	const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	if(email == ""){
+		return "Please fill the field.";
+	}
+
+	if(emailRegex.test(email) == false){
+		return "This is not a valid email.";
+	}
+
+	return "valid";
+}
+
+  </script>
+</body>
+</html>
