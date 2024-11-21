@@ -255,7 +255,7 @@
       
     </div>
     <script>
-     // Tham chiếu đến body và popup
+    // Tham chiếu đến body và popup
 const body = document.body; // Xác định body chính xác
 const productCards = document.querySelectorAll(".product-card");
 const popup = document.getElementById("popup");
@@ -284,7 +284,29 @@ const productDetails = [
     ports: "USB-C, USB 3.0, HDMI",
     battery: "4-cell Li-ion",
     os: "Windows 11"
+  },
+  {
+    name: "Dell Inspiron 15",
+    image: "https://cdn.tgdd.vn/Products/Images/44/325242/dell-inspiron-15-3520-i5-n5i5052w1-thumb-600x600.jpg",
+    price: "16.490.000đ",
+    oldPrice: "18.490.000đ",
+    discount: "-15%",
+    cpu: "Intel Core i5-1135G7",
+    cores: 4,
+    threads: 8,
+    baseClock: "2.4 GHz",
+    boostClock: "4.2 GHz",
+    cache: "8 MB",
+    ram: "16GB DDR4",
+    ssd: "512GB SSD M.2 PCIe NVMe",
+    screen: "15.6 inch Full HD",
+    graphics: "Intel Iris Xe",
+    audio: "Waves MaxxAudio Pro",
+    ports: "USB-C, USB 3.0, HDMI, RJ-45",
+    battery: "3-cell 42 Whr Li-ion",
+    os: "Windows 11 Home"
   }
+
   // Add more details for other products if needed
 ];
 
@@ -293,6 +315,23 @@ productCards.forEach((card, index) => {
   card.addEventListener("click", () => {
     
     const details = productDetails[index];
+    
+    // Thêm hình ảnh vào popup
+    const popupImage = document.createElement("img");
+    popupImage.src = details.image;
+    popupImage.alt = details.name;
+    popupImage.classList.add("popup-image");
+    
+    // Xóa hình ảnh cũ (nếu có)
+    const existingImage = document.querySelector(".popup-content .popup-image");
+    if (existingImage) {
+      existingImage.remove();
+    }
+
+    // Thêm hình ảnh mới vào popup
+    document.querySelector(".popup-content").insertBefore(popupImage, document.querySelector(".popup-content h2"));
+    
+    // Thêm chi tiết sản phẩm vào popup (Không thay đổi phần nội dung accordion)
     document.querySelector(".accordion-body").innerHTML = `
       <p><strong>Công nghệ CPU:</strong> ${details.cpu}</p>
       <p><strong>Số nhân:</strong> ${details.cores}</p>
@@ -309,7 +348,8 @@ productCards.forEach((card, index) => {
       <p><strong>Pin:</strong> ${details.battery}</p>
       <p><strong>Hệ điều hành:</strong> ${details.os}</p>
     `;
-    
+
+    // Hiển thị popup
     popup.classList.remove("hidden");
     body.classList.add("no-scroll"); // Khóa cuộn trang chính
   });
