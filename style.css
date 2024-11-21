@@ -26,7 +26,6 @@ button {
   background-color: #d90429;
   color: white;
   padding: 10px 20px;
-  position: fixed; /* Ghim thanh header cố định */
   top: 0; /* Đặt thanh header ở trên cùng */
   left: 0; /* Căn lề trái */
   width: 100%; /* Chiều rộng 100% */
@@ -71,7 +70,7 @@ button {
 .icons i {
   font-size: 20px;
   cursor: pointer;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .avatar {
