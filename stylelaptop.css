@@ -176,6 +176,10 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
   }
+  .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 
   .product-card img {
     width: 100%;
