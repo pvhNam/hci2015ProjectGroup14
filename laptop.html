@@ -90,7 +90,7 @@
           </div>
         </a>
 
-        <div class="product-card">
+        <a href="#" class="product-card">
           <img src="https://cdn.tgdd.vn/Products/Images/44/325242/dell-inspiron-15-3520-i5-n5i5052w1-thumb-600x600.jpg" alt="Laptop" />
           <div class="label">Giá rẻ quá</div>
           <div class="product-info">
@@ -99,7 +99,7 @@
             <div class="stars">★★★★☆</div>
             <div class="price">16.490.000đ</div>
           </div>
-        </div>
+        </a>
         <div class="product-card">
           <img src="https://cdn.tgdd.vn/Products/Images/44/313333/lenovo-ideapad-slim-3-15iah8-i5-83er00evn-thumb-600x600.jpg" alt="Laptop" />
           <div class="label">Giá rẻ quá</div>
@@ -202,42 +202,134 @@
         </div>
         <!-- Add more products -->
       </div>
-    </div>
-<!-- <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const productCards = document.querySelectorAll(".product-card");
-        const container = document.querySelector(".container");
-    
-        productCards.forEach((card) => {
-          card.addEventListener("click", (event) => {
-            event.preventDefault(); // Ngăn việc chuyển trang nếu link tồn tại
-            const productInfo = card.querySelector(".product-info");
-            const productImage = card.querySelector("img").src;
-    
-            // Tạo khung chi tiết sản phẩm
-            const detailPopup = document.createElement("div");
-            detailPopup.classList.add("product-detail");
-    
-            // Thêm nội dung vào khung chi tiết
-            detailPopup.innerHTML = `
-              <div class="detail-content">
-                <span class="close-btn">&times;</span>
-                <img src="${productImage}" alt="Product Image" />
-                <div>${productInfo.innerHTML}</div>
+      <div id="popup" class="popup hidden">
+        <div class="popup-content">
+          <button class="close-btn">×</button>
+          <h2>Thông tin chi tiết sản phẩm</h2>
+          <div class="details">
+            <div class="accordion">
+              <div class="accordion-item">
+                <button class="accordion-header">Bộ xử lý</button>
+                <div class="accordion-body">
+                  <p><strong>Công nghệ CPU:</strong> AMD Ryzen 5 - 7430U</p>
+                  <p><strong>Số nhân:</strong> 6</p>
+                  <p><strong>Số luồng:</strong> 12</p>
+                  <p><strong>Tốc độ CPU:</strong> 2.30 GHz</p>
+                  <p><strong>Tốc độ tối đa:</strong> Turbo Boost 4.3 GHz</p>
+                  <p><strong>Bộ nhớ đệm:</strong> 16 MB</p>
+                </div>
               </div>
-            `;
+              <div class="accordion-item">
+                <button class="accordion-header">Bộ nhớ RAM, Ổ cứng</button>
+                <div class="accordion-body">
+                  <p><strong>RAM:</strong> 16GB DDR4</p>
+                  <p><strong>SSD:</strong> 512GB</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header">Màn hình</button>
+                <div class="accordion-body">
+                  <p><strong>Kích thước:</strong> 15.6 inch</p>
+                  <p><strong>Độ phân giải:</strong> Full HD (1920 x 1080)</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header">Đồ họa và Âm thanh</button>
+                <div class="accordion-body">
+                  <p><strong>Card đồ họa:</strong> NVIDIA GeForce GTX 1650</p>
+                  <p><strong>Âm thanh:</strong> Dolby Audio</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header">Cổng kết nối & Tính năng mở rộng</button>
+                <div class="accordion-body">
+                  <p><strong>Cổng kết nối:</strong> USB-C, USB 3.0, HDMI</p>
+                  <p><strong>Pin:</strong> 4-cell Li-ion</p>
+                  <p><strong>Hệ điều hành:</strong> Windows 11</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <script>
+     // Tham chiếu đến body và popup
+const body = document.body; // Xác định body chính xác
+const productCards = document.querySelectorAll(".product-card");
+const popup = document.getElementById("popup");
+const closeBtn = document.querySelector(".close-btn");
+const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+// Mock data cho mỗi sản phẩm
+const productDetails = [
+  {
+    name: "Asus Vivobook Go 15",
+    image: "https://cdn.tgdd.vn/Products/Images/44/311178/asus-vivobook-go-15-e1504fa-r5-nj776w-thumb-600x600.jpg",
+    price: "12.390.000đ",
+    oldPrice: "14.490.000đ",
+    discount: "-14%",
+    cpu: "AMD Ryzen 5 - 7430U",
+    cores: 6,
+    threads: 12,
+    baseClock: "2.30 GHz",
+    boostClock: "4.3 GHz",
+    cache: "16 MB",
+    ram: "16GB DDR4",
+    ssd: "512GB",
+    screen: "15.6 inch Full HD",
+    graphics: "NVIDIA GeForce GTX 1650",
+    audio: "Dolby Audio",
+    ports: "USB-C, USB 3.0, HDMI",
+    battery: "4-cell Li-ion",
+    os: "Windows 11"
+  }
+  // Add more details for other products if needed
+];
+
+// Hiển thị popup với chi tiết sản phẩm
+productCards.forEach((card, index) => {
+  card.addEventListener("click", () => {
     
-            // Thêm khung vào container
-            container.appendChild(detailPopup);
+    const details = productDetails[index];
+    document.querySelector(".accordion-body").innerHTML = `
+      <p><strong>Công nghệ CPU:</strong> ${details.cpu}</p>
+      <p><strong>Số nhân:</strong> ${details.cores}</p>
+      <p><strong>Số luồng:</strong> ${details.threads}</p>
+      <p><strong>Tốc độ CPU:</strong> ${details.baseClock}</p>
+      <p><strong>Tốc độ tối đa:</strong> ${details.boostClock}</p>
+      <p><strong>Bộ nhớ đệm:</strong> ${details.cache}</p>
+      <p><strong>RAM:</strong> ${details.ram}</p>
+      <p><strong>SSD:</strong> ${details.ssd}</p>
+      <p><strong>Màn hình:</strong> ${details.screen}</p>
+      <p><strong>Card đồ họa:</strong> ${details.graphics}</p>
+      <p><strong>Âm thanh:</strong> ${details.audio}</p>
+      <p><strong>Cổng kết nối:</strong> ${details.ports}</p>
+      <p><strong>Pin:</strong> ${details.battery}</p>
+      <p><strong>Hệ điều hành:</strong> ${details.os}</p>
+    `;
     
-            // Thêm sự kiện đóng khung khi nhấn nút đóng
-            detailPopup.querySelector(".close-btn").addEventListener("click", () => {
-              container.removeChild(detailPopup);
-            });
-          });
-        });
-      });
-    </script> 
-    -->  
+    popup.classList.remove("hidden");
+    body.classList.add("no-scroll"); // Khóa cuộn trang chính
+  });
+});
+
+// Đóng popup
+closeBtn.addEventListener("click", () => {
+  popup.classList.add("hidden");
+  body.classList.remove("no-scroll"); // Mở khóa cuộn trang chính
+});
+
+// Accordion functionality
+accordionHeaders.forEach(header => {
+  header.addEventListener("click", () => {
+    header.classList.toggle("active");
+    const body = header.nextElementSibling;
+    body.style.display = body.style.display === "block" ? "none" : "block";
+  });
+});
+
+    </script>
   </body>
 </html>
