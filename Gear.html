@@ -317,6 +317,45 @@
         background-color: rgba(217, 4, 41, 0.1);
         color: #dc3652;
       }
+      #goTopBtn {
+        display: none; /* Ẩn nút ban đầu */
+        position: fixed; /* Vị trí cố định */
+        bottom: 20px; /* Cách đáy trang 20px */
+        right: 30px; /* Cách phải trang 30px */
+        z-index: 99; /* Đảm bảo nút nằm trên các thành phần khác */
+        border: none; /* Không có viền */
+        outline: none; /* Không có viền khi nhấn */
+        background: linear-gradient(
+          135deg,
+          #6e8efb,
+          #a777e3
+        ); /* Gradient màu */
+        color: white; /* Màu chữ trắng */
+        cursor: pointer; /* Con trỏ thay đổi khi hover */
+        padding: 15px; /* Khoảng đệm */
+        border-radius: 50%; /* Bo tròn nút */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+        transition: all 0.3s ease; /* Hiệu ứng chuyển động */
+      }
+
+      #goTopBtn:hover {
+        background: linear-gradient(
+          135deg,
+          #a777e3,
+          #6e8efb
+        ); /* Gradient màu khi hover */
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5); /* Đổ bóng khi hover */
+        transform: translateY(-5px); /* Dịch chuyển nút lên khi hover */
+      }
+
+      .arrow-up {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 15px solid white;
+        margin: 0 auto;
+      }
     </style>
   </head>
   <body>
@@ -573,5 +612,31 @@
         <!-- Add more products -->
       </div>
     </div>
+    <script>
+      // Lấy nút
+      var mybutton = document.getElementById("goTopBtn");
+
+      // Khi người dùng cuộn xuống 20px từ đỉnh trang, hiển thị nút
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // Khi người dùng nhấp vào nút, cuộn lên đầu trang
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
   </body>
 </html>

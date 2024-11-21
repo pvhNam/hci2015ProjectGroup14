@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="stylepc.css">
 
     <style>
@@ -337,7 +338,7 @@
       /* Modal nền */
       /* Modal container */
 .modal {
-  display: none; /* Đảm bảo mặc định là không hiển thị */
+  display: none; /* Đảm bảo mặc định là không hiển thị a*/
   position: fixed;
   z-index: 1;
   left: 0;
@@ -402,7 +403,7 @@
       <a href="BuildPC.html">Build PC</a>
       <a href="#">Linh kiện PC</a>
       <a href="laptop.html">Laptop</a>
-      <a href="#">Phím chuột ghế gear</a>
+      <a href="Gear.html">Phím chuột ghế gear</a>
     </div>
 
     <!-- Main Content -->
@@ -536,6 +537,32 @@ function closeModal() {
   document.getElementById("productModal").style.display = "none";
 }
     </script>
+
+<button id="goTopBtn" onclick="topFunction()">
+  <div class="arrow-up"></div>
+</button>
+
+<script>
+   // Lấy nút
+   var mybutton = document.getElementById("goTopBtn");
+
+// Khi người dùng cuộn xuống 20px từ đỉnh trang, hiển thị nút
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// Khi người dùng nhấp vào nút, cuộn lên đầu trang
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+        </script>
   </body>
   </script>
 </html>
