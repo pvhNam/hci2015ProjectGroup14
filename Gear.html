@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laptop</title>
+    <title>Keyboard</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -189,7 +189,7 @@
       }
 
       .product-card img {
-        width: 100%;
+        width: 80%;
         height: auto;
       }
 
@@ -201,6 +201,7 @@
         color: white;
         padding: 5px 10px;
         font-size: 12px;
+        justify-content: center;
         border-radius: 3px;
       }
 
@@ -257,6 +258,65 @@
       .product-info .add-to-cart:hover {
         background-color: #004c99;
       }
+      /* Dropdown container */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* Dropdown content */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 220px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+      }
+
+      /* Dropdown content links */
+      .dropdown-content a {
+        color: #444;
+        padding: 12px 18px;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f8f9fa;
+        color: #d90429;
+      }
+
+      /* Show dropdown on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Highlight the dropdown link */
+      .dropdown .nav-link {
+        display: inline-block;
+        color: #d90429;
+        font-weight: bold;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        font-size: 14px;
+        transition: all 0.3s ease-in;
+        border-radius: 5px;
+      }
+
+      .dropdown .nav-link:hover {
+        background-color: rgba(217, 4, 41, 0.1);
+        color: #dc3652;
+      }
     </style>
   </head>
   <body>
@@ -287,8 +347,15 @@
     <div class="nav">
       <a href="#" class="nav-link">PC</a>
       <a href="#" class="nav-link">Linh kiện PC</a>
-      <a href="laptop.html" class="nav-link active">Laptop</a>
-      <a href="#" class="nav-link">Phím chuột ghế gear</a>
+      <a href="laptop.html" class="nav-link">Laptop</a>
+      <div class="dropdown">
+        <a href="#" class="nav-link active">Phím chuột ghế gear</a>
+        <div class="dropdown-content">
+          <a href="#"> Bàn phím</a>
+          <a href="#"> Chuột</a>
+          <a href="#"><i class="fa fa-chair"></i> Ghế gaming</a>
+        </div>
+      </div>
     </div>
 
     <!-- Main Content -->
@@ -324,129 +391,183 @@
       </div>
 
       <!-- Product Grid -->
+
       <div class="product-grid">
         <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <img
+            src="https://techspace.vn/wp-content/uploads/2023/08/Anh-Website-TSVN.png"
+            alt="Keyboard"
+          />
           <div class="label">Trả góp 0%</div>
           <div class="product-info">
-            <h4>Asus Vivobook Go 15</h4>
-            <p>RAM 16GB | SSD 512GB</p>
+            <h4>Wootting 60HE</h4>
+            <p>Rapid trigger | 8000 HZ</p>
             <div class="stars">★★★★★</div>
-            <div class="price">
-              12.390.000đ <span class="old-price">14.490.000đ</span>
-              <span class="discount">-14%</span>
-            </div>
+            <div class="price">6.400.000đ</div>
           </div>
         </div>
 
         <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
-          <div class="label">Giá rẻ quá</div>
+          <img
+            src="https://techspace.vn/wp-content/uploads/2024/06/1-7-768x768.webp"
+            alt="Keyboard"
+          />
+          <div class="label">Trả góp 0%</div>
           <div class="product-info">
-            <h4>Dell Inspiron 15</h4>
-            <p>RAM 16GB | SSD 512GB</p>
-            <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <h4>Bàn phím từ HE MelGeek Made68 Rapid Trigger</h4>
+            <p>Magnetic Keyboard</p>
+            <div class="stars">★★★★★</div>
+            <div class="price">
+              3.290.000đ <span class="old-price">2.890.000đ</span>
+              <span class="discount">-12%</span>
+            </div>
           </div>
         </div>
         <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <img
+            src="https://techspace.vn/wp-content/uploads/2022/10/huntsman_v2_tkl_1_9c5e01fffd6343a884c0ea69ad2c722c_master.jpg"
+            alt="Keyboard"
+          />
           <div class="label">Giá rẻ quá</div>
           <div class="product-info">
-            <h4>Dell Inspiron 15</h4>
-            <p>RAM 16GB | SSD 512GB</p>
+            <h4>Bàn phím Razer Huntsman V2 Tenkeyless</h4>
+            <p>Razer Clicky Purple Optical</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <div class="price">
+              3.290.000đ <span class="old-price">2.890.000đ</span>
+              <span class="discount">-25%</span>
+            </div>
           </div>
         </div>
         <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <img
+            src="https://techspace.vn/wp-content/uploads/2022/09/1_1ed383c4f6064230a0166e96567dd04c-1-1.jpg"
+            alt="Keyboard"
+          />
           <div class="label">Giá rẻ quá</div>
           <div class="product-info">
-            <h4>Dell Inspiron 15</h4>
-            <p>RAM 16GB | SSD 512GB</p>
+            <h4>Bàn phím cơ Razer Blackwidow V3 Tenkeyless</h4>
+            <p>Razer Yellow | Razer Green</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <div class="price">
+              2.790.000đ <span class="old-price">1.490.00đ</span>
+              <span class="discount">-47%</span>
+            </div>
           </div>
         </div>
         <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
-          <div class="label">Giá rẻ quá</div>
+          <img
+            src="https://techspace.vn/wp-content/uploads/2022/09/razer_mini_2_5a0b7ad104a8437bb622d5d63d6e05c3-1-1.jpg"
+            alt="Keyboard"
+          />
+          <div class="label">Trả góp 0%</div>
           <div class="product-info">
-            <h4>Dell Inspiron 15</h4>
-            <p>RAM 16GB | SSD 512GB</p>
+            <h4>Bàn phím cơ Razer BlackWidow V3 Mini HyperSpeed</h4>
+            <p>Razer Mechanical Green/ Yellow</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <div class="price">2.190.000đ</div>
           </div>
         </div>
         <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
-          <div class="label">Giá rẻ quá</div>
+          <img
+            src="https://techspace.vn/wp-content/uploads/2023/09/1-31-768x768.png"
+            alt="Keyboard"
+          />
+          <div class="label">Trả góp 0%</div>
           <div class="product-info">
             <h4>Dell Inspiron 15</h4>
             <p>RAM 16GB | SSD 512GB</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <div class="price">
+              4.590.000đ <span class="old-price">4.890.000đ</span>
+              <span class="discount">-7%</span>
+            </div>
           </div>
         </div>
         <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
-          <div class="label">Giá rẻ quá</div>
+          <img
+            src="https://techspace.vn/wp-content/uploads/2023/03/1-18-768x768.png"
+            alt="Keyboard"
+          />
+
           <div class="product-info">
-            <h4>Dell Inspiron 15</h4>
-            <p>RAM 16GB | SSD 512GB</p>
+            <h4>Bàn phím Gaming Custom ASUS ROG Azoth</h4>
+            <p>1000 Hz</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <div class="price">
+              6.900.000đ <span class="old-price">5.900.000đ</span>
+              <span class="discount">-14%</span>
+            </div>
           </div>
         </div>
         <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
-          <div class="label">Giá rẻ quá</div>
+          <img
+            src="https://techspace.vn/wp-content/uploads/2023/11/1-67.webp"
+            alt="Keyboard"
+          />
+          <div class="label">Giới hạn</div>
           <div class="product-info">
-            <h4>Dell Inspiron 15</h4>
-            <p>RAM 16GB | SSD 512GB</p>
+            <h4>Bàn phím cơ DareU EK75 White Black</h4>
+            <p>DAREU customized Dream switch</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <div class="price">699.000đ</div>
           </div>
         </div>
         <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
-          <div class="label">Giá rẻ quá</div>
+          <img
+            src="https://techspace.vn/wp-content/uploads/2023/03/1-6-768x768.webp"
+            alt="Keyboard"
+          />
+          <div class="label">Đặc biệt</div>
           <div class="product-info">
-            <h4>Dell Inspiron 15</h4>
-            <p>RAM 16GB | SSD 512GB</p>
+            <h4>Bàn Phím Cơ IQUNIX Q66 Happy Ape Wireless</h4>
+            <p>Cherry MX / TTC</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <div class="price">
+              3.562.000đ <span class="old-price"> 3.750.000đ</span>
+              <span class="discount">-5%</span>
+            </div>
           </div>
         </div>
         <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
-          <div class="label">Giá rẻ quá</div>
+          <img
+            src="https://techspace.vn/wp-content/uploads/2023/05/1-92-768x768.jpg"
+            alt="Keyboard"
+          />
+          <div class="label">Giới hạn</div>
           <div class="product-info">
-            <h4>Dell Inspiron 15</h4>
-            <p>RAM 16GB | SSD 512GB</p>
+            <h4>Bàn phím gaming Rapoo MT510PRO – White Milk</h4>
+            <p>Bluetooth, USB, Wireless</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <div class="price">2.050.000đ</div>
           </div>
         </div>
         <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
-          <div class="label">Giá rẻ quá</div>
+          <img
+            src="https://techspace.vn/wp-content/uploads/2022/10/ban-phim-akko-pc75b-plus-year-of-tiger-ava01-1-768x950.jpg"
+            alt="Keyboard"
+          />
+          <div class="label">Giới hạn</div>
           <div class="product-info">
-            <h4>Dell Inspiron 15</h4>
-            <p>RAM 16GB | SSD 512GB</p>
+            <h4>Bàn phím cơ AKKO PC75B Plus Year of Tiger</h4>
+            <p>AKKO CS Switch (Silver / Wine Red)</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <div class="price">2.799.000đ</div>
           </div>
         </div>
         <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
-          <div class="label">Giá rẻ quá</div>
+          <img
+            src="https://akkogear.com.vn/wp-content/uploads/2024/03/MOD007v3-HE-Dragon-768x768.jpg"
+            alt="Keyboard"
+          />
+          <div class="label">Mới</div>
           <div class="product-info">
-            <h4>Dell Inspiron 15</h4>
-            <p>RAM 16GB | SSD 512GB</p>
+            <h4>Bàn phím cơ AKKO MOD007v3 HE Year of Dragon</h4>
+            <p>
+              (Hotswap,RGB / USB Type C 8K Hz/ Magnetic Switch / Rapid Trigger)
+            </p>
             <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <div class="price">4,990,000</div>
           </div>
         </div>
         <!-- Add more products -->
