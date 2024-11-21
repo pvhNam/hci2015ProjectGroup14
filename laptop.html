@@ -1,443 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Laptop</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            font-family: "Arial", sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f8f9fa;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        button {
-            cursor: pointer;
-            border: none;
-        }
-
-        /* Header */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #d90429;
-            color: white;
-            padding: 10px 20px;
-            position: relative;
-        }
-
-        .logo img {
-            border-radius: 5px;
-            height: 40px;
-        }
-
-        .search-bar {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: 600px;
-        }
-
-        .search-bar input {
-            width: 100%;
-            padding: 8px 15px;
-            border: none;
-            border-radius: 4px;
-            outline: none;
-            color: #333;
-        }
-
-        .icons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .icons i {
-            font-size: 20px;
-            cursor: pointer;
-            color: white;
-        }
-
-        .avatar {
-            vertical-align: middle;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-
-        /* Navigation */
-        .nav {
-            display: flex;
-            justify-content: center;
-            background-color: white;
-            padding: 10px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav a {
-            color: #d90429;
-            font-weight: bold;
-            padding: 10px 15px;
-            margin: 0 10px;
-            border: 2px solid transparent;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .nav a:hover,
-        .nav a.active {
-            background-color: #d90429;
-            color: white;
-            border: 2px solid #d90429;
-        }
-
-        /* Main Layout */
-        .container {
-            display: flex;
-            padding: 20px;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: 250px;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-right: 20px;
-        }
-
-        .sidebar h3 {
-            margin-bottom: 15px;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .filter-group {
-            margin-bottom: 20px;
-        }
-
-        .filter-group label {
-            display: block;
-            margin-bottom: 10px;
-            color: #555;
-            font-size: 14px;
-        }
-
-        .filter-group input[type="checkbox"] {
-            margin-right: 8px;
-        }
-
-        .filter-group input[type="radio"] {
-            margin-right: 8px;
-        }
-
-        .price-range input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        .price-range button {
-            width: 100%;
-            background-color: #d90429;
-            color: white;
-            padding: 8px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .price-range button:hover {
-            background-color: #b00321;
-        }
-
-        /* Product Grid */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            flex: 1;
-        }
-
-        .product-card {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .product-card img {
-            width: 100%;
-            height: auto;
-        }
-
-        .product-card .label {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #d90429;
-            color: white;
-            padding: 5px 10px;
-            font-size: 12px;
-            border-radius: 3px;
-        }
-
-        .product-info {
-            padding: 15px;
-        }
-
-        .product-info h4 {
-            margin: 0;
-            font-size: 16px;
-            color: #333;
-        }
-
-        .product-info p {
-            margin: 5px 0;
-            color: #555;
-            font-size: 14px;
-        }
-
-        .product-info .price {
-            font-weight: bold;
-            color: #d90429;
-            margin-top: 10px;
-        }
-
-        .product-info .old-price {
-            text-decoration: line-through;
-            color: #aaa;
-            margin-left: 5px;
-        }
-
-        .product-info .discount {
-            color: #28a745;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-
-        .product-info .stars {
-            color: #ffc107;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-
-        .product-info .add-to-cart {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 12px;
-            background-color: #0066cc;
-            color: white;
-            border-radius: 4px;
-            text-align: center;
-        }
-
-        .product-info .add-to-cart:hover {
-            background-color: #004c99;
-        }
-    </style>
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="stylelaptop.css">
+  </head>
+  <body>
     <!-- Header Section -->
     <div class="header">
-        <div class="logo">
-            <img src="https://storage.googleapis.com/a1aa/image/Uo3Eiyodgf3Fa6SQN5Telx3IPOgf6NCWC67rBFP4iaBPm5knA.jpg" alt="Logo">
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Bạn cần tìm gì?">
-        </div>
-        <div class="icons">
-            <img src="https://i.pinimg.com/736x/8f/1c/a2/8f1ca2029e2efceebd22fa05cca423d7.jpg" alt="Avatar" class="avatar">
-            <button>
-                <i class="fa fa-shopping-cart"></i>
-            </button>
-        </div>
+      <div class="logo">
+        <img
+          src="https://storage.googleapis.com/a1aa/image/Uo3Eiyodgf3Fa6SQN5Telx3IPOgf6NCWC67rBFP4iaBPm5knA.jpg"
+          alt="Logo"
+        />
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Bạn cần tìm gì?" />
+      </div>
+      <div class="icons">
+        <img
+          src="https://i.pinimg.com/736x/8f/1c/a2/8f1ca2029e2efceebd22fa05cca423d7.jpg"
+          alt="Avatar"
+          class="avatar"
+        />
+        <button>
+          <i class="fa fa-shopping-cart"></i>
+        </button>
+      </div>
     </div>
 
     <!-- Navigation -->
     <div class="nav">
-        <a href="#" class="nav-link">PC</a>
-        <a href="#" class="nav-link">Linh kiện PC</a>
-        <a href="laptop.html" class="nav-link active">Laptop</a>
-        <a href="#" class="nav-link">Phím chuột ghế gear</a>
+      <a href="#" class="nav-link">PC</a>
+      <a href="#" class="nav-link">Linh kiện PC</a>
+      <a href="laptop.html" class="nav-link active">Laptop</a>
+      <a href="#" class="nav-link">Phím chuột ghế gear</a>
     </div>
 
     <!-- Main Content -->
     <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <h3>Lọc sản phẩm</h3>
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h3>Lọc sản phẩm</h3>
 
-            <!-- Price Range -->
-            <div class="filter-group price-range">
-                <h4>Giá tiền</h4>
-                <input type="text" placeholder="Từ (VNĐ)">
-                <input type="text" placeholder="Đến (VNĐ)">
-                <button>Lọc</button>
-            </div>
-
-            <!-- Brand -->
-            <div class="filter-group">
-                <h4>Hãng</h4>
-                <label><input type="checkbox"> Asus</label>
-                <label><input type="checkbox"> Dell</label>
-                <label><input type="checkbox"> Acer</label>
-                <label><input type="checkbox"> HP</label>
-                <label><input type="checkbox"> Lenovo</label>
-            </div>
-
-            <!-- Other Filters -->
-            <div class="filter-group">
-                <h4>Khuyến mãi</h4>
-                <label><input type="checkbox"> Trả góp 0%</label>
-                <label><input type="checkbox"> Giá rẻ quá</label>
-            </div>
+        <!-- Price Range -->
+        <div class="filter-group price-range">
+          <h4>Giá tiền</h4>
+          <input type="text" placeholder="Từ (VNĐ)" />
+          <input type="text" placeholder="Đến (VNĐ)" />
+          <button>Lọc</button>
         </div>
 
-        <!-- Product Grid -->
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x150" alt="Laptop">
-                <div class="label">Trả góp 0%</div>
-                <div class="product-info">
-                    <h4>Asus Vivobook Go 15</h4>
-                    <p>RAM 16GB | SSD 512GB</p>
-                    <div class="stars">★★★★★</div>
-                    <div class="price">12.390.000đ <span class="old-price">14.490.000đ</span> <span class="discount">-14%</span></div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x150" alt="Laptop">
-                <div class="label">Giá rẻ quá</div>
-                <div class="product-info">
-                    <h4>Dell Inspiron 15</h4>
-                    <p>RAM 16GB | SSD 512GB</p>
-                    <div class="stars">★★★★☆</div>
-                    <div class="price">16.490.000đ</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x150" alt="Laptop">
-                <div class="label">Giá rẻ quá</div>
-                <div class="product-info">
-                    <h4>Dell Inspiron 15</h4>
-                    <p>RAM 16GB | SSD 512GB</p>
-                    <div class="stars">★★★★☆</div>
-                    <div class="price">16.490.000đ</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x150" alt="Laptop">
-                <div class="label">Giá rẻ quá</div>
-                <div class="product-info">
-                    <h4>Dell Inspiron 15</h4>
-                    <p>RAM 16GB | SSD 512GB</p>
-                    <div class="stars">★★★★☆</div>
-                    <div class="price">16.490.000đ</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x150" alt="Laptop">
-                <div class="label">Giá rẻ quá</div>
-                <div class="product-info">
-                    <h4>Dell Inspiron 15</h4>
-                    <p>RAM 16GB | SSD 512GB</p>
-                    <div class="stars">★★★★☆</div>
-                    <div class="price">16.490.000đ</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x150" alt="Laptop">
-                <div class="label">Giá rẻ quá</div>
-                <div class="product-info">
-                    <h4>Dell Inspiron 15</h4>
-                    <p>RAM 16GB | SSD 512GB</p>
-                    <div class="stars">★★★★☆</div>
-                    <div class="price">16.490.000đ</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x150" alt="Laptop">
-                <div class="label">Giá rẻ quá</div>
-                <div class="product-info">
-                    <h4>Dell Inspiron 15</h4>
-                    <p>RAM 16GB | SSD 512GB</p>
-                    <div class="stars">★★★★☆</div>
-                    <div class="price">16.490.000đ</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x150" alt="Laptop">
-                <div class="label">Giá rẻ quá</div>
-                <div class="product-info">
-                    <h4>Dell Inspiron 15</h4>
-                    <p>RAM 16GB | SSD 512GB</p>
-                    <div class="stars">★★★★☆</div>
-                    <div class="price">16.490.000đ</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x150" alt="Laptop">
-                <div class="label">Giá rẻ quá</div>
-                <div class="product-info">
-                    <h4>Dell Inspiron 15</h4>
-                    <p>RAM 16GB | SSD 512GB</p>
-                    <div class="stars">★★★★☆</div>
-                    <div class="price">16.490.000đ</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x150" alt="Laptop">
-                <div class="label">Giá rẻ quá</div>
-                <div class="product-info">
-                    <h4>Dell Inspiron 15</h4>
-                    <p>RAM 16GB | SSD 512GB</p>
-                    <div class="stars">★★★★☆</div>
-                    <div class="price">16.490.000đ</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x150" alt="Laptop">
-                <div class="label">Giá rẻ quá</div>
-                <div class="product-info">
-                    <h4>Dell Inspiron 15</h4>
-                    <p>RAM 16GB | SSD 512GB</p>
-                    <div class="stars">★★★★☆</div>
-                    <div class="price">16.490.000đ</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x150" alt="Laptop">
-                <div class="label">Giá rẻ quá</div>
-                <div class="product-info">
-                    <h4>Dell Inspiron 15</h4>
-                    <p>RAM 16GB | SSD 512GB</p>
-                    <div class="stars">★★★★☆</div>
-                    <div class="price">16.490.000đ</div>
-                </div>
-            </div>
-            <!-- Add more products -->
+        <!-- Brand -->
+        <div class="filter-group">
+          <h4>Hãng</h4>
+          <label><input type="checkbox" /> Asus</label>
+          <label><input type="checkbox" /> Dell</label>
+          <label><input type="checkbox" /> Acer</label>
+          <label><input type="checkbox" /> HP</label>
+          <label><input type="checkbox" /> Lenovo</label>
         </div>
+
+        <!-- Other Filters -->
+        <div class="filter-group">
+          <h4>Khuyến mãi</h4>
+          <label><input type="checkbox" /> Trả góp 0%</label>
+          <label><input type="checkbox" /> Giá rẻ quá</label>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <div class="label">Trả góp 0%</div>
+          <div class="product-info">
+            <h4>Asus Vivobook Go 15</h4>
+            <p>RAM 16GB | SSD 512GB</p>
+            <div class="stars">★★★★★</div>
+            <div class="price">
+              12.390.000đ <span class="old-price">14.490.000đ</span>
+              <span class="discount">-14%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <div class="label">Giá rẻ quá</div>
+          <div class="product-info">
+            <h4>Dell Inspiron 15</h4>
+            <p>RAM 16GB | SSD 512GB</p>
+            <div class="stars">★★★★☆</div>
+            <div class="price">16.490.000đ</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <div class="label">Giá rẻ quá</div>
+          <div class="product-info">
+            <h4>Dell Inspiron 15</h4>
+            <p>RAM 16GB | SSD 512GB</p>
+            <div class="stars">★★★★☆</div>
+            <div class="price">16.490.000đ</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <div class="label">Giá rẻ quá</div>
+          <div class="product-info">
+            <h4>Dell Inspiron 15</h4>
+            <p>RAM 16GB | SSD 512GB</p>
+            <div class="stars">★★★★☆</div>
+            <div class="price">16.490.000đ</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <div class="label">Giá rẻ quá</div>
+          <div class="product-info">
+            <h4>Dell Inspiron 15</h4>
+            <p>RAM 16GB | SSD 512GB</p>
+            <div class="stars">★★★★☆</div>
+            <div class="price">16.490.000đ</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <div class="label">Giá rẻ quá</div>
+          <div class="product-info">
+            <h4>Dell Inspiron 15</h4>
+            <p>RAM 16GB | SSD 512GB</p>
+            <div class="stars">★★★★☆</div>
+            <div class="price">16.490.000đ</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <div class="label">Giá rẻ quá</div>
+          <div class="product-info">
+            <h4>Dell Inspiron 15</h4>
+            <p>RAM 16GB | SSD 512GB</p>
+            <div class="stars">★★★★☆</div>
+            <div class="price">16.490.000đ</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <div class="label">Giá rẻ quá</div>
+          <div class="product-info">
+            <h4>Dell Inspiron 15</h4>
+            <p>RAM 16GB | SSD 512GB</p>
+            <div class="stars">★★★★☆</div>
+            <div class="price">16.490.000đ</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <div class="label">Giá rẻ quá</div>
+          <div class="product-info">
+            <h4>Dell Inspiron 15</h4>
+            <p>RAM 16GB | SSD 512GB</p>
+            <div class="stars">★★★★☆</div>
+            <div class="price">16.490.000đ</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <div class="label">Giá rẻ quá</div>
+          <div class="product-info">
+            <h4>Dell Inspiron 15</h4>
+            <p>RAM 16GB | SSD 512GB</p>
+            <div class="stars">★★★★☆</div>
+            <div class="price">16.490.000đ</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <div class="label">Giá rẻ quá</div>
+          <div class="product-info">
+            <h4>Dell Inspiron 15</h4>
+            <p>RAM 16GB | SSD 512GB</p>
+            <div class="stars">★★★★☆</div>
+            <div class="price">16.490.000đ</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+          <div class="label">Giá rẻ quá</div>
+          <div class="product-info">
+            <h4>Dell Inspiron 15</h4>
+            <p>RAM 16GB | SSD 512GB</p>
+            <div class="stars">★★★★☆</div>
+            <div class="price">16.490.000đ</div>
+          </div>
+        </div>
+        <!-- Add more products -->
+      </div>
     </div>
-</body>
+  </body>
 </html>
