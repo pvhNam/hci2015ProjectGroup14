@@ -352,23 +352,37 @@ productCards.forEach((card, index) => {
     // Thêm hình ảnh mới vào popup
     document.querySelector(".popup-content").insertBefore(popupImage, document.querySelector(".popup-content h2"));
     
-    // Thêm chi tiết sản phẩm vào popup (Không thay đổi phần nội dung accordion)
-    document.querySelector(".accordion-body").innerHTML = `
-      <p><strong>Công nghệ CPU:</strong> ${details.cpu}</p>
-      <p><strong>Số nhân:</strong> ${details.cores}</p>
-      <p><strong>Số luồng:</strong> ${details.threads}</p>
-      <p><strong>Tốc độ CPU:</strong> ${details.baseClock}</p>
-      <p><strong>Tốc độ tối đa:</strong> ${details.boostClock}</p>
-      <p><strong>Bộ nhớ đệm:</strong> ${details.cache}</p>
-      <p><strong>RAM:</strong> ${details.ram}</p>
-      <p><strong>SSD:</strong> ${details.ssd}</p>
-      <p><strong>Màn hình:</strong> ${details.screen}</p>
-      <p><strong>Card đồ họa:</strong> ${details.graphics}</p>
-      <p><strong>Âm thanh:</strong> ${details.audio}</p>
-      <p><strong>Cổng kết nối:</strong> ${details.ports}</p>
-      <p><strong>Pin:</strong> ${details.battery}</p>
-      <p><strong>Hệ điều hành:</strong> ${details.os}</p>
-    `;
+    const accordionItems = document.querySelectorAll(".accordion-item");
+
+// Cập nhật từng phần theo chỉ số hoặc tên
+accordionItems[0].querySelector(".accordion-body").innerHTML = `
+  <p><strong>Công nghệ CPU:</strong> ${details.cpu}</p>
+  <p><strong>Số nhân:</strong> ${details.cores}</p>
+  <p><strong>Số luồng:</strong> ${details.threads}</p>
+  <p><strong>Tốc độ CPU:</strong> ${details.baseClock}</p>
+  <p><strong>Tốc độ tối đa:</strong> ${details.boostClock}</p>
+  <p><strong>Bộ nhớ đệm:</strong> ${details.cache}</p>
+`;
+
+accordionItems[1].querySelector(".accordion-body").innerHTML = `
+  <p><strong>RAM:</strong> ${details.ram}</p>
+  <p><strong>SSD:</strong> ${details.ssd}</p>
+`;
+
+accordionItems[2].querySelector(".accordion-body").innerHTML = `
+  <p><strong>Màn hình:</strong> ${details.screen}</p>
+`;
+
+accordionItems[3].querySelector(".accordion-body").innerHTML = `
+  <p><strong>Card đồ họa:</strong> ${details.graphics}</p>
+  <p><strong>Âm thanh:</strong> ${details.audio}</p>
+`;
+
+accordionItems[4].querySelector(".accordion-body").innerHTML = `
+  <p><strong>Cổng kết nối:</strong> ${details.ports}</p>
+  <p><strong>Pin:</strong> ${details.battery}</p>
+  <p><strong>Hệ điều hành:</strong> ${details.os}</p>
+`;
 
     // Hiển thị popup
     popup.classList.remove("hidden");
