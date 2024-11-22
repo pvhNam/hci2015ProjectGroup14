@@ -349,27 +349,159 @@ button {
 }
 
 /* thanh sort */
-.sort,
-.pagination {
-  margin-bottom: 20px; /* Tạo khoảng cách giữa các thành phần */
+.header1 {
+  background-color: #d90429;
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
-.container {
+.header1 input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.header1 .search-icon {
+  color: white;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.container1 {
+  padding: 20px;
+}
+
+.product-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sort and Pagination */
+#productContainer {
+  display: none; /* Mặc định ẩn */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ để tạo hiệu ứng modal */
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  width: 90%;
+  max-width: 1200px; /* Giới hạn chiều rộng tối đa của modal */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng cho khung modal */
+}
+
+.header1 {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 20px;
+  position: relative; /* Để nút close định vị dựa vào khung header1 */
+}
+
+.search-bar1 {
+  display: flex;
+  width: 100%; /* Để thanh tìm kiếm chiếm hết chiều rộng của khung */
+}
+
+.search-bar1 input {
+  flex: 0.9; /* Để input chiếm toàn bộ chiều rộng có thể */
+  padding: 10px; /* Tăng khoảng cách bên trong */
+  margin-right: 10px; /* Khoảng cách giữa input và nút */
+}
+
+.search-bar1 button {
+  padding: 10px 20px; /* Tăng kích thước nút */
+  cursor: pointer;
+}
+
+.close-btn {
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column; /* Các phần tử sẽ xếp theo cột */
+  gap: 20px; /* Khoảng cách giữa các phần tử */
+}
+
+.sort-pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+}
+
+.sort select {
+  padding: 5px;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background-color: #ff0000;
+  color: white;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* Tự động điều chỉnh số cột */
+  gap: 20px;
 }
 
 .product {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Nút đóng modal */
-.close-btn {
-  color: #aaa;
-  font-size: 30px;
+.product img {
+  margin-bottom: 15px;
+}
+
+.product-details {
+  text-align: center;
+}
+
+.product-details .price {
+  font-size: 18px;
+  color: green;
   font-weight: bold;
-  float: right;
-  cursor: pointer;
 }
 
 .close-btn:hover,

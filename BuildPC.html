@@ -60,7 +60,7 @@
       <div class="config-list">
         <div class="component">
           <span class="title">1. CPU - BỘ VI XỬ LÝ</span>
-          <button class="button" onclick="openModal()">+ Chọn CPU</button>
+          <button class="choose-pc-btn" onclick="showProduct()">+ Chọn PC</button>
         </div>
         <div class="component">
           <span class="title">2. MAIN - BO MẠCH CHỦ</span>
@@ -114,62 +114,102 @@
     </div> 
    
     <!-- Modal -->
-    <div id="productModal" class="modal">
-      <div class="modal-content">
-        <button class="close-btn" onclick="closeModal()">×</button>
-        <div class="header">
-          <input placeholder="Bạn cần tìm linh kiện gì?" type="text" />
-          <i class="fas fa-search search-icon"> </i>
-        </div>
-        <div class="container">
-          <div class="sort">
-            <label for="sort"> Sắp xếp: </label>
-            <select id="sort">
-              <option value="default">Tùy chọn</option>
-            </select>
-          </div>
-          <div class="product">
-            <img
-              alt="Image of CPU Intel Core Ultra 5 245K"
-              height="150"
-              src="https://storage.googleapis.com/a1aa/image/mIIiohfJcVzFekymJANNVkvsGWsrzjmTlKG5rPpKf9QDbQmnA.jpg"
-              width="100"
-            />
-            <div class="product-details">
-              <h3>CPU Intel Core Ultra 5 245K (14 Nhân 14 Luồng, Arrow Lake-S)</h3>
-              <p>Bảo hành: 36 Tháng</p>
-              <p>Kho hàng: Còn hàng | Mã SP: CPU000075B</p>
-              <p class="price">6.990.000đ</p>
-              <p class="old-price">8.990.000đ</p>
-              <span class="discount"> -22% </span>
+    <!-- Khung lớn chứa tất cả -->
+<div id="productContainer" class="container1" style="display: none;">
+    <div class="modal-content">
+        <!-- Header chứa thanh tìm kiếm và nút đóng -->
+        <div class="header1">
+            <div class="search-bar1">
+                <input placeholder="Tìm kiếm " type="text"/>
+                <button>Tìm kiếm</button>
             </div>
-            <button class="add-to-config">THÊM VÀO CẤU HÌNH &gt;</button>
-          </div>
-          <!-- Thêm các sản phẩm khác tương tự -->
-          <div class="pagination">
-            <button class="active">1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>next</button>
-          </div>
+            <button class="close-btn" onclick="closeProduct()">X</button> <!-- Nút đóng -->
         </div>
-      </div>
-    </div>
-  <script>
-      // Open modal
-      function openModal() {
-  document.getElementById("productModal").style.display = "block";
-}
 
-// Đóng modal
-function closeModal() {
-  document.getElementById("productModal").style.display = "none";
-}
-    </script>
+        <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+        <div class="main-content">
+            <!-- Phần sắp xếp và phân trang -->
+            <div class="sort-pagination">
+                <div class="sort">
+                    <label for="sort">Sắp xếp :</label>
+                    <select id="sort">
+                        <option value="default">Tùy chọn</option>
+                        <option value="default">Giá rẻ</option>
+                        <option value="default">Chất lượng cao</option>
+                    </select>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>7</button>
+                    <button>next</button>
+                </div>
+            </div>
+
+            <!-- Khung chứa các sản phẩm -->
+            <div class="product-container">
+                <!-- Product 1 -->
+                <div class="product">
+                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://storage.googleapis.com/a1aa/image/mIIiohfJcVzFekymJANNVkvsGWsrzjmTlKG5rPpKf9QDbQmnA.jpg" width="100"/>
+                    <div class="product-details">
+                        <h3>CPU Intel Core Ultra 5 245K (14 Nhân 14 Luồng, Arrow Lake-S)</h3>
+                        <p>Bảo hành: 36 Tháng</p>
+                        <p>Kho hàng: Còn hàng | Mã SP: CPU000075B</p>
+                        <p class="price">6.990.000đ</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product">
+                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://storage.googleapis.com/a1aa/image/mIIiohfJcVzFekymJANNVkvsGWsrzjmTlKG5rPpKf9QDbQmnA.jpg" width="100"/>
+                    <div class="product-details">
+                        <h3>CPU Intel Core Ultra 5 245K (14 Nhân 14 Luồng, Arrow Lake-S)</h3>
+                        <p>Bảo hành: 36 Tháng</p>
+                        <p>Kho hàng: Còn hàng | Mã SP: CPU000075B</p>
+                        <p class="price">6.990.000đ</p>                       
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product">
+                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://storage.googleapis.com/a1aa/image/mIIiohfJcVzFekymJANNVkvsGWsrzjmTlKG5rPpKf9QDbQmnA.jpg" width="100"/>
+                  <div class="product-details">
+                      <h3>CPU Intel Core Ultra 5 245K (14 Nhân 14 Luồng, Arrow Lake-S)</h3>
+                      <p>Bảo hành: 36 Tháng</p>
+                      <p>Kho hàng: Còn hàng | Mã SP: CPU000075B</p>
+                      <p class="price">6.990.000đ</p>
+                  </div>
+              </div>
+              <!-- Product 4 -->
+              <div class="product">
+                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://storage.googleapis.com/a1aa/image/mIIiohfJcVzFekymJANNVkvsGWsrzjmTlKG5rPpKf9QDbQmnA.jpg" width="100"/>
+                <div class="product-details">
+                    <h3>CPU Intel Core Ultra 5 245K (14 Nhân 14 Luồng, Arrow Lake-S)</h3>
+                    <p>Bảo hành: 36 Tháng</p>
+                    <p>Kho hàng: Còn hàng | Mã SP: CPU000075B</p>
+                    <p class="price">6.990.000đ</p>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="product">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://storage.googleapis.com/a1aa/image/mIIiohfJcVzFekymJANNVkvsGWsrzjmTlKG5rPpKf9QDbQmnA.jpg" width="100"/>
+              <div class="product-details">
+                  <h3>CPU Intel Core Ultra 5 245K (14 Nhân 14 Luồng, Arrow Lake-S)</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng | Mã SP: CPU000075B</p>
+                  <p class="price">6.990.000đ</p>
+              </div>
+          </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
 
 <button id="goTopBtn" onclick="topFunction()">
   <div class="arrow-up"></div>
@@ -194,6 +234,15 @@ function scrollFunction() {
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+// làm model
+function showProduct() {
+  document.getElementById("productContainer").style.display = "block";  // Hiển thị khung sản phẩm
+}
+
+function closeProduct() {
+  document.getElementById("productContainer").style.display = "none";  // Ẩn khung sản phẩm
 }
         </script>
   </body>
