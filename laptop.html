@@ -251,6 +251,9 @@
           </div>
         </div>
       </div>
+      <button id="goTopBtn" onclick="topFunction()">
+        <div class="arrow-up"></div>
+      </button>
       
     </div>
     <script>
@@ -472,7 +475,26 @@ accordionHeaders.forEach(header => {
     body.style.display = body.style.display === "block" ? "none" : "block";
   });
 });
+///// button go to top
+ // Lấy nút
+ var mybutton = document.getElementById("goTopBtn");
 
+// Khi người dùng cuộn xuống 20px từ đỉnh trang, hiển thị nút
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// Khi người dùng nhấp vào nút, cuộn lên đầu trang
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
     </script>
   </body>
 </html>
