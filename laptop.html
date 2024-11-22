@@ -39,7 +39,7 @@
       <a href="BuildPC.html" class="nav-link">Build PC</a>
       <a href="#" class="nav-link">Linh kiện PC</a>
       <a href="laptop.html" class="nav-link active">Laptop</a>
-      <a href="Gear.html" class="nav-link">Phím chuột ghế gear</a>
+      <a href="Gear.html" class="nav-link">Bàn phím chuột Tai nghe</a>
     </div>
 
     <!-- Main Content -->
@@ -68,9 +68,12 @@
 
         <!-- Other Filters -->
         <div class="filter-group">
-          <h4>Khuyến mãi</h4>
-          <label><input type="checkbox" /> Trả góp 0%</label>
-          <label><input type="checkbox" /> Giá rẻ quá</label>
+          <h4>Lọc giá </h4>
+          <label><input type="checkbox" /> 5.000.000₫ - 10.000.000₫</label>
+          <label><input type="checkbox" /> 10.000.000₫ - 15.000.000₫</label>
+          <label><input type="checkbox" /> 15.000.000₫ - 20.000.000₫</label>
+          <label><input type="checkbox" /> 20.000.000₫ - 30.000.000₫</label>
+          <label><input type="checkbox" /> Trên 30.000.000₫</label>
         </div>
       </div>
 
@@ -84,8 +87,7 @@
             <p>RAM 16GB | SSD 512GB</p>
             <div class="stars">★★★★★</div>
             <div class="price">
-              12.390.000đ <span class="old-price">14.490.000đ</span>
-              <span class="discount">-14%</span>
+              12.390.000đ 
             </div>
           </div>
         </a>
@@ -100,7 +102,7 @@
             <div class="price">16.490.000đ</div>
           </div>
         </a>
-        <div class="product-card">
+        <a href="#" class="product-card">
           <img src="https://cdn.tgdd.vn/Products/Images/44/313333/lenovo-ideapad-slim-3-15iah8-i5-83er00evn-thumb-600x600.jpg" alt="Laptop" />
           <div class="label">Giá rẻ quá</div>
           <div class="product-info">
@@ -109,37 +111,37 @@
             <div class="stars">★★★★☆</div>
             <div class="price">16.490.000đ</div>
           </div>
-        </div>
-        <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+        </a>
+        <a href="#" class="product-card">
+          <img src="https://cdn.tgdd.vn/Products/Images/44/322959/msi-prestige-13-ai-evo-a1mg-ultra-7-062vn-070424-040052-600x600.jpg" alt="Laptop" />
           <div class="label">Giá rẻ quá</div>
           <div class="product-info">
-            <h4>Dell Inspiron 15</h4>
-            <p>RAM 16GB | SSD 512GB</p>
+            <h4>MSI Prestige 13 AI</h4>
+            <p>RAM 32GB | SSD 1TB</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <div class="price">30.990.000đ</div>
           </div>
-        </div>
-        <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+        </a>
+        <a href="#" class="product-card">
+          <img src="https://cdn.tgdd.vn/Products/Images/44/328237/asus-vivobook-16x-k3605zf-i5-rp745w-thumb-600x600.jpg" alt="Laptop" />
           <div class="label">Giá rẻ quá</div>
           <div class="product-info">
-            <h4>Dell Inspiron 15</h4>
+            <h4>Asus Gaming Vivobook</h4>
             <p>RAM 16GB | SSD 512GB</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <div class="price">17.390.000đ</div>
           </div>
-        </div>
-        <div class="product-card">
-          <img src="https://via.placeholder.com/250x150" alt="Laptop" />
+        </a>
+        <a href="#" class="product-card">
+          <img src="https://cdn.tgdd.vn/Products/Images/44/322072/lenovo-loq-gaming-15iax9-i5-83gs000jvn-thumb-new-600x600.jpg" alt="Laptop" />
           <div class="label">Giá rẻ quá</div>
           <div class="product-info">
-            <h4>Dell Inspiron 15</h4>
+            <h4>Lenovo Gaming LOQ</h4>
             <p>RAM 16GB | SSD 512GB</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">16.490.000đ</div>
+            <div class="price">21.490.000đ</div>
           </div>
-        </div>
+        </a>
         <div class="product-card">
           <img src="https://via.placeholder.com/250x150" alt="Laptop" />
           <div class="label">Giá rẻ quá</div>
@@ -252,6 +254,9 @@
           </div>
         </div>
       </div>
+      <button id="goTopBtn" onclick="topFunction()">
+        <div class="arrow-up"></div>
+      </button>
       
     </div>
     <script>
@@ -305,7 +310,97 @@ const productDetails = [
     ports: "USB-C, USB 3.0, HDMI, RJ-45",
     battery: "3-cell 42 Whr Li-ion",
     os: "Windows 11 Home"
-  }
+  },
+  {
+    name: "Lenovo Ideapad Slim 3",
+    image: "https://cdn.tgdd.vn/Products/Images/44/313333/lenovo-ideapad-slim-3-15iah8-i5-83er00evn-thumb-600x600.jpg",
+    price: "16.490.000đ",
+    oldPrice: "18.990.000đ",
+    discount: "-13%",
+    cpu: "Intel Core i5-1235U",
+    cores: 10,
+    threads: 12,
+    baseClock: "1.3 GHz",
+    boostClock: "4.4 GHz",
+    cache: "12 MB",
+    ram: "8GB DDR4 (3200 MHz)",
+    ssd: "512GB SSD M.2 PCIe",
+    screen: "15.6 inch Full HD (1920 x 1080), IPS, 300 nits",
+    graphics: "Intel Iris Xe Graphics",
+    audio: "Stereo speakers, Dolby Audio",
+    ports: "1 x USB 2.0, 1 x USB 3.2 Gen 1, 1 x USB-C 3.2 Gen 1, 1 x HDMI 1.4b, 1 x Audio combo jack",
+    battery: "3-cell Li-ion, 45 Wh",
+    os: "Windows 11 Home SL"
+  },
+  {
+  name: "MSI Prestige 13 AI Evo A1MG-062VN",
+  image: "https://cdn.tgdd.vn/Products/Images/44/322959/msi-prestige-13-ai-evo-a1mg-ultra-7-062vn-070424-040052-600x600.jpg",
+  price: "33.990.000đ",
+  oldPrice: null,
+  discount: null,
+  cpu: "Intel Core Ultra 7-155H (AI Boost)",
+  cores: 10,
+  threads: 16,
+  baseClock: "3.0 GHz",
+  boostClock: "5.1 GHz",
+  cache: "18 MB",
+  ram: "32GB LPDDR5 (6400 MHz)",
+  ssd: "1TB NVMe PCIe Gen4",
+  screen: "13.3 inch 2.8K (2880 x 1800), OLED, 100% DCI-P3",
+  graphics: "Intel Arc Graphics",
+  audio: "High-definition audio",
+  ports: "2 x Thunderbolt 4, 1 x Audio combo jack",
+  battery: "75Wh, 4-cell Li-Polymer",
+  os: "Windows 11 Home",
+  weight: "0.99 kg"
+},
+{
+  name: "Asus Vivobook K3605ZF i5 RP745W",
+  image: "https://cdn.tgdd.vn/Products/Images/44/328237/asus-vivobook-16x-k3605zf-i5-rp745w-thumb-600x600.jpg",
+  price: "15.990.000đ",
+  oldPrice: null,
+  discount: null,
+  cpu: "Intel Core i5-1340P",
+  cores: 12,
+  threads: 16,
+  baseClock: "1.80 GHz",
+  boostClock: "4.60 GHz",
+  cache: "12 MB",
+  ram: "8GB DDR4 (3200 MHz)",
+  ssd: "512GB NVMe PCIe Gen3",
+  screen: "15.6 inch Full HD (1920 x 1080), IPS, 250 nits",
+  graphics: "Intel Iris Xe Graphics",
+  audio: "Harman Kardon audio, DTS Audio Processing",
+  ports: "1 x USB 3.2 Type-C, 2 x USB 3.2 Type-A, 1 x HDMI 1.4, 1 x Audio combo jack, 1 x MicroSD card reader",
+  battery: "42Wh, 3-cell Li-ion",
+  os: "Windows 11 Home",
+  weight: "1.80 kg"
+},
+  {
+    name: "Lenovo LOQ Gaming ",
+    image: "https://cdn.tgdd.vn/Products/Images/44/322072/lenovo-loq-gaming-15iax9-i5-83gs000jvn-thumb-new-600x600.jpg",
+    price: "20.490.000đ",
+    oldPrice: "21.990.000đ",
+    discount: "-7%",
+    cpu: "Intel Core i5-12450H",
+    cores: 8,
+    threads: 12,
+    baseClock: "3.1 GHz",
+    boostClock: "4.4 GHz",
+    cache: "12 MB",
+    ram: "8GB DDR4 (3200 MHz), hỗ trợ nâng cấp tối đa 16GB",
+    ssd: "512GB SSD M.2 PCIe",
+    screen: "15.6 inch Full HD (1920 x 1080), IPS, 144Hz",
+    graphics: "NVIDIA GeForce RTX 3050 6GB GDDR6",
+    audio: "Stereo speakers, Dolby Audio",
+    ports: "1 x USB 3.2 Gen 1, 1 x USB-C 3.2 Gen 2, 1 x HDMI 2.0, 1 x Ethernet, 1 x Audio combo jack",
+    battery: "3-cell Li-ion, 60Wh",
+    os: "Windows 11 Home",
+    weight: "2.38 kg",
+    dimensions: "359.86 x 258.7 x 21.9-23.9 mm",
+    wifi: "Wi-Fi 6, Bluetooth 5.2",
+    design: "Vỏ nhựa PC-ABS, màu xám Luna"
+}
 
   // Add more details for other products if needed
 ];
@@ -331,23 +426,37 @@ productCards.forEach((card, index) => {
     // Thêm hình ảnh mới vào popup
     document.querySelector(".popup-content").insertBefore(popupImage, document.querySelector(".popup-content h2"));
     
-    // Thêm chi tiết sản phẩm vào popup (Không thay đổi phần nội dung accordion)
-    document.querySelector(".accordion-body").innerHTML = `
-      <p><strong>Công nghệ CPU:</strong> ${details.cpu}</p>
-      <p><strong>Số nhân:</strong> ${details.cores}</p>
-      <p><strong>Số luồng:</strong> ${details.threads}</p>
-      <p><strong>Tốc độ CPU:</strong> ${details.baseClock}</p>
-      <p><strong>Tốc độ tối đa:</strong> ${details.boostClock}</p>
-      <p><strong>Bộ nhớ đệm:</strong> ${details.cache}</p>
-      <p><strong>RAM:</strong> ${details.ram}</p>
-      <p><strong>SSD:</strong> ${details.ssd}</p>
-      <p><strong>Màn hình:</strong> ${details.screen}</p>
-      <p><strong>Card đồ họa:</strong> ${details.graphics}</p>
-      <p><strong>Âm thanh:</strong> ${details.audio}</p>
-      <p><strong>Cổng kết nối:</strong> ${details.ports}</p>
-      <p><strong>Pin:</strong> ${details.battery}</p>
-      <p><strong>Hệ điều hành:</strong> ${details.os}</p>
-    `;
+    const accordionItems = document.querySelectorAll(".accordion-item");
+
+// Cập nhật từng phần theo chỉ số hoặc tên
+accordionItems[0].querySelector(".accordion-body").innerHTML = `
+  <p><strong>Công nghệ CPU:</strong> ${details.cpu}</p>
+  <p><strong>Số nhân:</strong> ${details.cores}</p>
+  <p><strong>Số luồng:</strong> ${details.threads}</p>
+  <p><strong>Tốc độ CPU:</strong> ${details.baseClock}</p>
+  <p><strong>Tốc độ tối đa:</strong> ${details.boostClock}</p>
+  <p><strong>Bộ nhớ đệm:</strong> ${details.cache}</p>
+`;
+
+accordionItems[1].querySelector(".accordion-body").innerHTML = `
+  <p><strong>RAM:</strong> ${details.ram}</p>
+  <p><strong>SSD:</strong> ${details.ssd}</p>
+`;
+
+accordionItems[2].querySelector(".accordion-body").innerHTML = `
+  <p><strong>Màn hình:</strong> ${details.screen}</p>
+`;
+
+accordionItems[3].querySelector(".accordion-body").innerHTML = `
+  <p><strong>Card đồ họa:</strong> ${details.graphics}</p>
+  <p><strong>Âm thanh:</strong> ${details.audio}</p>
+`;
+
+accordionItems[4].querySelector(".accordion-body").innerHTML = `
+  <p><strong>Cổng kết nối:</strong> ${details.ports}</p>
+  <p><strong>Pin:</strong> ${details.battery}</p>
+  <p><strong>Hệ điều hành:</strong> ${details.os}</p>
+`;
 
     // Hiển thị popup
     popup.classList.remove("hidden");
@@ -369,7 +478,26 @@ accordionHeaders.forEach(header => {
     body.style.display = body.style.display === "block" ? "none" : "block";
   });
 });
+///// button go to top
+ // Lấy nút
+ var mybutton = document.getElementById("goTopBtn");
 
+// Khi người dùng cuộn xuống 20px từ đỉnh trang, hiển thị nút
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// Khi người dùng nhấp vào nút, cuộn lên đầu trang
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
     </script>
   </body>
 </html>
