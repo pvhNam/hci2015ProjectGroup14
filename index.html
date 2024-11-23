@@ -1,322 +1,286 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Login & Registration</title>
-	<link rel="stylesheet" href="styleindex.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="styleindex.css">
 </head>
+
 <body>
-	<div class="container">
-		<div id="LoginAndRegistrationForm">
-			<h1 id="formTitle">Login</h1>
-			<div id="formSwitchBtn">
-				<button onclick="ShowLoginForm()"  id="ShowLoginBtn" class="active">Login</button>
-				<button onclick="ShowRegistrationForm()"  id="ShowRegistrationBtn">Registration</button>
-			</div>
-			<div id="LoginFrom">
-				<form action="BuildPC.html">
-					<div class="center">
-						<input id="LoginEmail" class="input-text" type="text" placeholder="Email Address"> 
-						<input id="LoginPassword" class="mt-10 input-text" type="password" placeholder="Password">
-					</div>
-					
-					<div class="forgot-pass-remember-me mt-10">
-						<div class="forgot-pass">
-							<a id="ForgotPassword" href="JavaScript:void(0);" onclick="ShowForgotPasswordForm()" >Forgot Password?</a>
-						</div>
-						<div class="remember-me">
-							<input id="rememberMe" type="checkbox">
-							<label for="rememberMe">Remember Me</label>
-						</div>
-					</div>
+    <div class="container">
+        <div id="LoginAndRegistrationForm">
+            <h1 id="formTitle">Login</h1>
+            <div id="formSwitchBtn">
+                <button onclick="ShowLoginForm()" id="ShowLoginBtn" class="active">Login</button>
+                <button onclick="ShowRegistrationForm()" id="ShowRegistrationBtn">Registration</button>
+            </div>
 
-					<div class="center mt-20">
-						<input onclick="return ValidateLoginForm();"  class="Submit-Btn" type="submit" value="Login" id="LoginBtn">
-					</div>
-				</form>
-				<p class="center mt-20 dont-have-account">
-					Don't have an account? 
-					<a href="JavaScript:void(0);" onclick="ShowRegistrationForm()">Registration now</a>
-				</p>
-			</div>
-			<div id="RegistrationFrom">
-				<form action="#">
-					<div class="center">
-						<input id="RegiName" class="input-text" type="text" placeholder="Full Name">
-						<input id="RegiEmailAddres" class="input-text mt-10" type="email" placeholder="Email Address">
-						<input id="RegiPassword" class="mt-10 input-text" type="password" placeholder="Password">
-						<input id="RegiConfirmPassword" class="mt-10 input-text" type="password" placeholder="Confirm Password">
-					</div>
-					<div class="center mt-20">
-						<input onclick="return ValidateRegistrationForm();" class="Submit-Btn" type="submit" value="Registration" id="RegistrationitBtn">
-					</div>
-				</form>
-				<p class="center mt-20 already-have-account">
-					Already have an account? 
-					<a href="#" onclick="ShowLoginForm()">Login now</a>
-				</p>
-			</div>
-			<div id="ForgotPasswordForm">
-				<form action="">
-					<div class="center mt-20">
-						<input class="input-text " type="email" id="forgotPassEmail" placeholder="Email Address">
-					</div>
-					<div class="center mt-20">
-						<input onclick="return ValidateForgotPasswordForm();" class="Submit-Btn" type="submit" value="Reset Password" id="PasswordResetBtn" >
-					</div>
-				</form>
-				<p class="center mt-20 already-have-account">
-					Back to the 
-					<a href="JavaScript:void(0);" onclick="ShowLoginForm()">Login page</a> | <a href="JavaScript:void(0);" onclick="ShowRegistrationForm()">Registration page</a>
-				</p>
-			</div>
-		
+            <!-- Login Form -->
+            <div id="LoginFrom">
+                <form action="BuildPC.html">
+                    <div class="center">
+                        <input id="LoginEmail" class="input-text" type="text" placeholder="Email Address">
+                        <input id="LoginPassword" class="mt-10 input-text" type="password" placeholder="Password">
+                    </div>
 
-	<script>
-    function ShowLoginForm(){
-	
-	SetTitle("Login");
+                    <div class="forgot-pass-remember-me mt-10">
+                        <div class="forgot-pass">
+                            <a id="ForgotPassword" href="JavaScript:void(0);" onclick="ShowForgotPasswordForm()">Forgot Password?</a>
+                        </div>
+                        <div class="remember-me">
+                            <input id="rememberMe" type="checkbox">
+                            <label for="rememberMe">Remember Me</label>
+                        </div>
+                    </div>
 
-	ShowHideForm("LoginFrom","Show");
-	ShowHideForm("RegistrationFrom","Hide");
-	ShowHideForm("ForgotPasswordForm","Hide");
+                    <div class="center mt-20">
+                        <input onclick="return ValidateLoginForm();" class="Submit-Btn" type="submit" value="Login" id="LoginBtn">
+                    </div>
+                </form>
 
-	ActiveInactiveBtn("ShowLoginBtn","Active");
-	ActiveInactiveBtn("ShowRegistrationBtn","Inactive");
+                <p class="center mt-20 dont-have-account">
+                    Don't have an account?
+                    <a href="JavaScript:void(0);" onclick="ShowRegistrationForm()">Register now</a>
+                </p>
+            </div>
 
-	ShowHideFromSwitchBtn("Show");
-};
+            <!-- Registration Form -->
+            <div id="RegistrationFrom">
+                <form action="#">
+                    <div class="center">
+                        <input id="RegiName" class="input-text" type="text" placeholder="Full Name">
+                        <input id="RegiEmailAddres" class="input-text mt-10" type="email" placeholder="Email Address">
+                        <input id="RegiPassword" class="mt-10 input-text" type="password" placeholder="Password">
+                        <input id="RegiConfirmPassword" class="mt-10 input-text" type="password" placeholder="Confirm Password">
+                    </div>
+                    <div class="center mt-20">
+                        <input onclick="return ValidateRegistrationForm();" class="Submit-Btn" type="submit" value="Register" id="RegistrationitBtn">
+                    </div>
+                </form>
 
-function ShowRegistrationForm(){
-	debugger;
-	SetTitle("Registration");
+                <p class="center mt-20 already-have-account">
+                    Already have an account?
+                    <a href="JavaScript:void(0);" onclick="ShowLoginForm()">Login now</a>
+                </p>
+            </div>
 
-	ShowHideForm("RegistrationFrom","Show");
-	ShowHideForm("LoginFrom","Hide");
-	ShowHideForm("ForgotPasswordForm","Hide");
+            <!-- Forgot Password Form -->
+            <div id="ForgotPasswordForm">
+                <form action="">
+                    <div class="center mt-20">
+                        <input class="input-text" type="email" id="forgotPassEmail" placeholder="Email Address">
+                    </div>
+                    <div class="center mt-20">
+                        <input onclick="return ValidateForgotPasswordForm();" class="Submit-Btn" type="submit" value="Reset Password" id="PasswordResetBtn">
+                    </div>
+                </form>
+                <p class="center mt-20 already-have-account">
+                    Back to the
+                    <a href="JavaScript:void(0);" onclick="ShowLoginForm()">Login page</a> | <a href="JavaScript:void(0);" onclick="ShowRegistrationForm()">Registration page</a>
+                </p>
+            </div>
 
-	ActiveInactiveBtn("ShowLoginBtn","Inactive");
-	ActiveInactiveBtn("ShowRegistrationBtn","Active");
+        </div>
+    </div>
 
-	ShowHideFromSwitchBtn("Show");
-};
+    <script>
+        // Functions for form switching and validation
+        function ShowLoginForm() {
+            SetTitle("Login");
+            ShowHideForm("LoginFrom", "Show");
+            ShowHideForm("RegistrationFrom", "Hide");
+            ShowHideForm("ForgotPasswordForm", "Hide");
 
-function ShowForgotPasswordForm() {
-	
-	SetTitle("Forgot Password");
+            ActiveInactiveBtn("ShowLoginBtn", "Active");
+            ActiveInactiveBtn("ShowRegistrationBtn", "Inactive");
 
-	ShowHideForm("RegistrationFrom","Hide");
-	ShowHideForm("LoginFrom","Hide");
-	ShowHideForm("ForgotPasswordForm","Show");
+            ShowHideFromSwitchBtn("Show");
+        }
 
-	ActiveInactiveBtn("ShowLoginBtn","Inactive");
-	ActiveInactiveBtn("ShowRegistrationBtn","Inactive");
-	ShowHideFromSwitchBtn("Hide");
-}
+        function ShowRegistrationForm() {
+            SetTitle("Registration");
+            ShowHideForm("RegistrationFrom", "Show");
+            ShowHideForm("LoginFrom", "Hide");
+            ShowHideForm("ForgotPasswordForm", "Hide");
 
-function SetTitle(Title){
-	var formTitle = document.getElementById('formTitle');
-	formTitle.innerHTML = Title;
-}
+            ActiveInactiveBtn("ShowLoginBtn", "Inactive");
+            ActiveInactiveBtn("ShowRegistrationBtn", "Active");
 
-function ShowHideForm(FormID,ShowOrHide){
-	var Form = document.getElementById(FormID);
+            ShowHideFromSwitchBtn("Show");
+        }
 
-	if(ShowOrHide == "Show"){
-		Form.style.display = 'block';
-	}else{
-		Form.style.display = 'none';
-	}
-}
+        function ShowForgotPasswordForm() {
+            SetTitle("Forgot Password");
+            ShowHideForm("RegistrationFrom", "Hide");
+            ShowHideForm("LoginFrom", "Hide");
+            ShowHideForm("ForgotPasswordForm", "Show");
 
-function ActiveInactiveBtn(ButtonID,ActiveORInactive) {
-	debugger;
-	var Button = document.getElementById(ButtonID);
+            ActiveInactiveBtn("ShowLoginBtn", "Inactive");
+            ActiveInactiveBtn("ShowRegistrationBtn", "Inactive");
+            ShowHideFromSwitchBtn("Hide");
+        }
 
-	if(ActiveORInactive == "Active"){
-		Button.classList.add('active');
-	}else{
-		Button.classList.remove('active');
-	}
-}
+        function SetTitle(Title) {
+            var formTitle = document.getElementById('formTitle');
+            formTitle.innerHTML = Title;
+        }
 
-function ShowHideFromSwitchBtn(ShowOrHide) {
-	var formSwitchBtn = document.getElementById('formSwitchBtn');
-	if(ShowOrHide == 'Show'){
-		formSwitchBtn.style.display = '';
-	}else{
-		formSwitchBtn.style.display = 'none';
-	}
-}
+        function ShowHideForm(FormID, ShowOrHide) {
+            var Form = document.getElementById(FormID);
+            if (ShowOrHide == "Show") {
+                Form.style.display = 'block';
+            } else {
+                Form.style.display = 'none';
+            }
+        }
 
-// end
-  </script>
-	<script >
-    function ValidateLoginForm() {
-	RemoveAllErrorMessage();
+        function ActiveInactiveBtn(ButtonID, ActiveORInactive) {
+            var Button = document.getElementById(ButtonID);
+            if (ActiveORInactive == "Active") {
+                Button.classList.add('active');
+            } else {
+                Button.classList.remove('active');
+            }
+        }
 
-	var LoginEmail = document.getElementById('LoginEmail').value;
-	var LoginPassword = document.getElementById('LoginPassword').value;
-	var PasswordValidationMessage;
-	var	emailValidationMessage;
+        function ShowHideFromSwitchBtn(ShowOrHide) {
+            var formSwitchBtn = document.getElementById('formSwitchBtn');
+            if (ShowOrHide == 'Show') {
+                formSwitchBtn.style.display = '';
+            } else {
+                formSwitchBtn.style.display = 'none';
+            }
+        }
+    </script>
 
-	emailValidationMessage = isValidEmail(LoginEmail);
-	if(emailValidationMessage != "valid"){
-		ShowErrorMessage('LoginEmail',emailValidationMessage);
-		return false;
-	}
-	
-	PasswordValidationMessage = isValidPassword(LoginPassword);
-	if(PasswordValidationMessage != "valid"){
-		ShowErrorMessage('LoginPassword',PasswordValidationMessage);
-		return false;
-	}
-	
-	return true;
-}
+    <script>
+        // Form validation functions (Login, Registration, Forgot Password)
+        function ValidateLoginForm() {
+            RemoveAllErrorMessage();
 
-function ValidateRegistrationForm(){
+            var LoginEmail = document.getElementById('LoginEmail').value;
+            var LoginPassword = document.getElementById('LoginPassword').value;
+            var PasswordValidationMessage;
+            var emailValidationMessage;
 
-	RemoveAllErrorMessage();
+            emailValidationMessage = isValidEmail(LoginEmail);
+            if (emailValidationMessage != "valid") {
+                ShowErrorMessage('LoginEmail', emailValidationMessage);
+                return false;
+            }
 
-	var RegiName = document.getElementById('RegiName').value;
-	var RegiEmailAddres = document.getElementById('RegiEmailAddres').value;
-	var RegiPassword = document.getElementById('RegiPassword').value;
-	var RegiConfirmPassword = document.getElementById('RegiConfirmPassword').value;
+            PasswordValidationMessage = isValidPassword(LoginPassword);
+            if (PasswordValidationMessage != "valid") {
+                ShowErrorMessage('LoginPassword', PasswordValidationMessage);
+                return false;
+            }
 
-	var PasswordValidationMessage;
-	var ConfirmPasswordMessage;
-	var	emailValidationMessage;
+            return true;
+        }
 
-	if(RegiName == ""){
-		ShowErrorMessage('RegiName',"Please fill the filed.");
-		return false;
-	}else if(RegiName.length < 3 || RegiName.length > 20){
-		ShowErrorMessage('RegiName',"Name should be minimum 3 and maximum 20 characters long.");
-		return false;
-	}
+        function ValidateRegistrationForm() {
+            RemoveAllErrorMessage();
 
-	emailValidationMessage = isValidEmail(RegiEmailAddres);
+            var RegiName = document.getElementById('RegiName').value;
+            var RegiEmailAddres = document.getElementById('RegiEmailAddres').value;
+            var RegiPassword = document.getElementById('RegiPassword').value;
+            var RegiConfirmPassword = document.getElementById('RegiConfirmPassword').value;
 
-	if(emailValidationMessage != "valid"){
-		ShowErrorMessage('RegiEmailAddres',emailValidationMessage);
-		return false;
-	}
-	
-	PasswordValidationMessage = isValidPassword(RegiPassword);
-	if(PasswordValidationMessage != "valid"){
-		ShowErrorMessage('RegiPassword',PasswordValidationMessage);
-		return false;
-	}
-	
-	ConfirmPasswordMessage = isValidPassword(RegiConfirmPassword);
-	if(ConfirmPasswordMessage != "valid"){
-		ShowErrorMessage('RegiConfirmPassword',ConfirmPasswordMessage);
-		return false;
-	}
+            var PasswordValidationMessage;
+            var ConfirmPasswordMessage;
+            var emailValidationMessage;
 
-	if(RegiPassword != RegiConfirmPassword){
-		ShowErrorMessage('RegiConfirmPassword',"Password not match.");
-		return false;
-	}
+            if (RegiName == "") {
+                ShowErrorMessage('RegiName', "Please fill the field.");
+                return false;
+            } else if (RegiName.length < 3 || RegiName.length > 20) {
+                ShowErrorMessage('RegiName', "Name should be minimum 3 and maximum 20 characters long.");
+                return false;
+            }
 
-	return true;
-}
+            emailValidationMessage = isValidEmail(RegiEmailAddres);
+            if (emailValidationMessage != "valid") {
+                ShowErrorMessage('RegiEmailAddres', emailValidationMessage);
+                return false;
+            }
 
+            PasswordValidationMessage = isValidPassword(RegiPassword);
+            if (PasswordValidationMessage != "valid") {
+                ShowErrorMessage('RegiPassword', PasswordValidationMessage);
+                return false;
+            }
 
-function ValidateForgotPasswordForm(){
+            ConfirmPasswordMessage = isValidPassword(RegiConfirmPassword);
+            if (ConfirmPasswordMessage != "valid") {
+                ShowErrorMessage('RegiConfirmPassword', ConfirmPasswordMessage);
+                return false;
+            }
 
-	RemoveAllErrorMessage();
+            if (RegiPassword != RegiConfirmPassword) {
+                ShowErrorMessage('RegiConfirmPassword', "Passwords do not match.");
+                return false;
+            }
 
-	var forgotPassEmail = document.getElementById('forgotPassEmail').value;
-	
-	var	emailValidationMessage;
-	emailValidationMessage = isValidEmail(forgotPassEmail);
+            return true;
+        }
 
-	if(emailValidationMessage != "valid"){
-		ShowErrorMessage('forgotPassEmail',emailValidationMessage);
-		return false;
-	}
-}
+        function ValidateForgotPasswordForm() {
+            RemoveAllErrorMessage();
 
+            var forgotPassEmail = document.getElementById('forgotPassEmail').value;
+            var emailValidationMessage;
 
+            emailValidationMessage = isValidEmail(forgotPassEmail);
+            if (emailValidationMessage != "valid") {
+                ShowErrorMessage('forgotPassEmail', emailValidationMessage);
+                return false;
+            }
+        }
 
-function ValidateResetPasswordForm(){
+        function RemoveAllErrorMessage() {
+            var allErrorMessage = document.getElementsByClassName('error-message');
+            var allErrorFiled = document.getElementsByClassName('error-input');
+            for (var i = (allErrorMessage.length - 1); i >= 0; i--) {
+                allErrorMessage[i].remove();
+            }
+            for (var i = (allErrorFiled.length - 1); i >= 0; i--) {
+                allErrorFiled[i].classList.remove('error-input');
+            }
+        }
 
-	RemoveAllErrorMessage();
+        function ShowErrorMessage(id, message) {
+            var element = document.getElementById(id);
+            element.classList.add('error-input');
+            var parent = element.parentElement;
+            var errorMessage = document.createElement('div');
+            errorMessage.className = 'error-message';
+            errorMessage.innerHTML = message;
+            parent.appendChild(errorMessage);
+        }
 
-	var NewPassword = document.getElementById('NewPassword').value;
-	var ConfirmNewPassword = document.getElementById('ConfirmNewPassword').value;
+        function isValidEmail(email) {
+            var reg = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+            if (email == "") {
+                return "Email is required.";
+            } else if (email.length < 5) {
+                return "Email should be at least 5 characters long.";
+            } else if (!reg.test(email)) {
+                return "Please enter a valid email.";
+            }
+            return "valid";
+        }
 
-	var PasswordValidationMessage;
-	var ConfirmPasswordMessage;
-	
-	PasswordValidationMessage = isValidPassword(NewPassword);
-	if(PasswordValidationMessage != "valid"){
-		ShowErrorMessage('NewPassword',PasswordValidationMessage);
-		return false;
-	}
-	
-	ConfirmPasswordMessage = isValidPassword(ConfirmNewPassword);
-	if(ConfirmPasswordMessage != "valid"){
-		ShowErrorMessage('ConfirmNewPassword',ConfirmPasswordMessage);
-		return false;
-	}
-
-	if(NewPassword != ConfirmNewPassword){
-		ShowErrorMessage('ConfirmNewPassword',"Password not match.");
-		return false;
-	}
-
-	return true;
-}
-
-function RemoveAllErrorMessage(){
-
-	var allErrorMessage = document.getElementsByClassName('error-message');
-	var allErrorFiled = document.getElementsByClassName('error-input');
-	var i;
-
-	for(i=(allErrorMessage.length - 1); i>=0; i--){
-		allErrorMessage[i].remove();
-	}
-	
-	for(i=(allErrorFiled.length-1);i>=0;i--){
-		allErrorFiled[i].classList.remove('error-input');
-	}
-}
-
-function ShowErrorMessage(InputBoxID,Message){
-
-	var InputBox = document.getElementById(InputBoxID);
-	InputBox.classList.add('error-input');
-	InputBox.focus();
-
-	var ErrorMessageElement = document.createElement("p");
-	ErrorMessageElement.innerHTML = Message;
-	ErrorMessageElement.classList.add('error-message');
-	ErrorMessageElement.setAttribute("id",InputBoxID+'-error');
-
-	InputBox.parentNode.insertBefore(ErrorMessageElement, InputBox.nextSibling);
-	
-}
-
-function isValidEmail(email){
-
-	const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-	if(email == ""){
-		return "Please fill the field.";
-	}
-
-	if(emailRegex.test(email) == false){
-		return "This is not a valid email.";
-	}
-
-	return "valid";
-}
-
-  </script>
+        function isValidPassword(password) {
+            if (password == "") {
+                return "Password is required.";
+            } else if (password.length < 8) {
+                return "Password should be at least 8 characters long.";
+            }
+            return "valid";
+        }
+    </script>
 </body>
+
 </html>
