@@ -169,19 +169,21 @@ button {
 .main-content h2 {
   font-size: 24px;
   color: #d90429; /* Màu đỏ */
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .main-content p {
   font-size: 16px;
   color: #000000; /* Màu chữ phụ */
+  margin: 0; /* Loại bỏ khoảng cách trên và dưới */
 }
 
 /* Configuration Buttons */
 .config-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
+  margin-top: 10px; /* Giảm khoảng cách với phần trên */
   margin-bottom: 30px;
 }
 
@@ -291,6 +293,7 @@ button {
   font-size: 16px;
   font-weight: bold;
   color: #333;
+  padding-left: 10px; /* Thêm khoảng cách bên trong */
 }
 
 .component button {
@@ -323,17 +326,25 @@ button {
 
 /* Modal nền */
 /* Modal container */
-.modal {
-  display: none; /* Đảm bảo mặc định là không hiển thị */
+#productContainer {
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
+  background-color: rgba(0, 0, 0, 0.4); /* Nền mờ */
+  opacity: 0;
+  transform: translateY(-50px); /* Vị trí ban đầu khi modal chưa xuất hiện */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Thời gian và hiệu ứng chuyển động */
+}
+
+/* Khi hiển thị modal */
+#productContainer.show {
+  display: block; /* Hiển thị modal */
+  opacity: 1; /* Độ mờ đầy đủ */
+  transform: translateY(0); /* Đưa modal về vị trí ban đầu */
 }
 
 /* Nội dung modal */
@@ -346,6 +357,25 @@ button {
   max-width: 600px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-30px);
+  animation: modalSlideDown 0.4s ease;
+}
+
+/* Khi modal hiển thị */
+#productContainer.show .modal-content {
+  transform: scale(1); /* Phóng to về kích thước thực */
+}
+
+/* Keyframes cho hiệu ứng slide */
+@keyframes modalSlideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* thanh sort */
@@ -428,6 +458,18 @@ button {
 .search-bar1 button {
   padding: 10px 20px; /* Tăng kích thước nút */
   cursor: pointer;
+  border-radius: 5px;
+  background-color: #fff; /* Màu nền mặc định */
+  color: #414141; /* Màu chữ mặc định */
+  border: none; /* Loại bỏ viền */
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển đổi mượt mà */
+}
+
+.search-bar1 button:hover {
+  background-color: #96898b; /* Màu nền khi hover */
+  transform: scale(1.05); /* Phóng to nhẹ nút */
+  color: #f5f5f5; /* Thay đổi màu chữ (nếu muốn) */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Thêm đổ bóng để nổi bật */
 }
 
 .close-btn {
@@ -464,6 +506,7 @@ button {
   border: 1px solid #ccc;
   margin-right: 5px;
   cursor: pointer;
+  display: none; /* Ẩn phần pagination */
 }
 
 .pagination .active {
@@ -491,7 +534,13 @@ button {
 }
 
 .product img {
-  margin-bottom: 15px;
+  width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng của khung */
+  max-width: 150px; /* Giới hạn chiều rộng tối đa */
+  height: auto; /* Giữ tỷ lệ khung hình */
+  object-fit: contain; /* Đảm bảo toàn bộ hình ảnh được hiển thị */
+  margin-bottom: 10px; /* Giảm khoảng cách nếu cần */
+  border-radius: 5px; /* Bo góc nhẹ để hình ảnh trông mềm mại hơn */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Thêm hiệu ứng đổ bóng */
 }
 
 .product-details {
