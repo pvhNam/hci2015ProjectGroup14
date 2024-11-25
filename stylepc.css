@@ -326,7 +326,9 @@ button {
 
 /* Modal nền */
 /* Modal container */
-#productContainer {
+#productContainer,
+#productContainerMain,
+#productContainerRaw {
   display: none;
   position: fixed;
   z-index: 1;
@@ -341,7 +343,9 @@ button {
 }
 
 /* Khi hiển thị modal */
-#productContainer.show {
+#productContainer.show,
+#productContainerMain.show,
+#productContainerRaw.show {
   display: block; /* Hiển thị modal */
   opacity: 1; /* Độ mờ đầy đủ */
   transform: translateY(0); /* Đưa modal về vị trí ban đầu */
@@ -362,7 +366,9 @@ button {
 }
 
 /* Khi modal hiển thị */
-#productContainer.show .modal-content {
+#productContainer.show .modal-content,
+#productContainerMain.show .modal-content,
+#productContainerRaw.show .modal-content {
   transform: scale(1); /* Phóng to về kích thước thực */
 }
 
@@ -384,6 +390,7 @@ button {
   padding: 10px;
   display: flex;
   align-items: center;
+  border-radius: 5px;
 }
 
 .header1 input[type="text"] {
@@ -399,7 +406,7 @@ button {
   font-size: 20px;
 }
 
-.container1 {
+.modal {
   padding: 20px;
 }
 
