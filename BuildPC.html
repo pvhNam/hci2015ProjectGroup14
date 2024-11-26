@@ -60,15 +60,15 @@
       <div class="config-list">
         <div class="component">
           <span class="title">1. CPU - BỘ VI XỬ LÝ</span>
-          <button class="button" onclick="openModal()">+ Chọn CPU</button>
+          <button class="choose-pc-btn" onclick="showProduct('productContainer')">+ Chọn PC</button>
         </div>
         <div class="component">
           <span class="title">2. MAIN - BO MẠCH CHỦ</span>
-          <button class="button">+ Chọn Main</button>
+          <button class="choose-pc-btn" onclick="showProduct('productContainerMain')">+ Chọn Main</button>
         </div>
         <div class="component">
           <span class="title">3. RAM - BỘ NHỚ TRONG</span>
-          <button class="button">+ Chọn RAM</button>
+          <button class="choose-pc-btn" onclick="showProduct('productContainerRaw')">+ Chọn RAM</button>
         </div>
         <div class="component">
           <span class="title">4. Ổ CỨNG SSD 1</span>
@@ -114,62 +114,286 @@
     </div> 
    
     <!-- Modal -->
-    <div id="productModal" class="modal">
-      <div class="modal-content">
-        <button class="close-btn" onclick="closeModal()">×</button>
-        <div class="header">
-          <input placeholder="Bạn cần tìm linh kiện gì?" type="text" />
-          <i class="fas fa-search search-icon"> </i>
-        </div>
-        <div class="container">
-          <div class="sort">
-            <label for="sort"> Sắp xếp: </label>
-            <select id="sort">
-              <option value="default">Tùy chọn</option>
-            </select>
-          </div>
-          <div class="product">
-            <img
-              alt="Image of CPU Intel Core Ultra 5 245K"
-              height="150"
-              src="https://storage.googleapis.com/a1aa/image/mIIiohfJcVzFekymJANNVkvsGWsrzjmTlKG5rPpKf9QDbQmnA.jpg"
-              width="100"
-            />
-            <div class="product-details">
-              <h3>CPU Intel Core Ultra 5 245K (14 Nhân 14 Luồng, Arrow Lake-S)</h3>
-              <p>Bảo hành: 36 Tháng</p>
-              <p>Kho hàng: Còn hàng | Mã SP: CPU000075B</p>
-              <p class="price">6.990.000đ</p>
-              <p class="old-price">8.990.000đ</p>
-              <span class="discount"> -22% </span>
+    <!-- Khung lớn chứa tất cả -->
+<div id="productContainer" class="modal" style="display: none;">
+    <div class="modal-content">
+        <!-- Header chứa thanh tìm kiếm và nút đóng -->
+        <div class="header1">
+            <div class="search-bar1">
+                <input placeholder="Tìm kiếm " type="text"/>
+                <button>Tìm kiếm</button>
             </div>
-            <button class="add-to-config">THÊM VÀO CẤU HÌNH &gt;</button>
-          </div>
-          <!-- Thêm các sản phẩm khác tương tự -->
-          <div class="pagination">
-            <button class="active">1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>next</button>
-          </div>
+            <button class="close-btn" onclick="closeProduct('productContainer')">X</button> <!-- Nút đóng -->
         </div>
-      </div>
-    </div>
-  <script>
-      // Open modal
-      function openModal() {
-  document.getElementById("productModal").style.display = "block";
-}
 
-// Đóng modal
-function closeModal() {
-  document.getElementById("productModal").style.display = "none";
-}
-    </script>
+        <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+        <div class="main-content">
+            <!-- Phần sắp xếp và phân trang -->
+            <div class="sort-pagination">
+                <div class="sort">
+                    <label for="sort">Sắp xếp :</label>
+                    <select id="sort">
+                        <option value="default">Tùy chọn</option>
+                        <option value="low">Giá rẻ</option>
+                        <option value="high">Chất lượng cao</option>
+                    </select>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="active">1</button>
+                </div>
+            </div>
+
+            <!-- Khung chứa các sản phẩm -->
+            <div class="product-container">
+                <!-- Product 1 -->
+                <div class="product">
+                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/tJp7mb1Z/4587-intel-bx8071514900k-core-i9-14900k-24-core-lga-1697445940-1781469.jpg" width="100"/>
+                    <div class="product-details">
+                        <h3>CPU Intel Core I9 14900K (24 Nhân 32 Luồng, Cache 36MB, 150W)</h3>
+                        <p>Bảo hành: 36 Tháng</p>
+                        <p>Kho hàng: Còn hàng</p>
+                        <p>Mã SP: CPUI9149KB</p>
+                        <p class="price">9.590.000đ</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product">
+                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/wx2BTSy2/4585-intel-bx8071514600k-core-i5-14600k-14-core-lga-1697445940-1781465.jpg" width="100"/>
+                    <div class="product-details">
+                        <h3>CPU Intel Core i5 14600K (14 nhân 20 luồng, Cache 24MB, 125W)</h3>
+                        <p>Bảo hành: 36 Tháng</p>
+                        <p>Kho hàng: Còn hàng</p>
+                        <p>Mã SP: CPU0149KB</p>
+                        <p class="price">4.990.000đ</p>                       
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product">
+                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/vmtJtddS/4051-intel-bx8071514700k-core-i7-14700k-20-core-lga-1697445940-1781467.jpg" width="100"/>
+                  <div class="product-details">
+                      <h3>CPU Intel Core I7 14700K (20 nhân 28 luồng, 33MB Cache)</h3>
+                      <p>Bảo hành: 36 Tháng</p>
+                      <p>Kho hàng: Còn hàng</p>
+                      <p>Mã SP: CPUI7149KB</p>
+                      <p class="price">7.990.000đ</p>
+                  </div>
+              </div>
+              <!-- Product 4 -->
+              <div class="product">
+                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/vmtJtddS/4051-intel-bx8071514700k-core-i7-14700k-20-core-lga-1697445940-1781467.jpg" width="100"/>
+                <div class="product-details">
+                    <h3>CPU Intel Core i7 14700KF (20 nhân 28 luồng, 33MB Cache)</h3>
+                    <p>Bảo hành: 36 Tháng</p>
+                    <p>Kho hàng: Còn hàng</p>
+                    <p>Mã SP: CPUI7149KFB</p>
+                    <p class="price">7.590.000đ</p>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="product">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/wx2BTSy2/4585-intel-bx8071514600k-core-i5-14600k-14-core-lga-1697445940-1781465.jpg" width="100"/>
+              <div class="product-details">
+                  <h3>CCPU Intel Core i5 14500 (14 nhân 20 luồng, 24MB Cache, 65W)</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: CPUI5145B</p>
+                  <p class="price">4.290.000đ</p>
+              </div>
+          </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+            <!-- tạo cho main -->
+            <div id="productContainerMain" class="modal" style="display: none;">
+              <div class="modal-content">
+                  <!-- Header chứa thanh tìm kiếm và nút đóng -->
+                  <div class="header1">
+                      <div class="search-bar1">
+                          <input placeholder="Tìm kiếm " type="text"/>
+                          <button>Tìm kiếm</button>
+                      </div>
+                      <button class="close-btn" onclick="closeProduct('productContainerMain')">X</button> <!-- Nút đóng -->
+                  </div>
+          
+                  <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+                  <div class="main-content">
+                      <!-- Phần sắp xếp và phân trang -->
+                      <div class="sort-pagination">
+                          <div class="sort">
+                              <label for="sort">Sắp xếp :</label>
+                              <select id="sort">
+                                  <option value="default">Tùy chọn</option>
+                                  <option value="low">Giá rẻ</option>
+                                  <option value="high">Chất lượng cao</option>
+                              </select>
+                          </div>
+          
+                          <!-- Pagination -->
+                          <div class="pagination">
+                              <button class="active">1</button>
+                          </div>
+                      </div>
+          
+                      <!-- Khung chứa các sản phẩm -->
+                      <div class="product-container">
+                          <!-- Product 1 -->
+                          <div class="product">
+                              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/J0hw9sMk/3681-gigabyte-z790-ud-ax-ddr5.jpg" width="100"/>
+                              <div class="product-details">
+                                  <h3>Bo mạch chủ Mainboard Gigabyte Z790 UD AX DDR5</h3>
+                                  <p>Bảo hành: 36 Tháng</p>
+                                  <p>Kho hàng: Còn hàng</p>
+                                  <p>Mã SP: CPUI9149KB</p>
+                                  <p class="price">6.390.000đ</p>
+                              </div>
+                          </div>
+          
+                          <!-- Product 2 -->
+                          <div class="product">
+                              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/zB06SqKX/3683-gigabyte-z790-aorus-elite-ddr5.jpg" width="100"/>
+                              <div class="product-details">
+                                  <h3>Bo mạch chủ Mainboard GIGABYTE Z790 AORUS ELITE DDR5</h3>
+                                  <p>Bảo hành: 36 Tháng</p>
+                                  <p>Kho hàng: Còn hàng</p>
+                                  <p>Mã SP: CPU0149KB</p>
+                                  <p class="price">7.590.000đ</p>                       
+                              </div>
+                          </div>
+                          <!-- Product 3 -->
+                          <div class="product">
+                            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/8Pq3bKJW/3687-gigabyte-z790-gaming-x-ax.jpg" width="100"/>
+                            <div class="product-details">
+                                <h3>Bo mạch chủ Mainboard Gigabyte Z790 GAMING X AX DDR5</h3>
+                                <p>Bảo hành: 36 Tháng</p>
+                                <p>Kho hàng: Còn hàng</p>
+                                <p>Mã SP: CPUI7149KB</p>
+                                <p class="price">7.450.000đ</p>
+                            </div>
+                        </div>
+                        <!-- Product 4 -->
+                        <div class="product">
+                          <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/NFKJ6mQp/5122-rog-maximus-z790-hero-btf-1.png" width="100"/>
+                          <div class="product-details">
+                              <h3>Bo Mạch Chủ Mainboard ASUS ROG Maximus Z790 HERO BTF</h3>
+                              <p>Bảo hành: 36 Tháng</p>
+                              <p>Kho hàng: Còn hàng</p>
+                              <p>Mã SP: CPUI7149KFB</p>
+                              <p class="price">16.890.000đ</p>
+                          </div>
+                      </div>
+                      <!-- Product 5 -->
+                      <div class="product">
+                        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/pLbGjm4J/250-5246-z790-aorus-xtreme-x-ice-01.png" width="100"/>
+                        <div class="product-details">
+                            <h3>Bo Mạch Chủ Mainboard GIGABYTE Z790 AORUS XTREME </h3>
+                            <p>Bảo hành: 36 Tháng</p>
+                            <p>Kho hàng: Còn hàng</p>
+                            <p>Mã SP: CPUI5145B</p>
+                            <p class="price">46.650.000đ</p>
+                        </div>
+                    </div>
+                      </div>
+                  </div>
+              </div>
+          </div>         
+            <!-- tạo cho RAM -->
+            <div id="productContainerRaw" class="modal" style="display: none;">
+              <div class="modal-content">
+                  <!-- Header chứa thanh tìm kiếm và nút đóng -->
+                  <div class="header1">
+                      <div class="search-bar1">
+                          <input placeholder="Tìm kiếm " type="text"/>
+                          <button>Tìm kiếm</button>
+                      </div>
+                      <button class="close-btn" onclick="closeProduct('productContainerRaw')">X</button> <!-- Nút đóng -->
+                  </div>
+          
+                  <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+                  <div class="main-content">
+                      <!-- Phần sắp xếp và phân trang -->
+                      <div class="sort-pagination">
+                          <div class="sort">
+                              <label for="sort">Sắp xếp :</label>
+                              <select id="sort">
+                                  <option value="default">Tùy chọn</option>
+                                  <option value="low">Giá rẻ</option>
+                                  <option value="high">Chất lượng cao</option>
+                              </select>
+                          </div>
+          
+                          <!-- Pagination -->
+                          <div class="pagination">
+                              <button class="active">1</button>
+                          </div>
+                      </div>
+          
+                      <!-- Khung chứa các sản phẩm -->
+                      <div class="product-container">
+                          <!-- Product 1 -->
+                          <div class="product">
+                              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/kXYyqBFy/4519-trident-z5-rgb-black-1.jpg" width="100"/>
+                              <div class="product-details">
+                                  <h3>Bộ nhớ Ram PC G.Skill Trident Z5 RGB Black </h3>
+                                  <p>Bảo hành: 36 Tháng</p>
+                                  <p>Kho hàng: Còn hàng</p>
+                                  <p>Mã SP: CPUI9149KB</p>
+                                  <p class="price">3.250.000đ</p>
+                              </div>
+                          </div>
+          
+                          <!-- Product 2 -->
+                          <div class="product">
+                              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/8zqBf9YJ/250-4164-trident-z5-rgb-white-1.jpg" width="100"/>
+                              <div class="product-details">
+                                  <h3>Bộ nhớ Ram PC G.Skill Trident Z5 RGB DDR5</h3>
+                                  <p>Bảo hành: 36 Tháng</p>
+                                  <p>Kho hàng: Còn hàng</p>
+                                  <p>Mã SP: CPU0149KB</p>
+                                  <p class="price">3.250.000đ</p>                       
+                              </div>
+                          </div>
+                          <!-- Product 3 -->
+                          <div class="product">
+                            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/3NJgHTk6/250-5486-trident-z5-royal-silver-1.jpg" width="100"/>
+                            <div class="product-details">
+                              <h3>Bộ nhớ Ram PC G.Skill Trident Z5 Royal</h3>
+                              <p>Bảo hành: 36 Tháng</p>
+                              <p>Kho hàng: Còn hàng</p>
+                              <p>Mã SP: CPUI5145B</p>
+                              <p class="price">3.890.000đ</p>
+                            </div>
+                        </div>
+                        <!-- Product 4 -->
+                        <div class="product">
+                          <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/50pCgRsm/4365-trident-z5-neo-1.jpg" width="100"/>
+                          <div class="product-details">
+                              <h3>Bộ nhớ Ram PC G.Skill Trident Z5 Neo</h3>
+                              <p>Bảo hành: 36 Tháng</p>
+                              <p>Kho hàng: Còn hàng</p>
+                              <p>Mã SP: CPUI7149KFB</p>
+                              <p class="price">5.990.000đ</p>
+                          </div>
+                      </div>
+                      <!-- Product 5 -->
+                      <div class="product">
+                        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://i.postimg.cc/8zqBf9YJ/250-4164-trident-z5-rgb-white-1.jpg" width="100"/>
+                        <div class="product-details">
+                            <h3>Bộ nhớ Ram PC G.Skill Trident Z5</h3>
+                            <p>Bảo hành: 36 Tháng</p>
+                            <p>Kho hàng: Còn hàng</p>
+                            <p>Mã SP: CPUI5145B</p>
+                            <p class="price">6.290.000đ</p>
+                        </div>
+                    </div>
+                      </div>
+                  </div>
+              </div>
+          </div>         
 
 <button id="goTopBtn" onclick="topFunction()">
   <div class="arrow-up"></div>
@@ -195,6 +419,24 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+// làm model
+function showProduct(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.classList.add("show"); // Thêm lớp show để kích hoạt hiệu ứng
+  setTimeout(() => {
+    modal.style.display = "block"; // Đảm bảo modal hiển thị
+  }, 10); // Cho CSS kích hoạt hiệu ứng đầu tiên
+}
+
+function closeProduct(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.classList.remove("show"); // Xóa lớp show để bắt đầu hiệu ứng ẩn
+  setTimeout(() => {
+    modal.style.display = "none"; // Ẩn hoàn toàn sau khi hiệu ứng kết thúc
+  }, 300); // Thời gian khớp với transition CSS
+}
+
         </script>
   </body>
   </script>
