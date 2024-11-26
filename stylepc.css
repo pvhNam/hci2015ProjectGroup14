@@ -328,7 +328,16 @@ button {
 /* Modal container */
 #productContainer,
 #productContainerMain,
-#productContainerRaw {
+#productContainerRaw,
+#productContainerSSD1,
+#productContainerSSD2,
+#productContainerHDD,
+#productContainerVGA,
+#productContainerPSU,
+#productContainerCASE,
+#productContainerAIR,
+#productContainerAOI,
+#productContainerCUSTOM {
   display: none;
   position: fixed;
   z-index: 1;
@@ -345,7 +354,16 @@ button {
 /* Khi hiển thị modal */
 #productContainer.show,
 #productContainerMain.show,
-#productContainerRaw.show {
+#productContainerRaw.show,
+#productContainerSSD1.show,
+#productContainerSSD2.show,
+#productContainerHDD.show,
+#productContainerVGA.show,
+#productContainerPSU.show,
+#productContainerCASE.show,
+#productContainerAIR.show,
+#productContainerAOI.show,
+#productContainerCUSTOM.show {
   display: block; /* Hiển thị modal */
   opacity: 1; /* Độ mờ đầy đủ */
   transform: translateY(0); /* Đưa modal về vị trí ban đầu */
@@ -368,7 +386,16 @@ button {
 /* Khi modal hiển thị */
 #productContainer.show .modal-content,
 #productContainerMain.show .modal-content,
-#productContainerRaw.show .modal-content {
+#productContainerRaw.show .modal-content,
+#productContainerSSD1.show .modal-content,
+#productContainerSSD2.show .modal-content,
+#productContainerHDD.show .modal-content,
+#productContainerVGA.show .modal-content,
+#productContainerPSU.show .modal-content,
+#productContainerCASE.show .modal-content,
+#productContainerAIR.show .modal-content,
+#productContainerAOI.show .modal-content,
+#productContainerCUSTOM.show .modal-content {
   transform: scale(1); /* Phóng to về kích thước thực */
 }
 
