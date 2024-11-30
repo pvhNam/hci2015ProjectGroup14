@@ -381,6 +381,8 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-30px);
   animation: modalSlideDown 0.4s ease;
+  overflow-y: auto; /* Cho phép cuộn trong modal */
+  max-height: 80vh; /* Giới hạn chiều cao modal */
 }
 
 /* Khi modal hiển thị */
@@ -413,6 +415,10 @@ button {
 
 /* thanh sort */
 .header1 {
+  position: sticky; /* Giữ cố định khi cuộn trong modal */
+  top: 0; /* Đặt ở đầu modal-content */
+  z-index: 10; /* Hiển thị trên các phần tử khác */
+  border-bottom: 2px solid #ccc;
   background-color: #d90429;
   padding: 10px;
   display: flex;
@@ -434,7 +440,14 @@ button {
 }
 
 .modal {
-  padding: 20px;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.modal.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .product-container {
@@ -455,6 +468,7 @@ button {
   background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ để tạo hiệu ứng modal */
   z-index: 9999;
   overflow-y: auto;
+  overflow: hidden; /* Vô hiệu hóa cuộn toàn modal */
 }
 
 .modal-content {
@@ -462,6 +476,8 @@ button {
   margin: 5% auto;
   width: 90%;
   max-width: 1200px; /* Giới hạn chiều rộng tối đa của modal */
+  height: 80%; /* Đặt chiều cao cố định để cuộn nội dung bên trong */
+  overflow-y: auto; /* Chỉ cuộn nội dung bên trong modal */
   padding: 20px;
   border-radius: 10px;
   position: relative;
