@@ -276,6 +276,7 @@ button {
   text-decoration: none;
   display: block;
   transition: all 0.3s ease;
+  text-transform: none;
 }
 
 .dropdown-content a:hover {
@@ -296,7 +297,7 @@ button {
   color: #d90429;
   font-weight: bold;
   padding: 10px 15px;
-  text-transform: uppercase;
+  text-transform: none;
   font-size: 14px;
   transition: all 0.3s ease-in;
   border-radius: 5px;
