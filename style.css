@@ -23,7 +23,7 @@ button {
   display: flex;
   justify-content: space-between; /* Căn đều ba phần: logo, thanh tìm kiếm, và biểu tượng */
   align-items: center;
-  background-color: #d90429;
+  background-color: #512da8;
   color: white;
   padding: 10px 20px;
   top: 0; /* Đặt thanh header ở trên cùng */
