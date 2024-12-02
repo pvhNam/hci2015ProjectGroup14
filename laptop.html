@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="stylelaptop.css">
+    <link rel="stylesheet" href="stylelaptop.css" />
   </head>
   <body>
     <!-- Header Section -->
@@ -28,9 +28,7 @@
           alt="Avatar"
           class="avatar"
         />
-        <button>
-          <i class="fa fa-shopping-cart"></i>
-        </button>
+        <i class="fa fa-shopping-cart" style="font-size: 36px"></i>
       </div>
     </div>
 
@@ -68,7 +66,7 @@
 
         <!-- Other Filters -->
         <div class="filter-group">
-          <h4>Lọc giá </h4>
+          <h4>Lọc giá</h4>
           <label><input type="checkbox" /> 5.000.000₫ - 10.000.000₫</label>
           <label><input type="checkbox" /> 10.000.000₫ - 15.000.000₫</label>
           <label><input type="checkbox" /> 15.000.000₫ - 20.000.000₫</label>
@@ -80,19 +78,23 @@
       <!-- Product Grid -->
       <div class="product-grid">
         <a href="#" class="product-card">
-          <img src="https://cdn.tgdd.vn/Products/Images/44/311178/asus-vivobook-go-15-e1504fa-r5-nj776w-thumb-600x600.jpg" alt="Laptop" />
+          <img
+            src="https://cdn.tgdd.vn/Products/Images/44/311178/asus-vivobook-go-15-e1504fa-r5-nj776w-thumb-600x600.jpg"
+            alt="Laptop"
+          />
           <div class="product-info">
             <h4>Asus Vivobook Go 15</h4>
             <p>RAM 16GB | SSD 512GB</p>
             <div class="stars">★★★★★</div>
-            <div class="price">
-              12.390.000đ 
-            </div>
+            <div class="price">12.390.000đ</div>
           </div>
         </a>
 
         <a href="#" class="product-card">
-          <img src="https://cdn.tgdd.vn/Products/Images/44/325242/dell-inspiron-15-3520-i5-n5i5052w1-thumb-600x600.jpg" alt="Laptop" />
+          <img
+            src="https://cdn.tgdd.vn/Products/Images/44/325242/dell-inspiron-15-3520-i5-n5i5052w1-thumb-600x600.jpg"
+            alt="Laptop"
+          />
           <div class="product-info">
             <h4>Dell Inspiron 15</h4>
             <p>RAM 16GB | SSD 512GB</p>
@@ -101,7 +103,10 @@
           </div>
         </a>
         <a href="#" class="product-card">
-          <img src="https://cdn.tgdd.vn/Products/Images/44/313333/lenovo-ideapad-slim-3-15iah8-i5-83er00evn-thumb-600x600.jpg" alt="Laptop" />
+          <img
+            src="https://cdn.tgdd.vn/Products/Images/44/313333/lenovo-ideapad-slim-3-15iah8-i5-83er00evn-thumb-600x600.jpg"
+            alt="Laptop"
+          />
           <div class="product-info">
             <h4>Lenovo Ideapad Slim 3</h4>
             <p>RAM 16GB | SSD 512GB</p>
@@ -110,7 +115,10 @@
           </div>
         </a>
         <a href="#" class="product-card">
-          <img src="https://cdn.tgdd.vn/Products/Images/44/322959/msi-prestige-13-ai-evo-a1mg-ultra-7-062vn-070424-040052-600x600.jpg" alt="Laptop" />
+          <img
+            src="https://cdn.tgdd.vn/Products/Images/44/322959/msi-prestige-13-ai-evo-a1mg-ultra-7-062vn-070424-040052-600x600.jpg"
+            alt="Laptop"
+          />
           <div class="product-info">
             <h4>MSI Prestige 13 AI</h4>
             <p>RAM 32GB | SSD 1TB</p>
@@ -119,7 +127,10 @@
           </div>
         </a>
         <a href="#" class="product-card">
-          <img src="https://cdn.tgdd.vn/Products/Images/44/328237/asus-vivobook-16x-k3605zf-i5-rp745w-thumb-600x600.jpg" alt="Laptop" />
+          <img
+            src="https://cdn.tgdd.vn/Products/Images/44/328237/asus-vivobook-16x-k3605zf-i5-rp745w-thumb-600x600.jpg"
+            alt="Laptop"
+          />
           <div class="product-info">
             <h4>Asus Gaming Vivobook</h4>
             <p>RAM 16GB | SSD 512GB</p>
@@ -128,7 +139,10 @@
           </div>
         </a>
         <a href="#" class="product-card">
-          <img src="https://cdn.tgdd.vn/Products/Images/44/322072/lenovo-loq-gaming-15iax9-i5-83gs000jvn-thumb-new-600x600.jpg" alt="Laptop" />
+          <img
+            src="https://cdn.tgdd.vn/Products/Images/44/322072/lenovo-loq-gaming-15iax9-i5-83gs000jvn-thumb-new-600x600.jpg"
+            alt="Laptop"
+          />
           <div class="product-info">
             <h4>Lenovo Gaming LOQ</h4>
             <p>RAM 16GB | SSD 512GB</p>
@@ -231,7 +245,9 @@
                 </div>
               </div>
               <div class="accordion-item">
-                <button class="accordion-header">Cổng kết nối & Tính năng mở rộng</button>
+                <button class="accordion-header">
+                  Cổng kết nối & Tính năng mở rộng
+                </button>
                 <div class="accordion-body">
                   <p><strong>Cổng kết nối:</strong> USB-C, USB 3.0, HDMI</p>
                   <p><strong>Pin:</strong> 4-cell Li-ion</p>
@@ -245,161 +261,175 @@
       <button id="goTopBtn" onclick="topFunction()">
         <div class="arrow-up"></div>
       </button>
-      
     </div>
     <script>
-    // Tham chiếu đến body và popup
-const body = document.body; // Xác định body chính xác
-const productCards = document.querySelectorAll(".product-card");
-const popup = document.getElementById("popup");
-const closeBtn = document.querySelector(".close-btn");
-const accordionHeaders = document.querySelectorAll(".accordion-header");
+      // Tham chiếu đến body và popup
+      const body = document.body; // Xác định body chính xác
+      const productCards = document.querySelectorAll(".product-card");
+      const popup = document.getElementById("popup");
+      const closeBtn = document.querySelector(".close-btn");
+      const accordionHeaders = document.querySelectorAll(".accordion-header");
 
-// Mock data cho mỗi sản phẩm
-const productDetails = [
-  {
-    name: "Asus Vivobook Go 15",
-    image: "https://cdn.tgdd.vn/Products/Images/44/311178/asus-vivobook-go-15-e1504fa-r5-nj776w-thumb-600x600.jpg",
-    cpu: "AMD Ryzen 5 - 7430U",
-    cores: 6,
-    threads: 12,
-    baseClock: "2.30 GHz",
-    boostClock: "4.3 GHz",
-    cache: "16 MB",
-    ram: "16GB DDR4",
-    ssd: "512GB",
-    screen: "15.6 inch Full HD",
-    graphics: "NVIDIA GeForce GTX 1650",
-    audio: "Dolby Audio",
-    ports: "USB-C, USB 3.0, HDMI",
-    battery: "4-cell Li-ion",
-    os: "Windows 11"
-  },
-  {
-    name: "Dell Inspiron 15",
-    image: "https://cdn.tgdd.vn/Products/Images/44/325242/dell-inspiron-15-3520-i5-n5i5052w1-thumb-600x600.jpg",
-    cpu: "Intel Core i5-1135G7",
-    cores: 4,
-    threads: 8,
-    baseClock: "2.4 GHz",
-    boostClock: "4.2 GHz",
-    cache: "8 MB",
-    ram: "16GB DDR4",
-    ssd: "512GB SSD M.2 PCIe NVMe",
-    screen: "15.6 inch Full HD",
-    graphics: "Intel Iris Xe",
-    audio: "Waves MaxxAudio Pro",
-    ports: "USB-C, USB 3.0, HDMI, RJ-45",
-    battery: "3-cell 42 Whr Li-ion",
-    os: "Windows 11 Home"
-  },
-  {
-    name: "Lenovo Ideapad Slim 3",
-    image: "https://cdn.tgdd.vn/Products/Images/44/313333/lenovo-ideapad-slim-3-15iah8-i5-83er00evn-thumb-600x600.jpg",
-    cpu: "Intel Core i5-1235U",
-    cores: 10,
-    threads: 12,
-    baseClock: "1.3 GHz",
-    boostClock: "4.4 GHz",
-    cache: "12 MB",
-    ram: "8GB DDR4 (3200 MHz)",
-    ssd: "512GB SSD M.2 PCIe",
-    screen: "15.6 inch Full HD (1920 x 1080), IPS, 300 nits",
-    graphics: "Intel Iris Xe Graphics",
-    audio: "Stereo speakers, Dolby Audio",
-    ports: "1 x USB 2.0, 1 x USB 3.2 Gen 1, 1 x USB-C 3.2 Gen 1, 1 x HDMI 1.4b, 1 x Audio combo jack",
-    battery: "3-cell Li-ion, 45 Wh",
-    os: "Windows 11 Home SL"
-  },
-  {
-  name: "MSI Prestige 13 AI Evo A1MG-062VN",
-  image: "https://cdn.tgdd.vn/Products/Images/44/322959/msi-prestige-13-ai-evo-a1mg-ultra-7-062vn-070424-040052-600x600.jpg",
-  cpu: "Intel Core Ultra 7-155H (AI Boost)",
-  cores: 10,
-  threads: 16,
-  baseClock: "3.0 GHz",
-  boostClock: "5.1 GHz",
-  cache: "18 MB",
-  ram: "32GB LPDDR5 (6400 MHz)",
-  ssd: "1TB NVMe PCIe Gen4",
-  screen: "13.3 inch 2.8K (2880 x 1800), OLED, 100% DCI-P3",
-  graphics: "Intel Arc Graphics",
-  audio: "High-definition audio",
-  ports: "2 x Thunderbolt 4, 1 x Audio combo jack",
-  battery: "75Wh, 4-cell Li-Polymer",
-  os: "Windows 11 Home",
-  weight: "0.99 kg"
-},
-{
-  name: "Asus Vivobook K3605ZF i5 RP745W",
-  image: "https://cdn.tgdd.vn/Products/Images/44/328237/asus-vivobook-16x-k3605zf-i5-rp745w-thumb-600x600.jpg",
-  cpu: "Intel Core i5-1340P",
-  cores: 12,
-  threads: 16,
-  baseClock: "1.80 GHz",
-  boostClock: "4.60 GHz",
-  cache: "12 MB",
-  ram: "8GB DDR4 (3200 MHz)",
-  ssd: "512GB NVMe PCIe Gen3",
-  screen: "15.6 inch Full HD (1920 x 1080), IPS, 250 nits",
-  graphics: "Intel Iris Xe Graphics",
-  audio: "Harman Kardon audio, DTS Audio Processing",
-  ports: "1 x USB 3.2 Type-C, 2 x USB 3.2 Type-A, 1 x HDMI 1.4, 1 x Audio combo jack, 1 x MicroSD card reader",
-  battery: "42Wh, 3-cell Li-ion",
-  os: "Windows 11 Home",
-  weight: "1.80 kg"
-},
-  {
-    name: "Lenovo LOQ Gaming ",
-    image: "https://cdn.tgdd.vn/Products/Images/44/322072/lenovo-loq-gaming-15iax9-i5-83gs000jvn-thumb-new-600x600.jpg",
-    cpu: "Intel Core i5-12450H",
-    cores: 8,
-    threads: 12,
-    baseClock: "3.1 GHz",
-    boostClock: "4.4 GHz",
-    cache: "12 MB",
-    ram: "8GB DDR4 (3200 MHz), hỗ trợ nâng cấp tối đa 16GB",
-    ssd: "512GB SSD M.2 PCIe",
-    screen: "15.6 inch Full HD (1920 x 1080), IPS, 144Hz",
-    graphics: "NVIDIA GeForce RTX 3050 6GB GDDR6",
-    audio: "Stereo speakers, Dolby Audio",
-    ports: "1 x USB 3.2 Gen 1, 1 x USB-C 3.2 Gen 2, 1 x HDMI 2.0, 1 x Ethernet, 1 x Audio combo jack",
-    battery: "3-cell Li-ion, 60Wh",
-    os: "Windows 11 Home",
-    weight: "2.38 kg",
-    dimensions: "359.86 x 258.7 x 21.9-23.9 mm",
-    wifi: "Wi-Fi 6, Bluetooth 5.2",
-    design: "Vỏ nhựa PC-ABS, màu xám Luna"
-}
+      // Mock data cho mỗi sản phẩm
+      const productDetails = [
+        {
+          name: "Asus Vivobook Go 15",
+          image:
+            "https://cdn.tgdd.vn/Products/Images/44/311178/asus-vivobook-go-15-e1504fa-r5-nj776w-thumb-600x600.jpg",
+          cpu: "AMD Ryzen 5 - 7430U",
+          cores: 6,
+          threads: 12,
+          baseClock: "2.30 GHz",
+          boostClock: "4.3 GHz",
+          cache: "16 MB",
+          ram: "16GB DDR4",
+          ssd: "512GB",
+          screen: "15.6 inch Full HD",
+          graphics: "NVIDIA GeForce GTX 1650",
+          audio: "Dolby Audio",
+          ports: "USB-C, USB 3.0, HDMI",
+          battery: "4-cell Li-ion",
+          os: "Windows 11",
+        },
+        {
+          name: "Dell Inspiron 15",
+          image:
+            "https://cdn.tgdd.vn/Products/Images/44/325242/dell-inspiron-15-3520-i5-n5i5052w1-thumb-600x600.jpg",
+          cpu: "Intel Core i5-1135G7",
+          cores: 4,
+          threads: 8,
+          baseClock: "2.4 GHz",
+          boostClock: "4.2 GHz",
+          cache: "8 MB",
+          ram: "16GB DDR4",
+          ssd: "512GB SSD M.2 PCIe NVMe",
+          screen: "15.6 inch Full HD",
+          graphics: "Intel Iris Xe",
+          audio: "Waves MaxxAudio Pro",
+          ports: "USB-C, USB 3.0, HDMI, RJ-45",
+          battery: "3-cell 42 Whr Li-ion",
+          os: "Windows 11 Home",
+        },
+        {
+          name: "Lenovo Ideapad Slim 3",
+          image:
+            "https://cdn.tgdd.vn/Products/Images/44/313333/lenovo-ideapad-slim-3-15iah8-i5-83er00evn-thumb-600x600.jpg",
+          cpu: "Intel Core i5-1235U",
+          cores: 10,
+          threads: 12,
+          baseClock: "1.3 GHz",
+          boostClock: "4.4 GHz",
+          cache: "12 MB",
+          ram: "8GB DDR4 (3200 MHz)",
+          ssd: "512GB SSD M.2 PCIe",
+          screen: "15.6 inch Full HD (1920 x 1080), IPS, 300 nits",
+          graphics: "Intel Iris Xe Graphics",
+          audio: "Stereo speakers, Dolby Audio",
+          ports:
+            "1 x USB 2.0, 1 x USB 3.2 Gen 1, 1 x USB-C 3.2 Gen 1, 1 x HDMI 1.4b, 1 x Audio combo jack",
+          battery: "3-cell Li-ion, 45 Wh",
+          os: "Windows 11 Home SL",
+        },
+        {
+          name: "MSI Prestige 13 AI Evo A1MG-062VN",
+          image:
+            "https://cdn.tgdd.vn/Products/Images/44/322959/msi-prestige-13-ai-evo-a1mg-ultra-7-062vn-070424-040052-600x600.jpg",
+          cpu: "Intel Core Ultra 7-155H (AI Boost)",
+          cores: 10,
+          threads: 16,
+          baseClock: "3.0 GHz",
+          boostClock: "5.1 GHz",
+          cache: "18 MB",
+          ram: "32GB LPDDR5 (6400 MHz)",
+          ssd: "1TB NVMe PCIe Gen4",
+          screen: "13.3 inch 2.8K (2880 x 1800), OLED, 100% DCI-P3",
+          graphics: "Intel Arc Graphics",
+          audio: "High-definition audio",
+          ports: "2 x Thunderbolt 4, 1 x Audio combo jack",
+          battery: "75Wh, 4-cell Li-Polymer",
+          os: "Windows 11 Home",
+          weight: "0.99 kg",
+        },
+        {
+          name: "Asus Vivobook K3605ZF i5 RP745W",
+          image:
+            "https://cdn.tgdd.vn/Products/Images/44/328237/asus-vivobook-16x-k3605zf-i5-rp745w-thumb-600x600.jpg",
+          cpu: "Intel Core i5-1340P",
+          cores: 12,
+          threads: 16,
+          baseClock: "1.80 GHz",
+          boostClock: "4.60 GHz",
+          cache: "12 MB",
+          ram: "8GB DDR4 (3200 MHz)",
+          ssd: "512GB NVMe PCIe Gen3",
+          screen: "15.6 inch Full HD (1920 x 1080), IPS, 250 nits",
+          graphics: "Intel Iris Xe Graphics",
+          audio: "Harman Kardon audio, DTS Audio Processing",
+          ports:
+            "1 x USB 3.2 Type-C, 2 x USB 3.2 Type-A, 1 x HDMI 1.4, 1 x Audio combo jack, 1 x MicroSD card reader",
+          battery: "42Wh, 3-cell Li-ion",
+          os: "Windows 11 Home",
+          weight: "1.80 kg",
+        },
+        {
+          name: "Lenovo LOQ Gaming ",
+          image:
+            "https://cdn.tgdd.vn/Products/Images/44/322072/lenovo-loq-gaming-15iax9-i5-83gs000jvn-thumb-new-600x600.jpg",
+          cpu: "Intel Core i5-12450H",
+          cores: 8,
+          threads: 12,
+          baseClock: "3.1 GHz",
+          boostClock: "4.4 GHz",
+          cache: "12 MB",
+          ram: "8GB DDR4 (3200 MHz), hỗ trợ nâng cấp tối đa 16GB",
+          ssd: "512GB SSD M.2 PCIe",
+          screen: "15.6 inch Full HD (1920 x 1080), IPS, 144Hz",
+          graphics: "NVIDIA GeForce RTX 3050 6GB GDDR6",
+          audio: "Stereo speakers, Dolby Audio",
+          ports:
+            "1 x USB 3.2 Gen 1, 1 x USB-C 3.2 Gen 2, 1 x HDMI 2.0, 1 x Ethernet, 1 x Audio combo jack",
+          battery: "3-cell Li-ion, 60Wh",
+          os: "Windows 11 Home",
+          weight: "2.38 kg",
+          dimensions: "359.86 x 258.7 x 21.9-23.9 mm",
+          wifi: "Wi-Fi 6, Bluetooth 5.2",
+          design: "Vỏ nhựa PC-ABS, màu xám Luna",
+        },
 
-  // Add more details for other products if needed
-];
+        // Add more details for other products if needed
+      ];
 
-// Hiển thị popup với chi tiết sản phẩm
-productCards.forEach((card, index) => {
-  card.addEventListener("click", () => {
-    
-    const details = productDetails[index];
-    
-    // Thêm hình ảnh vào popup
-    const popupImage = document.createElement("img");
-    popupImage.src = details.image;
-    popupImage.alt = details.name;
-    popupImage.classList.add("popup-image");
-    
-    // Xóa hình ảnh cũ (nếu có)
-    const existingImage = document.querySelector(".popup-content .popup-image");
-    if (existingImage) {
-      existingImage.remove();
-    }
+      // Hiển thị popup với chi tiết sản phẩm
+      productCards.forEach((card, index) => {
+        card.addEventListener("click", () => {
+          const details = productDetails[index];
 
-    // Thêm hình ảnh mới vào popup
-    document.querySelector(".popup-content").insertBefore(popupImage, document.querySelector(".popup-content h2"));
-    
-    const accordionItems = document.querySelectorAll(".accordion-item");
+          // Thêm hình ảnh vào popup
+          const popupImage = document.createElement("img");
+          popupImage.src = details.image;
+          popupImage.alt = details.name;
+          popupImage.classList.add("popup-image");
 
-// Cập nhật từng phần theo chỉ số hoặc tên
-accordionItems[0].querySelector(".accordion-body").innerHTML = `
+          // Xóa hình ảnh cũ (nếu có)
+          const existingImage = document.querySelector(
+            ".popup-content .popup-image"
+          );
+          if (existingImage) {
+            existingImage.remove();
+          }
+
+          // Thêm hình ảnh mới vào popup
+          document
+            .querySelector(".popup-content")
+            .insertBefore(
+              popupImage,
+              document.querySelector(".popup-content h2")
+            );
+
+          const accordionItems = document.querySelectorAll(".accordion-item");
+
+          // Cập nhật từng phần theo chỉ số hoặc tên
+          accordionItems[0].querySelector(".accordion-body").innerHTML = `
   <p><strong>Công nghệ CPU:</strong> ${details.cpu}</p>
   <p><strong>Số nhân:</strong> ${details.cores}</p>
   <p><strong>Số luồng:</strong> ${details.threads}</p>
@@ -408,66 +438,176 @@ accordionItems[0].querySelector(".accordion-body").innerHTML = `
   <p><strong>Bộ nhớ đệm:</strong> ${details.cache}</p>
 `;
 
-accordionItems[1].querySelector(".accordion-body").innerHTML = `
+          accordionItems[1].querySelector(".accordion-body").innerHTML = `
   <p><strong>RAM:</strong> ${details.ram}</p>
   <p><strong>SSD:</strong> ${details.ssd}</p>
 `;
 
-accordionItems[2].querySelector(".accordion-body").innerHTML = `
+          accordionItems[2].querySelector(".accordion-body").innerHTML = `
   <p><strong>Màn hình:</strong> ${details.screen}</p>
 `;
 
-accordionItems[3].querySelector(".accordion-body").innerHTML = `
+          accordionItems[3].querySelector(".accordion-body").innerHTML = `
   <p><strong>Card đồ họa:</strong> ${details.graphics}</p>
   <p><strong>Âm thanh:</strong> ${details.audio}</p>
 `;
 
-accordionItems[4].querySelector(".accordion-body").innerHTML = `
+          accordionItems[4].querySelector(".accordion-body").innerHTML = `
   <p><strong>Cổng kết nối:</strong> ${details.ports}</p>
   <p><strong>Pin:</strong> ${details.battery}</p>
   <p><strong>Hệ điều hành:</strong> ${details.os}</p>
 `;
 
-    // Hiển thị popup
-    popup.classList.remove("hidden");
-    body.classList.add("no-scroll"); // Khóa cuộn trang chính
-  });
-});
+          // Hiển thị popup
+          popup.classList.remove("hidden");
+          body.classList.add("no-scroll"); // Khóa cuộn trang chính
+        });
+      });
 
-// Đóng popup
-closeBtn.addEventListener("click", () => {
-  popup.classList.add("hidden");
-  body.classList.remove("no-scroll"); // Mở khóa cuộn trang chính
-});
+      // Đóng popup
+      closeBtn.addEventListener("click", () => {
+        popup.classList.add("hidden");
+        body.classList.remove("no-scroll"); // Mở khóa cuộn trang chính
+      });
 
-// Accordion functionality
-accordionHeaders.forEach(header => {
-  header.addEventListener("click", () => {
-    header.classList.toggle("active");
-    const body = header.nextElementSibling;
-    body.style.display = body.style.display === "block" ? "none" : "block";
-  });
-});
-///// button go to top
- // Lấy nút
- var mybutton = document.getElementById("goTopBtn");
+      // Accordion functionality
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          header.classList.toggle("active");
+          const body = header.nextElementSibling;
+          body.style.display =
+            body.style.display === "block" ? "none" : "block";
+        });
+      });
+      ///// button go to top
+      // Lấy nút
+      var mybutton = document.getElementById("goTopBtn");
 
-// Khi người dùng cuộn xuống 20px từ đỉnh trang, hiển thị nút
-window.onscroll = function() {scrollFunction()};
+      // Khi người dùng cuộn xuống 20px từ đỉnh trang, hiển thị nút
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
 
-// Khi người dùng nhấp vào nút, cuộn lên đầu trang
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+      // Khi người dùng nhấp vào nút, cuộn lên đầu trang
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
     </script>
+    <footer class="footer">
+      <div class="container">
+        <div>
+          <h3>GROUP 14</h3>
+          <p>
+            Linh Trung Ward<br />
+            Thu Duc - Ho Chi Minh City - Viet Nam<br />
+            <strong>Phone:</strong> +0862210723<br />
+            <strong>Email:</strong> group14@gmail.com
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-skype"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3>Useful Links</h3>
+          <p><a href="#">Home</a></p>
+          <p><a href="#">About us</a></p>
+          <p><a href="#">Services</a></p>
+          <p><a href="#">Terms of service</a></p>
+          <p><a href="#">Privacy policy</a></p>
+        </div>
+        <div>
+          <h3>Our Services</h3>
+          <p><a href="#">Web Design</a></p>
+          <p><a href="#">Web Development</a></p>
+          <p><a href="#">Product Management</a></p>
+          <p><a href="#">Marketing</a></p>
+          <p><a href="#">Graphic Design</a></p>
+        </div>
+        <div>
+          <h3>Our Newsletter</h3>
+          <p>
+            Your support is our greatest motivation. Join us for the best
+            experience
+          </p>
+          <form class="newsletter">
+            <input type="email" placeholder="Email" />
+            <input type="submit" value="Subscribe" />
+          </form>
+        </div>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      <p>© Copyright <strong>GROUP 14</strong>. All Rights Reserved</p>
+      <p>Designed by GROUP 14</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- nút GotoTop -->
+    <button id="goTopBtn" onclick="topFunction()">
+      <div class="arrow-up"></div>
+    </button>
+
+    <script>
+      // Lấy nút
+      var mybutton = document.getElementById("goTopBtn");
+
+      // Khi người dùng cuộn xuống 20px từ đỉnh trang, hiển thị nút
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // Khi người dùng nhấp vào nút, cuộn lên đầu trang
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+
+      // làm model
+      function showProduct(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.classList.add("show"); // Thêm lớp show để kích hoạt hiệu ứng
+        setTimeout(() => {
+          modal.style.display = "block"; // Đảm bảo modal hiển thị
+        }, 10); // Cho CSS kích hoạt hiệu ứng đầu tiên
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeProduct(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.classList.remove("show"); // Xóa lớp show để bắt đầu hiệu ứng ẩn
+        setTimeout(() => {
+          modal.style.display = "none"; // Ẩn hoàn toàn sau khi hiệu ứng kết thúc
+        }, 300); // Thời gian khớp với transition CSS
+        document.body.style.overflow = "auto";
+      }
+    </script>
+    
   </body>
 </html>
