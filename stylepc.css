@@ -24,7 +24,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #d90429;
+  background-color: #512da8;
   color: white;
   padding: 10px 20px;
   position: relative;
@@ -80,7 +80,7 @@ button {
 }
 
 .nav a {
-  color: #d90429;
+  color: #512da8;
   font-weight: bold;
   padding: 10px 15px;
   margin: 0 10px;
@@ -91,9 +91,9 @@ button {
 
 .nav a:hover,
 .nav a.active {
-  background-color: #d90429;
+  background-color: #512da8;
   color: white;
-  border: 2px solid #d90429;
+  border: 2px solid #512da8;
 }
 
 /* Main Layout */
@@ -148,7 +148,7 @@ button {
 
 .price-range button {
   width: 100%;
-  background-color: #d90429;
+  background-color: #512da8;
   color: white;
   padding: 8px;
   border: none;
@@ -157,7 +157,7 @@ button {
 }
 
 .price-range button:hover {
-  background-color: #b00321;
+  background-color: #512da8;
 }
 
 /* Main Content */
@@ -168,7 +168,7 @@ button {
 
 .main-content h2 {
   font-size: 24px;
-  color: #d90429; /* Màu đỏ */
+  color: #512da8; /* Màu đỏ */
   margin-bottom: 5px;
 }
 
@@ -190,7 +190,7 @@ button {
 .config-buttons button {
   padding: 10px 20px;
   border: none;
-  background-color: #d90429; /* Màu đỏ */
+  background-color: #512da8; /* Màu đỏ */
   color: #fff; /* Màu chữ trắng */
   border-radius: 5px;
   font-weight: bold;
@@ -200,7 +200,7 @@ button {
 
 .config-buttons button.active,
 .config-buttons button:hover {
-  background-color: #cc0000; /* Màu đỏ đậm khi hover hoặc active */
+  background-color: #512da8; /* Màu đỏ đậm khi hover hoặc active */
 }
 
 .config-buttons .reset {
@@ -259,15 +259,15 @@ button {
   padding: 10px 20px;
   border-radius: 5px;
   background-color: white;
-  color: #d90429;
-  border: 2px solid #d90429;
+  color: #512da8;
+  border: 2px solid #512da8;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .config-buttons button.active,
 .config-buttons button:hover {
-  background-color: #d90429;
+  background-color: #512da8;
   color: white;
 }
 
@@ -300,14 +300,14 @@ button {
   padding: 8px 15px;
   border-radius: 4px;
   background-color: white;
-  color: #d90429;
-  border: 2px solid #d90429;
+  color: #512da8;
+  border: 2px solid #512da8;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .component button:hover {
-  background-color: #d90429;
+  background-color: #512da8;
   color: white;
 }
 
@@ -317,7 +317,7 @@ button {
   padding: 15px;
   background-color: #fdfdfd;
   color: #333;
-  border: 2px solid #d90429;
+  border: 2px solid #512da8;
   border-radius: 5px;
   font-size: 18px;
   font-weight: bold;
@@ -419,7 +419,7 @@ button {
   top: 0; /* Đặt ở đầu modal-content */
   z-index: 10; /* Hiển thị trên các phần tử khác */
   border-bottom: 2px solid #ccc;
-  background-color: #d90429;
+  background-color: #512da8;
   padding: 10px;
   display: flex;
   align-items: center;
