@@ -41,31 +41,26 @@
       <h3>Lọc sản phẩm</h3>
 
       <!-- Price Range -->
-      <div class="filter-group price-range">
-        <h4>Giá tiền</h4>
-        <input type="text" placeholder="Từ (VNĐ)" />
-        <input type="text" placeholder="Đến (VNĐ)" />
-        <button>Lọc</button>
-      </div>
+      
 
       <!-- Brand -->
       <div class="filter-group">
         <h4>Hãng</h4>
-        <label><input type="checkbox" /> Asus</label>
-        <label><input type="checkbox" /> Dell</label>
-        <label><input type="checkbox" /> Acer</label>
-        <label><input type="checkbox" /> HP</label>
-        <label><input type="checkbox" /> Lenovo</label>
+        <label><input type="checkbox" class="filter-checkbox" data-type="brand" value="Asus" /> Asus</label>
+        <label><input type="checkbox" class="filter-checkbox" data-type="brand" value="Dell" /> Dell</label>
+        <label><input type="checkbox" class="filter-checkbox" data-type="brand" value="Acer" /> Acer</label>
+        <label><input type="checkbox" class="filter-checkbox" data-type="brand" value="HP" /> HP</label>
+        <label><input type="checkbox" class="filter-checkbox" data-type="brand" value="Lenovo" /> Lenovo</label>
       </div>
 
       <!-- Other Filters -->
       <div class="filter-group">
         <h4>Lọc giá</h4>
-        <label><input type="checkbox" /> 5.000.000₫ - 10.000.000₫</label>
-        <label><input type="checkbox" /> 10.000.000₫ - 15.000.000₫</label>
-        <label><input type="checkbox" /> 15.000.000₫ - 20.000.000₫</label>
-        <label><input type="checkbox" /> 20.000.000₫ - 30.000.000₫</label>
-        <label><input type="checkbox" /> Trên 30.000.000₫</label>
+        <label><input type="checkbox" class="filter-checkbox" data-type="price" value="5000000-10000000" /> 5.000.000đ - 10.000.000đ</label>
+        <label><input type="checkbox" class="filter-checkbox" data-type="price" value="10000000-15000000" /> 10.000.000đ - 15.000.000đ</label>
+        <label><input type="checkbox" class="filter-checkbox" data-type="price" value="15000000-20000000" /> 15.000.000đ - 20.000.000đ</label>
+        <label><input type="checkbox" class="filter-checkbox" data-type="price" value="20000000-30000000" /> 20.000.000đ - 30.000.000đ</label>
+        <label><input type="checkbox" class="filter-checkbox" data-type="price" value="30000000+" /> Trên 30.000.000đ</label>
       </div>
     </div>
 
@@ -78,7 +73,7 @@
           <h4>Asus Vivobook Go 15</h4>
           <p>RAM 16GB | SSD 512GB</p>
           <div class="stars">★★★★★</div>
-          <div class="price">12.390.000đ</div>
+          <div class="price">12,390,000đ</div>
         </div>
       </a>
 
@@ -89,7 +84,7 @@
           <h4>Dell Inspiron 15</h4>
           <p>RAM 16GB | SSD 512GB</p>
           <div class="stars">★★★★☆</div>
-          <div class="price">16.490.000đ</div>
+          <div class="price">16,490,000đ</div>
         </div>
       </a>
       <a href="#" class="product-card">
@@ -100,7 +95,7 @@
           <h4>Lenovo Ideapad Slim 3</h4>
           <p>RAM 16GB | SSD 512GB</p>
           <div class="stars">★★★★☆</div>
-          <div class="price">16.490.000đ</div>
+          <div class="price">16,490,000đ</div>
         </div>
       </a>
       <a href="#" class="product-card">
@@ -111,7 +106,7 @@
           <h4>MSI Prestige 13 AI</h4>
           <p>RAM 32GB | SSD 1TB</p>
           <div class="stars">★★★★☆</div>
-          <div class="price">30.990.000đ</div>
+          <div class="price">30,990,000đ</div>
         </div>
       </a>
       <a href="#" class="product-card">
@@ -121,7 +116,7 @@
           <h4>Asus Gaming Vivobook</h4>
           <p>RAM 16GB | SSD 512GB</p>
           <div class="stars">★★★★☆</div>
-          <div class="price">17.390.000đ</div>
+          <div class="price">17,390,000đ</div>
         </div>
       </a>
       <a href="#" class="product-card">
@@ -132,7 +127,7 @@
           <h4>Lenovo Gaming LOQ</h4>
           <p>RAM 16GB | SSD 512GB</p>
           <div class="stars">★★★★☆</div>
-          <div class="price">21.490.000đ</div>
+          <div class="price">21,490,000đ</div>
         </div>
       </a>
       <a href="#" class="product-card">
@@ -142,7 +137,7 @@
           <h4>MSI Gaming GF63 Thin 12VE</h4>
           <p>RAM 16GB | SSD 512GB</p>
           <div class="stars">★★★★☆</div>
-          <div class="price">16.490.000đ</div>
+          <div class="price">16,490,000đ</div>
         </div>
       </a>
       <a href="#" class="product-card">
@@ -151,7 +146,7 @@
           <h4>HP 240 G9</h4>
           <p>RAM 16GB | SSD 512GB</p>
           <div class="stars">★★★★☆</div>
-          <div class="price">16.490.000đ</div>
+          <div class="price">16,490,000đ</div>
         </div>
       </a>
       <a href="#" class="product-card">
@@ -160,7 +155,7 @@
           <h4>Asus TUF Gaming F15</h4>
           <p>RAM 16GB | SSD 512GB</p>
           <div class="stars">★★★★☆</div>
-          <div class="price">20.290.000đ</div>
+          <div class="price">20,290,000đ</div>
         </div>
       </a>
       <a href="#" class="product-card">
@@ -169,7 +164,7 @@
           <h4>HP Pavilion 15 </h4>
           <p>RAM 16GB | SSD 512GB</p>
           <div class="stars">★★★★☆</div>
-          <div class="price">21.390.000đ</div>
+          <div class="price">21,390,000đ</div>
         </div>
       </a>
       <a href="#" class="product-card">
@@ -178,7 +173,7 @@
           <h4>HP Envy x360 14</h4>
           <p>RAM 16GB | SSD 512GB</p>
           <div class="stars">★★★★☆</div>
-          <div class="price">30.790.000đ</div>
+          <div class="price">30,790,000đ</div>
         </div>
       </a>
       <a href="#" class="product-card">
@@ -187,7 +182,7 @@
           <h4>MSI Prestige 14 AI Studio</h4>
           <p>RAM 16GB | SSD 1TB</p>
           <div class="stars">★★★★☆</div>
-          <div class="price">26.990.000đ</div>
+          <div class="price">26,990,000đ</div>
         </div>
       </a>
       <!-- Add more products -->
@@ -733,6 +728,53 @@
       }, 300); // Thời gian khớp với transition CSS
       document.body.style.overflow = "auto";
     }
+    /////////////////////////////////////////////////
+   // Lấy tất cả các checkbox
+const checkboxes = document.querySelectorAll('.filter-checkbox');
+const products = document.querySelectorAll('.product-card');
+
+// Lắng nghe sự kiện thay đổi trên các checkbox
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', filterProducts);
+});
+
+function filterProducts() {
+  // Lấy tất cả các giá trị được chọn từ các checkbox
+  const selectedBrands = [];
+  const selectedPrices = [];
+
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+      if (checkbox.dataset.type === 'brand') {
+        selectedBrands.push(checkbox.value);
+      } else if (checkbox.dataset.type === 'price') {
+        selectedPrices.push(checkbox.value);
+      }
+    }
+  });
+
+  // Lọc các sản phẩm dựa trên lựa chọn của người dùng
+  products.forEach((product) => {
+    const productBrand = product.querySelector('.product-info h4').textContent.split(' ')[0]; // Lấy tên hãng (ví dụ: "Asus")
+    const productPriceText = product.querySelector('.price').textContent.replace(/[^\d]/g, ''); // Lấy giá và loại bỏ các ký tự không phải là số
+    const productPrice = parseInt(productPriceText); // Chuyển giá sang số
+
+    const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(productBrand);
+    const matchesPrice = selectedPrices.length === 0 || selectedPrices.some((range) => {
+      const [min, max] = range.split('-').map((value) => value === '+' ? Infinity : parseInt(value));
+
+      return productPrice >= min && (max === Infinity || productPrice <= max);
+    });
+
+    // Hiển thị hoặc ẩn sản phẩm dựa trên các tiêu chí lọc
+    if (matchesBrand && matchesPrice) {
+      product.style.display = 'block';
+    } else {
+      product.style.display = 'none';
+    }
+  });
+}
+
   </script>
 </body>
 
