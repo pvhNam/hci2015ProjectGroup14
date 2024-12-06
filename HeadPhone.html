@@ -157,7 +157,7 @@
       <!-- Product Grid -->
 
       <div class="product-grid">
-        <div class="product-card">
+        <div class="product-card" onclick="showProduct('modal1')">
           <img
             src="https://product.hstatic.net/200000637319/product/cetra-true-wireless_cf8412572cdf47b6b3d11ee526c63da7_master.png"
             alt="Mouse"
@@ -170,7 +170,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" onclick="showProduct('modal2')">
           <img
             src="https://product.hstatic.net/200000637319/product/razer_wolverine_v3__16__3290ae3f293840379617724a6f44ca5d_master.png"
             alt="Mouse"
@@ -257,6 +257,118 @@
         </div>
 
         <!-- Add more products -->
+      </div>
+    </div>
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeProduct('modal1')">
+          &times;
+        </button>
+        <img
+          src="https://product.hstatic.net/200000637319/product/cetra-true-wireless_cf8412572cdf47b6b3d11ee526c63da7_master.png"
+          alt="High-Performance Mouse"
+        />
+        <div class="modal-details">
+          <h4>Asus ROG Cetra True Wireless SpeedNova</h4>
+          <p>Wireless Mouse | Hiệu suất tối đa</p>
+          <p class="price">1.690.000đ</p>
+          <table>
+            <tr>
+              <td><strong>Đầu nối:</strong></td>
+              <td>USB-C (bộ thu), USB-A (adapter)</td>
+            </tr>
+            <tr>
+              <td><strong>Trình điều khiển:</strong></td>
+              <td>Nam châm neodymium 10 mm</td>
+            </tr>
+            <tr>
+              <td><strong>Trở kháng:</strong></td>
+              <td>32 ohms</td>
+            </tr>
+            <tr>
+              <td><strong>Đáp ứng tần số (tai nghe):</strong></td>
+              <td>20 Hz - 40 kHz</td>
+            </tr>
+            <tr>
+              <td><strong>Micro:</strong></td>
+              <td>Đa hướng (Omnidirectional)</td>
+            </tr>
+            <tr>
+              <td><strong>Độ nhạy micro:</strong></td>
+              <td>-38 dB</td>
+            </tr>
+            <tr>
+              <td><strong>Đáp ứng tần số (micro):</strong></td>
+              <td>100 Hz - 10 kHz</td>
+            </tr>
+            <tr>
+              <td><strong>Khử tiếng ồn:</strong></td>
+              <td>Chủ động (ANC)</td>
+            </tr>
+            <tr>
+              <td><strong>Đèn:</strong></td>
+              <td>RGB</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeProduct('modal2')">
+          &times;
+        </button>
+        <img
+          src="https://product.hstatic.net/200000637319/product/razer_wolverine_v3__16__3290ae3f293840379617724a6f44ca5d_master.png"
+          alt="High-Performance Mouse"
+        />
+        <div class="modal-details">
+          <h4>Tai nghe không dây hiệu suất cao</h4>
+          <p>Wireless Headset | Hiệu suất tối đa</p>
+          <p class="price">1.690.000đ</p>
+          <table>
+            <tr>
+              <td><strong>Dải tần số:</strong></td>
+              <td>20 Hz – 20 kHz</td>
+            </tr>
+            <tr>
+              <td><strong>Trở kháng:</strong></td>
+              <td>32 Ω (1 kHz)</td>
+            </tr>
+            <tr>
+              <td><strong>Độ nhạy:</strong></td>
+              <td>96 dBSPL / mW @ 1 kHz (HATS)</td>
+            </tr>
+            <tr>
+              <td><strong>Loa driver:</strong></td>
+              <td>40 mm</td>
+            </tr>
+            <tr>
+              <td><strong>Loại driver:</strong></td>
+              <td>Razer™ TriForce</td>
+            </tr>
+            <tr>
+              <td><strong>Chụp tai:</strong></td>
+              <td>Đệm tai hình bầu dục</td>
+            </tr>
+            <tr>
+              <td><strong>Kích thước bên trong chụp tai:</strong></td>
+              <td>Rộng: 40 mm / 1.57 in<br />Dài: 60 mm / 2.36 in</td>
+            </tr>
+            <tr>
+              <td><strong>Chất liệu đệm tai:</strong></td>
+              <td>Vải thoáng khí với mút hoạt tính (Memory Foam)</td>
+            </tr>
+            <tr>
+              <td><strong>Khả năng chống ồn:</strong></td>
+              <td>Không có</td>
+            </tr>
+            <tr>
+              <td><strong>Kết nối:</strong></td>
+              <td>2.4 GHz Wireless / Bluetooth</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
     <script>
@@ -387,30 +499,37 @@
         }
       }
 
-      // Khi người dùng nhấp vào nút cuộn lên đầu trang
+      // Khi người dùng nhấp vào nút, cuộn lên đầu trang
       function topFunction() {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
-
-      // làm model
+    </script>
+    <script>
+      // Show the modal
       function showProduct(modalId) {
         const modal = document.getElementById(modalId);
-        modal.classList.add("show"); // Thêm lớp show để kích hoạt hiệu ứng
-        setTimeout(() => {
-          modal.style.display = "block"; // Đảm bảo modal hiển thị
-        }, 10); // Cho CSS kích hoạt hiệu ứng đầu tiên
-        document.body.style.overflow = "hidden";
+        modal.style.display = "flex"; // Show the modal
+        document.body.style.overflow = "hidden"; // Disable scrolling when modal is active
       }
 
+      // Close the modal
       function closeProduct(modalId) {
         const modal = document.getElementById(modalId);
-        modal.classList.remove("show"); // Xóa lớp show để bắt đầu hiệu ứng ẩn
-        setTimeout(() => {
-          modal.style.display = "none"; // Ẩn hoàn toàn sau khi hiệu ứng kết thúc
-        }, 300); // Thời gian khớp với transition CSS
-        document.body.style.overflow = "auto";
+        modal.style.display = "none"; // Hide the modal
+        document.body.style.overflow = "auto"; // Enable scrolling again
       }
+
+      // Close modal when clicking outside
+      window.onclick = function (event) {
+        const modals = document.querySelectorAll(".modal");
+        modals.forEach((modal) => {
+          if (event.target === modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Enable scrolling again
+          }
+        });
+      };
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
