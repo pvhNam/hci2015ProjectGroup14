@@ -780,3 +780,74 @@ button {
 .social-icons a .fa-linkedin-in:hover {
   color: #29839a; /* Màu xanh của LinkedIn */
 }
+
+#selectedProduct {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#selectedImg {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#selectedTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#selectedDescription {
+  color: #555;
+}
+
+#selectedPrice {
+  color: #d9534f;
+}
+
+#selectedProductInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#selectedProductInfo img {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the selected product */
+.component .title {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fefefe;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 20px; /* Dịch sang phải bằng cách tạo khoảng cách từ cạnh trái */
+}
+
+.component .title img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.component .title:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.component .title span {
+  margin-left: 5px;
+  color: #d9534f;
+  font-size: 14px;
+}

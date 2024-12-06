@@ -61,60 +61,64 @@
     <!-- Configuration List -->
     <div class="config-container">
       <div class="config-list">
-        <div class="component">
+        <div class="component" id="cpu-component">
           <span class="title">1. CPU - BỘ VI XỬ LÝ</span>
-          <button class="choose-pc-btn" onclick="showProduct('productContainer')">+ Chọn PC</button>
-        </div>
-        <div class="component">
+          <button class="choose-pc-btn" onclick="showProduct('productContainer', 'cpu-component')">+ Chọn PC</button>
+      </div>
+      <!-- Mainboard Component -->
+      <div class="component" id="main-component">
           <span class="title">2. MAIN - BO MẠCH CHỦ</span>
-          <button class="choose-pc-btn" onclick="showProduct('productContainerMain')">+ Chọn Main</button>
-        </div>
-        <div class="component">
-          <span class="title">3. RAM - BỘ NHỚ TRONG</span>
-          <button class="choose-pc-btn" onclick="showProduct('productContainerRaw')">+ Chọn RAM</button>
-        </div>
-        <div class="component">
-          <span class="title">4. Ổ CỨNG SSD 1</span>
-          <button class="choose-pc-btn" onclick="showProduct('productContainerSSD1')">+ Chọn Ổ Cứng SSD 1</button>
-        </div>
-        <div class="component">
-          <span class="title">5. Ổ CỨNG SSD 2</span>
-          <button class="choose-pc-btn" onclick="showProduct('productContainerSSD2')">+ Chọn Ổ Cứng SSD 2</button>
-        </div>
-        <div class="component">
-          <span class="title">6. Ổ CỨNG HDD</span>
-          <button class="choose-pc-btn" onclick="showProduct('productContainerHDD')">+ Chọn Ổ Cứng HDD</button>
-        </div>
-        <div class="component">
-          <div><span class="title">7. VGA - CARD MÀN HÌNH</span><br /></div>
-          <button class="choose-pc-btn" onclick="showProduct('productContainerVGA')">+ Chọn VGA - Card Màn Hình</button>
-        </div>
-        <div class="component">
-          <span class="title">8. PSU - NGUỒN MÁY TÍNH</span>
-          <button class="choose-pc-btn" onclick="showProduct('productContainerPSU')">+ Chọn PSU - Nguồn Máy Tính</button>
-        </div>
-        <div class="component">
-          <span class="title">9. CASE - VỎ MÁY TÍNH</span>
-          <button class="choose-pc-btn" onclick="showProduct('productContainerCASE')">+ Chọn Case - Vỏ Máy Tính</button>
-        </div>
-        <div class="component">
-          <span class="title">10. TẢN NHIỆT KHÍ</span>
-          <button class="choose-pc-btn" onclick="showProduct('productContainerAIR')">+ Chọn Tản Nhiệt Khí</button>
-        </div>
-        <div class="component">
-          <span class="title">11. TẢN NHIỆT NƯỚC AIO</span>
-          <button class="choose-pc-btn" onclick="showProduct('productContainerAOI')">+ Chọn Tản Nhiệt Nước AIO</button>
-        </div>
-        <div class="component">
-          <span class="title">12. TẢN NHIỆT NƯỚC CUSTOM</span>
-          <button class="choose-pc-btn" onclick="showProduct('productContainerCUSTOM')">+ Chọn Tản Nhiệt Nước Custom</button>
-        </div>
+          <button class="choose-pc-btn" onclick="showProduct('productContainerMain', 'main-component')">+ Chọn Main</button>
+      </div>
+      <div class="component" id="ram-component">
+        <span class="title">3. RAM - BỘ NHỚ TRONG</span>
+        <button class="choose-pc-btn" onclick="showProduct('productContainerRaw', 'ram-component')">+ Chọn RAM</button>
+    </div>
+    <div class="component" id="ssd1-component">
+      <span class="title">4. Ổ CỨNG SSD 1</span>
+      <button class="choose-pc-btn" onclick="showProduct('productContainerSSD1', 'ssd1-component')">+ Chọn Ổ Cứng SSD 1</button>
+    </div>
+    <div class="component" id="ssd2-component">
+      <span class="title">5. Ổ CỨNG SSD 2</span>
+      <button class="choose-pc-btn" onclick="showProduct('productContainerSSD2', 'ssd2-component')">+ Chọn Ổ Cứng SSD 2</button>
+    </div>
+    <div class="component" id="hdd-component">
+      <span class="title">6. Ổ CỨNG HDD</span>
+      <button class="choose-pc-btn" onclick="showProduct('productContainerHDD', 'hdd-component')">+ Chọn Ổ Cứng HDD</button>
+    </div>
+    <div class="component" id="vga-component">
+      <span class="title">7. VGA - CARD MÀN HÌNH</span>
+      <button class="choose-pc-btn" onclick="showProduct('productContainerVGA', 'vga-component')">+ Chọn VGA - Card Màn Hình</button>
+    </div>
+    <div class="component" id="psu-component">
+      <span class="title">8. PSU - NGUỒN MÁY TÍNH</span>
+      <button class="choose-pc-btn" onclick="showProduct('productContainerPSU', 'psu-component')">+ Chọn PSU - Nguồn Máy Tính</button>
+    </div>
+    <div class="component" id="case-component">
+      <span class="title">9. CASE - VỎ MÁY TÍNH</span>
+      <button class="choose-pc-btn" onclick="showProduct('productContainerCASE', 'case-component')">+ Chọn Case - Vỏ Máy Tính</button>
+    </div>
+    <div class="component" id="air-cooler-component">
+      <span class="title">10. TẢN NHIỆT KHÍ</span>
+      <button class="choose-pc-btn" onclick="showProduct('productContainerAIR', 'air-cooler-component')">+ Chọn Tản Nhiệt Khí</button>
+    </div>
+    <div class="component" id="aio-cooler-component">
+      <span class="title">11. TẢN NHIỆT NƯỚC AIO</span>
+      <button class="choose-pc-btn" onclick="showProduct('productContainerAOI', 'aio-cooler-component')">+ Chọn Tản Nhiệt Nước AIO</button>
+    </div>
+    <div class="component" id="custom-water-cooler-component">
+      <span class="title">12. TẢN NHIỆT NƯỚC CUSTOM</span>
+      <button class="choose-pc-btn" onclick="showProduct('productContainerCUSTOM', 'custom-water-cooler-component')">+ Chọn Tản Nhiệt Nước Custom</button>
+    </div>
       </div>
       
       <!-- Estimated Cost -->
       <div class="cost">Chi phí dự tính: 0 đ</div>
     </div>
     </div> 
+
+    </div>
+</div>
    
     <!-- Modal -->
     <!-- Khung lớn chứa tất cả -->
@@ -150,441 +154,68 @@
 
             <!-- Khung chứa các sản phẩm -->
             <div class="product-container">
-                <!-- Product 1 -->
-                <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/75-4587-intel_bx8071514900k_core_i9_14900k_24_core_lga_1697445940_1781469.jpg" width="100"/>
-                    <div class="product-details">
-                        <h3>CPU Intel Core I9 14900K (24 Nhân 32 Luồng, Cache 36MB)</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: CPUI9149KB</p>
-                        <p class="price">9.590.000đ</p>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/719-i5-12400f-clean.jpg" width="100"/>
-                    <div class="product-details">
-                        <h3>CPU Intel Core i5 14600K (14 nhân 20 luồng, Cache 24MB)</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: CPU0149KB</p>
-                        <p class="price">4.990.000đ</p>                       
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="product">
-                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/75-4051-intel_bx8071514700k_core_i7_14700k_20_core_lga_1697445940_1781467.jpg" width="100"/>
+                <div class="product" onclick="selectProduct(this)">
+                  <img src="https://mygear.vn/media/product/75-4587-intel_bx8071514900k_core_i9_14900k_24_core_lga_1697445940_1781469.jpg" alt="Product Image">
                   <div class="product-details">
-                      <h3>CPU Intel Core I7 14700K (20 nhân 28 luồng, 33MB Cache)</h3>
-                      <p>Bảo hành: 36 Tháng</p>
-                      <p>Kho hàng: Còn hàng</p>
-                      <p>Mã SP: CPUI7149KB</p>
-                      <p class="price">7.990.000đ</p>
-                  </div>
-              </div>
-              <!-- Product 4 -->
-              <div class="product">
-                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/75-4051-intel_bx8071514700k_core_i7_14700k_20_core_lga_1697445940_1781467.jpg" width="100"/>
-                <div class="product-details">
-                    <h3>CPU Intel Core i7 14700KF (20 nhân 28 luồng, 33MB Cache)</h3>
+                    <h3>CPU Intel Core I9 14900K</h3>
+                    <p>24 Nhân 32 Luồng, Cache 36MB</p>
                     <p>Bảo hành: 36 Tháng</p>
                     <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: CPUI7149KFB</p>
-                    <p class="price">7.590.000đ</p>
+                    <p class="price">9.590.000đ</p>
+                  </div>
                 </div>
-            </div>
-            <!-- Product 5 -->
-            <div class="product">
+            <!-- Product 2 -->
+              <div class="product" onclick="selectProduct(this)">
               <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/719-i5-12400f-clean.jpg" width="100"/>
               <div class="product-details">
-                  <h3>CCPU Intel Core i5 14500 (14 nhân 20 luồng, 24MB Cache)</h3>
+                  <h3>CPU Intel Core i5 14600K (14 nhân 20 luồng, Cache 24MB)</h3>
                   <p>Bảo hành: 36 Tháng</p>
                   <p>Kho hàng: Còn hàng</p>
-                  <p>Mã SP: CPUI5145B</p>
-                  <p class="price">4.290.000đ</p>
+                  <p>Mã SP: CPU0149KB</p>
+                  <p class="price">4.990.000đ</p>                       
               </div>
           </div>
+          <!-- Product 3 -->
+            <div class="product" onclick="selectProduct(this)">
+            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/75-4051-intel_bx8071514700k_core_i7_14700k_20_core_lga_1697445940_1781467.jpg" width="100"/>
+            <div class="product-details">
+                <h3>CPU Intel Core I7 14700K (20 nhân 28 luồng, 33MB Cache)</h3>
+                <p>Bảo hành: 36 Tháng</p>
+                <p>Kho hàng: Còn hàng</p>
+                <p>Mã SP: CPUI7149KB</p>
+                <p class="price">7.990.000đ</p>
             </div>
         </div>
-    </div>
-</div>
-    
-            <!-- tạo cho main -->
-            <div id="productContainerMain" class="modal" style="display: none;">
-              <div class="modal-content">
-                  <!-- Header chứa thanh tìm kiếm và nút đóng -->
-                  <div class="header1">
-                      <div class="search-bar1">
-                          <input placeholder="Tìm kiếm " type="text"/>
-                          <button>Tìm kiếm</button>
-                      </div>
-                      <button class="close-btn" onclick="closeProduct('productContainerMain')">X</button> <!-- Nút đóng -->
-                  </div>
-          
-                  <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
-                  <div class="main-content">
-                      <!-- Phần sắp xếp và phân trang -->
-                      <div class="sort-pagination">
-                          <div class="sort">
-                              <label for="sort">Sắp xếp :</label>
-                              <select id="sort">
-                                  <option value="default">Tùy chọn</option>
-                                  <option value="low">Giá rẻ</option>
-                                  <option value="high">Chất lượng cao</option>
-                              </select>
-                          </div>
-          
-                          <!-- Pagination -->
-                          <div class="pagination">
-                              <button class="active">1</button>
-                          </div>
-                      </div>
-          
-                      <!-- Khung chứa các sản phẩm -->
-                      <div class="product-container">
-                          <!-- Product 1 -->
-                          <div class="product">
-                              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3681-gigabyte-z790-ud-ax-ddr5.jpg" width="100"/>
-                              <div class="product-details">
-                                  <h3>Mainboard Gigabyte Z790 GAMING UD AX DDR5</h3>
-                                  <p>Bảo hành: 36 Tháng</p>
-                                  <p>Kho hàng: Còn hàng</p>
-                                  <p>Mã SP: CPUI9149KB</p>
-                                  <p class="price">6.390.000đ</p>
-                              </div>
-                          </div>
-          
-                          <!-- Product 2 -->
-                          <div class="product">
-                              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3683-gigabyte-z790-aorus-elite-ddr5.jpg" width="100"/>
-                              <div class="product-details">
-                                  <h3>Mainboard GIGABYTE Z790 AORUS ELITE DDR5</h3>
-                                  <p>Bảo hành: 36 Tháng</p>
-                                  <p>Kho hàng: Còn hàng</p>
-                                  <p>Mã SP: CPU0149KB</p>
-                                  <p class="price">7.590.000đ</p>                       
-                              </div>
-                          </div>
-                          <!-- Product 3 -->
-                          <div class="product">
-                            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3687-gigabyte-z790-gaming-x-ax.jpg" width="100"/>
-                            <div class="product-details">
-                                <h3>Mainboard Gigabyte Z790 GAMING X AX DDR5</h3>
-                                <p>Bảo hành: 36 Tháng</p>
-                                <p>Kho hàng: Còn hàng</p>
-                                <p>Mã SP: CPUI7149KB</p>
-                                <p class="price">7.450.000đ</p>
-                            </div>
-                        </div>
-                        <!-- Product 4 -->
-                        <div class="product">
-                          <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5122-rog-maximus-z790-hero-btf-1.png" width="100"/>
-                          <div class="product-details">
-                              <h3>Mainboard ASUS ROG Maximus Z790 HERO BTF</h3>
-                              <p>Bảo hành: 36 Tháng</p>
-                              <p>Kho hàng: Còn hàng</p>
-                              <p>Mã SP: CPUI7149KFB</p>
-                              <p class="price">16.890.000đ</p>
-                          </div>
-                      </div>
-                      <!-- Product 5 -->
-                      <div class="product">
-                        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5246-z790-aorus-xtreme-x-ice-01.png" width="100"/>
-                        <div class="product-details">
-                            <h3>Mainboard GIGABYTE Z790 AORUS XTREME </h3>
-                            <p>Bảo hành: 36 Tháng</p>
-                            <p>Kho hàng: Còn hàng</p>
-                            <p>Mã SP: CPUI5145B</p>
-                            <p class="price">46.650.000đ</p>
-                        </div>
-                    </div>
-                      </div>
-                  </div>
-              </div>
-          </div>         
-            <!-- tạo cho RAM -->
-            <div id="productContainerRaw" class="modal" style="display: none;">
-              <div class="modal-content">
-                  <!-- Header chứa thanh tìm kiếm và nút đóng -->
-                  <div class="header1">
-                      <div class="search-bar1">
-                          <input placeholder="Tìm kiếm " type="text"/>
-                          <button>Tìm kiếm</button>
-                      </div>
-                      <button class="close-btn" onclick="closeProduct('productContainerRaw')">X</button> <!-- Nút đóng -->
-                  </div>
-          
-                  <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
-                  <div class="main-content">
-                      <!-- Phần sắp xếp và phân trang -->
-                      <div class="sort-pagination">
-                          <div class="sort">
-                              <label for="sort">Sắp xếp :</label>
-                              <select id="sort">
-                                  <option value="default">Tùy chọn</option>
-                                  <option value="low">Giá rẻ</option>
-                                  <option value="high">Chất lượng cao</option>
-                              </select>
-                          </div>
-          
-                          <!-- Pagination -->
-                          <div class="pagination">
-                              <button class="active">1</button>
-                          </div>
-                      </div>
-          
-                      <!-- Khung chứa các sản phẩm -->
-                      <div class="product-container">
-                          <!-- Product 1 -->
-                          <div class="product">
-                              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4519-trident-z5-rgb-black-1.jpg" width="100"/>
-                              <div class="product-details">
-                                  <h3>Bộ nhớ Ram PC G.Skill Trident Z5 RGB Black </h3>
-                                  <p>Bảo hành: 36 Tháng</p>
-                                  <p>Kho hàng: Còn hàng</p>
-                                  <p>Mã SP: CPUI9149KB</p>
-                                  <p class="price">3.250.000đ</p>
-                              </div>
-                          </div>
-          
-                          <!-- Product 2 -->
-                          <div class="product">
-                              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4164-trident-z5-rgb-white-1.jpg" width="100"/>
-                              <div class="product-details">
-                                  <h3>Bộ nhớ Ram PC G.Skill Trident Z5 RGB DDR5</h3>
-                                  <p>Bảo hành: 36 Tháng</p>
-                                  <p>Kho hàng: Còn hàng</p>
-                                  <p>Mã SP: CPU0149KB</p>
-                                  <p class="price">3.250.000đ</p>                       
-                              </div>
-                          </div>
-                          <!-- Product 3 -->
-                          <div class="product">
-                            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5486-trident-z5-royal-silver-1.jpg" width="100"/>
-                            <div class="product-details">
-                              <h3>Bộ nhớ Ram PC G.Skill Trident Z5 Royal</h3>
-                              <p>Bảo hành: 36 Tháng</p>
-                              <p>Kho hàng: Còn hàng</p>
-                              <p>Mã SP: CPUI5145B</p>
-                              <p class="price">3.890.000đ</p>
-                            </div>
-                        </div>
-                        <!-- Product 4 -->
-                        <div class="product">
-                          <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4164-trident-z5-rgb-white-1.jpg" width="100"/>
-                          <div class="product-details">
-                              <h3>Bộ nhớ Ram PC G.Skill Trident Z5 Neo Alpha</h3>
-                              <p>Bảo hành: 36 Tháng</p>
-                              <p>Kho hàng: Còn hàng</p>
-                              <p>Mã SP: CPUI7149KFB</p>
-                              <p class="price">5.990.000đ</p>
-                          </div>
-                      </div>
-                      <!-- Product 5 -->
-                      <div class="product">
-                        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5486-trident-z5-royal-silver-1.jpg" width="100"/>
-                        <div class="product-details">
-                            <h3>Bộ nhớ Ram PC G.Skill Trident Z5 RGS</h3>
-                            <p>Bảo hành: 36 Tháng</p>
-                            <p>Kho hàng: Còn hàng</p>
-                            <p>Mã SP: CPUI5145B</p>
-                            <p class="price">6.290.000đ</p>
-                        </div>
-                    </div>
-                      </div>
-                  </div>
-              </div>
-          </div>         
-          <!-- tạo cho SSD1 -->
-          <div id="productContainerSSD1" class="modal" style="display: none;">
-            <div class="modal-content">
-                <!-- Header chứa thanh tìm kiếm và nút đóng -->
-                <div class="header1">
-                    <div class="search-bar1">
-                        <input placeholder="Tìm kiếm " type="text"/>
-                        <button>Tìm kiếm</button>
-                    </div>
-                    <button class="close-btn" onclick="closeProduct('productContainerSSD1')">X</button> <!-- Nút đóng -->
-                </div>
-        
-                <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
-                <div class="main-content">
-                    <!-- Phần sắp xếp và phân trang -->
-                    <div class="sort-pagination">
-                        <div class="sort">
-                            <label for="sort">Sắp xếp :</label>
-                            <select id="sort">
-                                <option value="default">Tùy chọn</option>
-                                <option value="low">Giá rẻ</option>
-                                <option value="high">Chất lượng cao</option>
-                            </select>
-                        </div>
-        
-                        <!-- Pagination -->
-                        <div class="pagination">
-                            <button class="active">1</button>
-                        </div>
-                    </div>
-        
-                    <!-- Khung chứa các sản phẩm -->
-                    <div class="product-container">
-                        <!-- Product 1 -->
-                        <div class="product">
-                            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4937-ssd-samsung-870-evo-1-copy.jpg" width="100"/>
-                            <div class="product-details">
-                                <h3>Ổ cứng SSD Samsung 980 Pro</h3>
-                                <p>Bảo hành: 36 Tháng</p>
-                                <p>Kho hàng: Còn hàng</p>
-                                <p>Mã SP: SSDI9149KB</p>
-                                <p class="price">3.390.000đ</p>
-                            </div>
-                        </div>
-        
-                        <!-- Product 2 -->
-                        <div class="product">
-                            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3448-cs900-1.jpg" width="100"/>
-                            <div class="product-details">
-                                <h3>Ổ Cứng Di Động SSD Samsung T7</h3>
-                                <p>Bảo hành: 36 Tháng</p>
-                                <p>Kho hàng: Còn hàng</p>
-                                <p>Mã SP: SSD20149KB</p>
-                                <p class="price">6.190.000đ</p>                       
-                            </div>
-                        </div>
-                        <!-- Product 3 -->
-                        <div class="product">
-                          <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4937-ssd-samsung-870-evo-1-copy.jpg" width="100"/>
-                          <div class="product-details">
-                            <h3>Ổ Cứng Di Động SSD Samsung BLACK</h3>
-                            <p>Bảo hành: 36 Tháng</p>
-                            <p>Kho hàng: Còn hàng</p>
-                            <p>Mã SP: SSDBL13145B</p>
-                            <p class="price">6.120.000đ</p>
-                          </div>
-                      </div>
-                      <!-- Product 4 -->
-                      <div class="product">
-                        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6283-ssd-t7-portable-2.jpg" width="100"/>
-                        <div class="product-details">
-                            <h3>Ổ cứng SSD GIGABYTE AI TOP</h3>
-                            <p>Bảo hành: 36 Tháng</p>
-                            <p>Kho hàng: Còn hàng</p>
-                            <p>Mã SP: SSDAI149KFB</p>
-                            <p class="price">7.900.000đ</p>
-                        </div>
-                    </div>
-                    <!-- Product 5 -->
-                    <div class="product">
-                      <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5645-ai-top-100e-ssd-1tb-02.png" width="100"/>
-                      <div class="product-details">
-                          <h3>Ổ Cứng SSD SamSung 990 PRO</h3>
-                          <p>Bảo hành: 36 Tháng</p>
-                          <p>Kho hàng: Còn hàng</p>
-                          <p>Mã SP: SSDPRO145B</p>
-                          <p class="price">12.930.000đ</p>
-                      </div>
-                  </div>
-                    </div>
-                </div>
-            </div>
-        </div>         
-        <!-- tạo cho SSD2 -->
-        <div id="productContainerSSD2" class="modal" style="display: none;">
-          <div class="modal-content">
-              <!-- Header chứa thanh tìm kiếm và nút đóng -->
-              <div class="header1">
-                  <div class="search-bar1">
-                      <input placeholder="Tìm kiếm " type="text"/>
-                      <button>Tìm kiếm</button>
-                  </div>
-                  <button class="close-btn" onclick="closeProduct('productContainerSSD2')">X</button> <!-- Nút đóng -->
-              </div>
-      
-              <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
-              <div class="main-content">
-                  <!-- Phần sắp xếp và phân trang -->
-                  <div class="sort-pagination">
-                      <div class="sort">
-                          <label for="sort">Sắp xếp :</label>
-                          <select id="sort">
-                              <option value="default">Tùy chọn</option>
-                              <option value="low">Giá rẻ</option>
-                              <option value="high">Chất lượng cao</option>
-                          </select>
-                      </div>
-      
-                      <!-- Pagination -->
-                      <div class="pagination">
-                          <button class="active">1</button>
-                      </div>
-                  </div>
-      
-                  <!-- Khung chứa các sản phẩm -->
-                  <div class="product-container">
-                      <!-- Product 1 -->
-                      <div class="product">
-                        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6286-ssd-t9-portable-7.jpg" width="100"/>
-                        <div class="product-details">
-                            <h3>Ổ cứng SSD Samsung 1TB PCIe</h3>
-                            <p>Bảo hành: 36 Tháng</p>
-                            <p>Kho hàng: Còn hàng</p>
-                            <p>Mã SP: SSDI9149KB</p>
-                            <p class="price">3.390.000đ</p>
-                        </div>
-                    </div>
-    
-                    <!-- Product 2 -->
-                    <div class="product">
-                        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6549-ssd-samsung-t7-shield-usb-3-2-gen2-4tb-1j.jpg" width="100"/>
-                        <div class="product-details">
-                            <h3>Ổ Cứng Di Động SSD Samsung T7</h3>
-                            <p>Bảo hành: 36 Tháng</p>
-                            <p>Kho hàng: Còn hàng</p>
-                            <p>Mã SP: SSD20149KB</p>
-                            <p class="price">6.190.000đ</p>                       
-                        </div>
-                    </div>
-                    <!-- Product 3 -->
-                    <div class="product">
-                      <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6286-ssd-t9-portable-7.jpg" width="100"/>
-                      <div class="product-details">
-                        <h3>Ổ Cứng Di Động SSD Samsung BLACK</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: SSDBL13145B</p>
-                        <p class="price">6.120.000đ</p>
-                      </div>
-                  </div>
-                  <!-- Product 4 -->
-                  <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4937-ssd-samsung-870-evo-1-copy.jpg" width="100"/>
-                    <div class="product-details">
-                        <h3>Ổ cứng SSD GIGABYTE AI TOP</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: SSDA4ER49KFB</p>
-                        <p class="price">7.900.000đ</p>
-                    </div>
-                </div>
-                <!-- Product 5 -->
-                <div class="product">
-                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6562-samsung-t7-usb-c-3-2-gen2-1tb-black-2j.jpg" width="100"/>
-                  <div class="product-details">
-                      <h3>Ổ Cứng SSD SamSung 990 PRO</h3>
-                      <p>Bảo hành: 36 Tháng</p>
-                      <p>Kho hàng: Còn hàng</p>
-                      <p>Mã SP: SSDPRO145B</p>
-                      <p class="price">12.930.000đ</p>
-                    </div>
-                </div>
-                  </div>
-              </div>
+        <!-- Product 4 -->
+          <div class="product" onclick="selectProduct(this)">
+          <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/75-4051-intel_bx8071514700k_core_i7_14700k_20_core_lga_1697445940_1781467.jpg" width="100"/>
+          <div class="product-details">
+              <h3>CPU Intel Core i7 14700KF (20 nhân 28 luồng, 33MB Cache)</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: CPUI7149KFB</p>
+              <p class="price">7.590.000đ</p>
           </div>
-      </div>         
-      <!-- tạo cho HDD -->
-      <div id="productContainerHDD" class="modal" style="display: none;">
+      </div>
+
+      <!-- Product 5 -->
+        <div class="product" onclick="selectProduct(this)">
+        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/719-i5-12400f-clean.jpg" width="100"/>
+        <div class="product-details">
+            <h3>CCPU Intel Core i5 14500 (14 nhân 20 luồng, 24MB Cache)</h3>
+            <p>Bảo hành: 36 Tháng</p>
+            <p>Kho hàng: Còn hàng</p>
+            <p>Mã SP: CPUI5145B</p>
+            <p class="price">4.290.000đ</p>
+        </div>
+    </div>
+      </div>
+  </div>
+</div>
+</div>
+
+      <!-- tạo cho main -->
+      <div id="productContainerMain" class="modal" style="display: none;">
         <div class="modal-content">
             <!-- Header chứa thanh tìm kiếm và nút đóng -->
             <div class="header1">
@@ -592,7 +223,7 @@
                     <input placeholder="Tìm kiếm " type="text"/>
                     <button>Tìm kiếm</button>
                 </div>
-                <button class="close-btn" onclick="closeProduct('productContainerHDD')">X</button> <!-- Nút đóng -->
+                <button class="close-btn" onclick="closeProduct('productContainerMain')">X</button> <!-- Nút đóng -->
             </div>
     
             <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
@@ -617,674 +248,1046 @@
                 <!-- Khung chứa các sản phẩm -->
                 <div class="product-container">
                     <!-- Product 1 -->
-                    <div class="product">
-                      <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6093-wd-purple-pro-3-5.jpg" width="100"/>
+                    <div class="product" onclick="selectProduct(this)">
+                        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3681-gigabyte-z790-ud-ax-ddr5.jpg" width="100"/>
+                        <div class="product-details">
+                            <h3>Mainboard Gigabyte Z790 GAMING UD AX DDR5</h3>
+                            <p>Bảo hành: 36 Tháng</p>
+                            <p>Kho hàng: Còn hàng</p>
+                            <p>Mã SP: CPUI9149KB</p>
+                            <p class="price">6.390.000đ</p>
+                        </div>
+                    </div>
+    
+                    <!-- Product 2 -->
+                    <div class="product" onclick="selectProduct(this)">
+                        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3683-gigabyte-z790-aorus-elite-ddr5.jpg" width="100"/>
+                        <div class="product-details">
+                            <h3>Mainboard GIGABYTE Z790 AORUS ELITE DDR5</h3>
+                            <p>Bảo hành: 36 Tháng</p>
+                            <p>Kho hàng: Còn hàng</p>
+                            <p>Mã SP: CPU0149KB</p>
+                            <p class="price">7.590.000đ</p>                       
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product" onclick="selectProduct(this)">
+                      <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3687-gigabyte-z790-gaming-x-ax.jpg" width="100"/>
                       <div class="product-details">
-                          <h3>Ổ cứng HDD Seagate 500GB 16MB</h3>
+                          <h3>Mainboard Gigabyte Z790 GAMING X AX DDR5</h3>
                           <p>Bảo hành: 36 Tháng</p>
                           <p>Kho hàng: Còn hàng</p>
-                          <p>Mã SP: HDDI9149KB</p>
+                          <p>Mã SP: CPUI7149KB</p>
+                          <p class="price">7.450.000đ</p>
+                      </div>
+                  </div>
+                  <!-- Product 4 -->
+                  <div class="product" onclick="selectProduct(this)">
+                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5122-rog-maximus-z790-hero-btf-1.png" width="100"/>
+                    <div class="product-details">
+                        <h3>Mainboard ASUS ROG Maximus Z790 HERO BTF</h3>
+                        <p>Bảo hành: 36 Tháng</p>
+                        <p>Kho hàng: Còn hàng</p>
+                        <p>Mã SP: CPUI7149KFB</p>
+                        <p class="price">16.890.000đ</p>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product" onclick="selectProduct(this)">
+                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5246-z790-aorus-xtreme-x-ice-01.png" width="100"/>
+                  <div class="product-details">
+                      <h3>Mainboard GIGABYTE Z790 AORUS XTREME </h3>
+                      <p>Bảo hành: 36 Tháng</p>
+                      <p>Kho hàng: Còn hàng</p>
+                      <p>Mã SP: CPUI5145B</p>
+                      <p class="price">46.650.000đ</p>
+                  </div>
+              </div>
+                </div>
+            </div>
+        </div>
+    </div>         
+      <!-- tạo cho RAM -->
+      <div id="productContainerRaw" class="modal" style="display: none;">
+        <div class="modal-content">
+            <!-- Header chứa thanh tìm kiếm và nút đóng -->
+            <div class="header1">
+                <div class="search-bar1">
+                    <input placeholder="Tìm kiếm " type="text"/>
+                    <button>Tìm kiếm</button>
+                </div>
+                <button class="close-btn" onclick="closeProduct('productContainerRaw')">X</button> <!-- Nút đóng -->
+            </div>
+    
+            <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+            <div class="main-content">
+                <!-- Phần sắp xếp và phân trang -->
+                <div class="sort-pagination">
+                    <div class="sort">
+                        <label for="sort">Sắp xếp :</label>
+                        <select id="sort">
+                            <option value="default">Tùy chọn</option>
+                            <option value="low">Giá rẻ</option>
+                            <option value="high">Chất lượng cao</option>
+                        </select>
+                    </div>
+    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="active">1</button>
+                    </div>
+                </div>
+    
+                <!-- Khung chứa các sản phẩm -->
+                <div class="product-container">
+                    <!-- Product 1 -->
+                    <div class="product" onclick="selectProduct(this)">
+                        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4519-trident-z5-rgb-black-1.jpg" width="100"/>
+                        <div class="product-details">
+                            <h3>Bộ nhớ Ram PC G.Skill Trident Z5 RGB Black </h3>
+                            <p>Bảo hành: 36 Tháng</p>
+                            <p>Kho hàng: Còn hàng</p>
+                            <p>Mã SP: CPUI9149KB</p>
+                            <p class="price">3.250.000đ</p>
+                        </div>
+                    </div>
+    
+                    <!-- Product 2 -->
+                    <div class="product" onclick="selectProduct(this)">
+                        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4164-trident-z5-rgb-white-1.jpg" width="100"/>
+                        <div class="product-details">
+                            <h3>Bộ nhớ Ram PC G.Skill Trident Z5 RGB DDR5</h3>
+                            <p>Bảo hành: 36 Tháng</p>
+                            <p>Kho hàng: Còn hàng</p>
+                            <p>Mã SP: CPU0149KB</p>
+                            <p class="price">3.250.000đ</p>                       
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product" onclick="selectProduct(this)">
+                      <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5486-trident-z5-royal-silver-1.jpg" width="100"/>
+                      <div class="product-details">
+                        <h3>Bộ nhớ Ram PC G.Skill Trident Z5 Royal</h3>
+                        <p>Bảo hành: 36 Tháng</p>
+                        <p>Kho hàng: Còn hàng</p>
+                        <p>Mã SP: CPUI5145B</p>
+                        <p class="price">3.890.000đ</p>
+                      </div>
+                  </div>
+                  <!-- Product 4 -->
+                  <div class="product" onclick="selectProduct(this)">
+                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4164-trident-z5-rgb-white-1.jpg" width="100"/>
+                    <div class="product-details">
+                        <h3>Bộ nhớ Ram PC G.Skill Trident Z5 Neo Alpha</h3>
+                        <p>Bảo hành: 36 Tháng</p>
+                        <p>Kho hàng: Còn hàng</p>
+                        <p>Mã SP: CPUI7149KFB</p>
+                        <p class="price">5.990.000đ</p>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product" onclick="selectProduct(this)">
+                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5486-trident-z5-royal-silver-1.jpg" width="100"/>
+                  <div class="product-details">
+                      <h3>Bộ nhớ Ram PC G.Skill Trident Z5 RGS</h3>
+                      <p>Bảo hành: 36 Tháng</p>
+                      <p>Kho hàng: Còn hàng</p>
+                      <p>Mã SP: CPUI5145B</p>
+                      <p class="price">6.290.000đ</p>
+                  </div>
+              </div>
+                </div>
+            </div>
+        </div>
+    </div>         
+    <!-- tạo cho SSD1 -->
+    <div id="productContainerSSD1" class="modal" style="display: none;">
+      <div class="modal-content">
+          <!-- Header chứa thanh tìm kiếm và nút đóng -->
+          <div class="header1">
+              <div class="search-bar1">
+                  <input placeholder="Tìm kiếm " type="text"/>
+                  <button>Tìm kiếm</button>
+              </div>
+              <button class="close-btn" onclick="closeProduct('productContainerSSD1')">X</button> <!-- Nút đóng -->
+          </div>
+  
+          <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+          <div class="main-content">
+              <!-- Phần sắp xếp và phân trang -->
+              <div class="sort-pagination">
+                  <div class="sort">
+                      <label for="sort">Sắp xếp :</label>
+                      <select id="sort">
+                          <option value="default">Tùy chọn</option>
+                          <option value="low">Giá rẻ</option>
+                          <option value="high">Chất lượng cao</option>
+                      </select>
+                  </div>
+  
+                  <!-- Pagination -->
+                  <div class="pagination">
+                      <button class="active">1</button>
+                  </div>
+              </div>
+  
+              <!-- Khung chứa các sản phẩm -->
+              <div class="product-container">
+                  <!-- Product 1 -->
+                  <div class="product" onclick="selectProduct(this)">
+                      <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4937-ssd-samsung-870-evo-1-copy.jpg" width="100"/>
+                      <div class="product-details">
+                          <h3>Ổ cứng SSD Samsung 980 Pro</h3>
+                          <p>Bảo hành: 36 Tháng</p>
+                          <p>Kho hàng: Còn hàng</p>
+                          <p>Mã SP: SSDI9149KB</p>
                           <p class="price">3.390.000đ</p>
                       </div>
                   </div>
   
                   <!-- Product 2 -->
-                  <div class="product">
-                      <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6104-wd-gold-3-5.jpg" width="100"/>
+                  <div class="product" onclick="selectProduct(this)">
+                      <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3448-cs900-1.jpg" width="100"/>
                       <div class="product-details">
-                          <h3>Ổ cứng HDD Enterprise WD Gold</h3>
+                          <h3>Ổ Cứng Di Động SSD Samsung T7</h3>
                           <p>Bảo hành: 36 Tháng</p>
                           <p>Kho hàng: Còn hàng</p>
-                          <p>Mã SP: HDDG0149KB</p>
-                          <p class="price">15.190.000đ</p>                       
+                          <p>Mã SP: SSD20149KB</p>
+                          <p class="price">6.190.000đ</p>                       
                       </div>
                   </div>
                   <!-- Product 3 -->
-                  <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6108-wd-ultrastar-dc-hc560-1.jpg" width="100"/>
+                  <div class="product" onclick="selectProduct(this)">
+                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4937-ssd-samsung-870-evo-1-copy.jpg" width="100"/>
                     <div class="product-details">
-                      <h3>Ổ cứng HDD Camera WD Purple Pro</h3>
+                      <h3>Ổ Cứng Di Động SSD Samsung BLACK</h3>
                       <p>Bảo hành: 36 Tháng</p>
                       <p>Kho hàng: Còn hàng</p>
-                      <p>Mã SP: HDDP13145B</p>
-                      <p class="price">19.490.000đ</p>
+                      <p>Mã SP: SSDBL13145B</p>
+                      <p class="price">6.120.000đ</p>
                     </div>
                 </div>
                 <!-- Product 4 -->
-                <div class="product">
-                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/2094-wd-blue-3-5-1.jpg" width="100"/>
+                <div class="product" onclick="selectProduct(this)">
+                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6283-ssd-t7-portable-2.jpg" width="100"/>
                   <div class="product-details">
-                      <h3>Ổ cứng HDD Enterprise Ultrastar</h3>
+                      <h3>Ổ cứng SSD GIGABYTE AI TOP</h3>
                       <p>Bảo hành: 36 Tháng</p>
                       <p>Kho hàng: Còn hàng</p>
-                      <p>Mã SP: HDDC49KFB</p>
-                      <p class="price">14.250.000đ</p>
+                      <p>Mã SP: SSDAI149KFB</p>
+                      <p class="price">7.900.000đ</p>
                   </div>
               </div>
               <!-- Product 5 -->
-              <div class="product">
-                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/2421-wd-red-plus-3-5.jpg" width="100"/>
+              <div class="product" onclick="selectProduct(this)">
+                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5645-ai-top-100e-ssd-1tb-02.png" width="100"/>
                 <div class="product-details">
-                    <h3>Ổ cứng HDD WD Red Plus 8TB</h3>
+                    <h3>Ổ Cứng SSD SamSung 990 PRO</h3>
                     <p>Bảo hành: 36 Tháng</p>
                     <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: HDDRRO145B</p>
-                    <p class="price">6.190.000đ</p>
-                  </div>
-              </div>
+                    <p>Mã SP: SSDPRO145B</p>
+                    <p class="price">12.930.000đ</p>
                 </div>
             </div>
+              </div>
+          </div>
+      </div>
+  </div>         
+  <!-- tạo cho SSD2 -->
+  <div id="productContainerSSD2" class="modal" style="display: none;">
+    <div class="modal-content">
+        <!-- Header chứa thanh tìm kiếm và nút đóng -->
+        <div class="header1">
+            <div class="search-bar1">
+                <input placeholder="Tìm kiếm " type="text"/>
+                <button>Tìm kiếm</button>
+            </div>
+            <button class="close-btn" onclick="closeProduct('productContainerSSD2')">X</button> <!-- Nút đóng -->
         </div>
-    </div>      
-    <!-- tạo cho VGA -->
-    <div id="productContainerVGA" class="modal" style="display: none;">
-      <div class="modal-content">
-          <!-- Header chứa thanh tìm kiếm và nút đóng -->
-          <div class="header1">
-              <div class="search-bar1">
-                  <input placeholder="Tìm kiếm " type="text"/>
-                  <button>Tìm kiếm</button>
-              </div>
-              <button class="close-btn" onclick="closeProduct('productContainerVGA')">X</button> <!-- Nút đóng -->
-          </div>
-  
-          <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
-          <div class="main-content">
-              <!-- Phần sắp xếp và phân trang -->
-              <div class="sort-pagination">
-                  <div class="sort">
-                      <label for="sort">Sắp xếp :</label>
-                      <select id="sort">
-                          <option value="default">Tùy chọn</option>
-                          <option value="low">Giá rẻ</option>
-                          <option value="high">Chất lượng cao</option>
-                      </select>
-                  </div>
-  
-                  <!-- Pagination -->
-                  <div class="pagination">
-                      <button class="active">1</button>
-                  </div>
-              </div>
-  
-              <!-- Khung chứa các sản phẩm -->
-              <div class="product-container">
-                  <!-- Product 1 -->
-                  <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-4846-tuf-rtx4070s-12g-gaming.jpg" width="100"/>
-                    <div class="product-details">
-                        <h3>Card màn hình ASUS TUF GeForce RTX</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: VGAI9149KB</p>
-                        <p class="price">20.790.000đ</p>
-                    </div>
+
+        <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+        <div class="main-content">
+            <!-- Phần sắp xếp và phân trang -->
+            <div class="sort-pagination">
+                <div class="sort">
+                    <label for="sort">Sắp xếp :</label>
+                    <select id="sort">
+                        <option value="default">Tùy chọn</option>
+                        <option value="low">Giá rẻ</option>
+                        <option value="high">Chất lượng cao</option>
+                    </select>
                 </div>
 
-                <!-- Product 2 -->
-                <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5509-dual-rx-6600-v3-1.jpg" width="100"/>
-                    <div class="product-details">
-                        <h3>Card màn hình Asus Dual GeForce RTX</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: VGA20149KB</p>
-                        <p class="price">7.690.000đ</p>                       
-                    </div>
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="active">1</button>
                 </div>
-                <!-- Product 3 -->
-                <div class="product">
-                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/2954-2954-asus-rog-strix-geforce-rtx-4090-24gb-gddr6x.jpg" width="100"/>
+            </div>
+
+            <!-- Khung chứa các sản phẩm -->
+            <div class="product-container">
+                <!-- Product 1 -->
+                <div class="product" onclick="selectProduct(this)">
+                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6286-ssd-t9-portable-7.jpg" width="100"/>
                   <div class="product-details">
-                    <h3>Card màn hình ASUS ROG Strix GeForce</h3>
-                    <p>Bảo hành: 36 Tháng</p>
-                    <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: VGAL13145B</p>
-                    <p class="price">22.890.000đ</p>
-                  </div>
-              </div>
-              <!-- Product 4 -->
-              <div class="product">
-                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3628-dual-4060ti-oc-8g-white.jpg" width="100"/>
-                <div class="product-details">
-                    <h3>Card Màn Hình TUF Pro GeForce RTX™</h3>
-                    <p>Bảo hành: 36 Tháng</p>
-                    <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: VGA4ER49KFB</p>
-                    <p class="price">26.990.000đ</p>
-                </div>
-            </div>
-            <!-- Product 5 -->
-            <div class="product">
-              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5053-dual-3050-6gb-oc-1.jpg" width="100"/>
-              <div class="product-details">
-                  <h3>Card màn hình ASUS ROG Strix GeForce</h3>
-                  <p>Bảo hành: 36 Tháng</p>
-                  <p>Kho hàng: Còn hàng</p>
-                  <p>Mã SP: SSDPRO145B</p>
-                  <p class="price">64.490.000đ</p>
-                </div>
-            </div>
-              </div>
-          </div>
-      </div>
-  </div>            
-            <!-- tạo cho PSU -->
-    <div id="productContainerPSU" class="modal" style="display: none;">
-      <div class="modal-content">
-          <!-- Header chứa thanh tìm kiếm và nút đóng -->
-          <div class="header1">
-              <div class="search-bar1">
-                  <input placeholder="Tìm kiếm " type="text"/>
-                  <button>Tìm kiếm</button>
-              </div>
-              <button class="close-btn" onclick="closeProduct('productContainerPSU')">X</button> <!-- Nút đóng -->
-          </div>
-  
-          <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
-          <div class="main-content">
-              <!-- Phần sắp xếp và phân trang -->
-              <div class="sort-pagination">
-                  <div class="sort">
-                      <label for="sort">Sắp xếp :</label>
-                      <select id="sort">
-                          <option value="default">Tùy chọn</option>
-                          <option value="low">Giá rẻ</option>
-                          <option value="high">Chất lượng cao</option>
-                      </select>
-                  </div>
-  
-                  <!-- Pagination -->
-                  <div class="pagination">
-                      <button class="active">1</button>
-                  </div>
-              </div>
-  
-              <!-- Khung chứa các sản phẩm -->
-              <div class="product-container">
-                  <!-- Product 1 -->
-                  <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5367-leadex-iii-gold-argb-750w-black-1.jpg    " width="100"/>
-                    <div class="product-details">
-                        <h3>Nguồn máy tính Super Flower III</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: PSUI9149KB</p>
-                        <p class="price">3.290.000đ</p>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5555-rog-thor-1600w-titanium-iii-01.png" width="100"/>
-                    <div class="product-details">
-                        <h3>Nguồn máy tính Super Flower VII</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: PSU20149KB</p>
-                        <p class="price">4.250.000đ</p>                       
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="product">
-                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5369-leadex-iii-gold-argb-750w-white-1.jpg" width="100"/>
-                  <div class="product-details">
-                    <h3>Nguồn Máy Tính ASUS ROG THOR</h3>
-                    <p>Bảo hành: 36 Tháng</p>
-                    <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: PSU13145B</p>
-                    <p class="price">16.490.000đ</p>
-                  </div>
-              </div>
-              <!-- Product 4 -->
-              <div class="product">
-                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5367-leadex-iii-gold-argb-750w-black-1.jpg" width="100"/>
-                <div class="product-details">
-                    <h3>Nguồn máy tính Super Flower Leadex</h3>
-                    <p>Bảo hành: 36 Tháng</p>
-                    <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: PSU4ER49KFB</p>
-                    <p class="price">5.050.000đ</p>
-                </div>
-            </div>
-            <!-- Product 5 -->
-            <div class="product">
-              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5363-leadex-iii-gold-850w-pcie-5-0--wh--1.jpg" width="100"/>
-              <div class="product-details">
-                  <h3>Nguồn máy tính Super Flower Leadex</h3>
-                  <p>Bảo hành: 36 Tháng</p>
-                  <p>Kho hàng: Còn hàng</p>
-                  <p>Mã SP: PSURO145B</p>
-                  <p class="price">3.290.000đ</p>
-                </div>
-            </div>
-              </div>
-          </div>
-      </div>
-  </div>     
-            <!-- tạo cho CASE -->
-    <div id="productContainerCASE" class="modal" style="display: none;">
-      <div class="modal-content">
-          <!-- Header chứa thanh tìm kiếm và nút đóng -->
-          <div class="header1">
-              <div class="search-bar1">
-                  <input placeholder="Tìm kiếm " type="text"/>
-                  <button>Tìm kiếm</button>
-              </div>
-              <button class="close-btn" onclick="closeProduct('productContainerCASE')">X</button> <!-- Nút đóng -->
-          </div>
-  
-          <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
-          <div class="main-content">
-              <!-- Phần sắp xếp và phân trang -->
-              <div class="sort-pagination">
-                  <div class="sort">
-                      <label for="sort">Sắp xếp :</label>
-                      <select id="sort">
-                          <option value="default">Tùy chọn</option>
-                          <option value="low">Giá rẻ</option>
-                          <option value="high">Chất lượng cao</option>
-                      </select>
-                  </div>
-  
-                  <!-- Pagination -->
-                  <div class="pagination">
-                      <button class="active">1</button>
-                  </div>
-              </div>
-  
-              <!-- Khung chứa các sản phẩm -->
-              <div class="product-container">
-                  <!-- Product 1 -->
-                  <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3865-montech-air-903-max-white.jpg" width="100"/>
-                    <div class="product-details">
-                        <h3>Vỏ case máy tính Montech Air</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: CASEI9149KB</p>
-                        <p class="price">1.890.000đ</p>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3905-c--2-.jpg" width="100"/>
-                    <div class="product-details">
-                        <h3>Vỏ case Segotep Gank 360S-APE (B)</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: CASE20149KB</p>
-                        <p class="price">1.960.000đ</p>                       
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="product">
-                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3906-4.jpg" width="100"/>
-                  <div class="product-details">
-                    <h3>Vỏ case Segotep Gank 360S-APE (W)</h3>
-                    <p>Bảo hành: 36 Tháng</p>
-                    <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: CASEL13145B</p>
-                    <p class="price">1.450.000đ</p>
-                  </div>
-              </div>
-              <!-- Product 4 -->
-              <div class="product">
-                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-4316-1.jpg" width="100"/>
-                <div class="product-details">
-                    <h3>Vỏ case Hyte Y60 - (Đen)</h3>
-                    <p>Bảo hành: 36 Tháng</p>
-                    <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: CASE4ER49KFB</p>
-                    <p class="price">5.500.000đ</p>
-                </div>
-            </div>
-            <!-- Product 5 -->
-            <div class="product">
-              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4906-king95-wht-1.jpg" width="100"/>
-              <div class="product-details">
-                <h3>Vỏ case Hyte Y60 - (Trắng)</h3>
-                <p>Bảo hành: 36 Tháng</p>
-                <p>Kho hàng: Còn hàng</p>
-                <p>Mã SP: CASE4ER49KFB</p>
-                <p class="price">5.500.000đ</p>
-                </div>
-            </div>
-              </div>
-          </div>
-      </div>
-  </div>     
-          <!-- tạo cho Khí -->
-    <div id="productContainerAIR" class="modal" style="display: none;">
-      <div class="modal-content">
-          <!-- Header chứa thanh tìm kiếm và nút đóng -->
-          <div class="header1">
-              <div class="search-bar1">
-                  <input placeholder="Tìm kiếm " type="text"/>
-                  <button>Tìm kiếm</button>
-              </div>
-              <button class="close-btn" onclick="closeProduct('productContainerAIR')">X</button> <!-- Nút đóng -->
-          </div>
-  
-          <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
-          <div class="main-content">
-              <!-- Phần sắp xếp và phân trang -->
-              <div class="sort-pagination">
-                  <div class="sort">
-                      <label for="sort">Sắp xếp :</label>
-                      <select id="sort">
-                          <option value="default">Tùy chọn</option>
-                          <option value="low">Giá rẻ</option>
-                          <option value="high">Chất lượng cao</option>
-                      </select>
-                  </div>
-  
-                  <!-- Pagination -->
-                  <div class="pagination">
-                      <button class="active">1</button>
-                  </div>
-              </div>
-  
-              <!-- Khung chứa các sản phẩm -->
-              <div class="product-container">
-                  <!-- Product 1 -->
-                  <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6324-peerless-assasin-120-se-argb-black-1.jpg" width="100"/>
-                    <div class="product-details">
-                        <h3>Tản nhiệt Thermalright Peerless - (Đen)</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: AIRI9149KB</p>
-                        <p class="price">890.000đ</p>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6325-peerless-assasin-120-se-argb-white-1.jpg" width="100"/>
-                    <div class="product-details">
-                      <h3>Tản nhiệt Thermalright Peerless - (Trắng)</h3>
+                      <h3>Ổ cứng SSD Samsung 1TB PCIe</h3>
                       <p>Bảo hành: 36 Tháng</p>
                       <p>Kho hàng: Còn hàng</p>
-                      <p>Mã SP: AIRI9149KB</p>
-                      <p class="price">890.000đ</p>                    
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="product">
-                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6318-deepcool-ak620-1.jpg" width="100"/>
-                  <div class="product-details">
-                    <h3>Tản nhiệt khí CPU Thermalright AXP90-X47</h3>
-                    <p>Bảo hành: 36 Tháng</p>
-                    <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: AIRL13145B</p>
-                    <p class="price">1.390.000đ</p>
+                      <p>Mã SP: SSDI9149KB</p>
+                      <p class="price">3.390.000đ</p>
                   </div>
               </div>
-              <!-- Product 4 -->
-              <div class="product">
-                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6326-frost-commander-140-black-1.jpg" width="100"/>
-                <div class="product-details">
-                    <h3>Tản nhiệt CPU DeepCool Lightning AK620</h3>
-                    <p>Bảo hành: 36 Tháng</p>
-                    <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: AIR4ER49KFB</p>
-                    <p class="price">1.790.000đ</p>
-                </div>
-            </div>
-            <!-- Product 5 -->
-            <div class="product">
-              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/2675-cr-1000-evo-black-1.jpg" width="100"/>
-              <div class="product-details">
-                <h3>Tản nhiệt CPU DeepCool Assasin Lightning IV</h3>
-                <p>Bảo hành: 36 Tháng</p>
-                <p>Kho hàng: Còn hàng</p>
-                <p>Mã SP: AIR4ER49KFB</p>
-                <p class="price">2.790.000đ</p>
-                </div>
-            </div>
-              </div>
-          </div>
-      </div>
-  </div>     
-              <!-- tạo cho AOI -->
-    <div id="productContainerAOI" class="modal" style="display: none;">
-      <div class="modal-content">
-          <!-- Header chứa thanh tìm kiếm và nút đóng -->
-          <div class="header1">
-              <div class="search-bar1">
-                  <input placeholder="Tìm kiếm " type="text"/>
-                  <button>Tìm kiếm</button>
-              </div>
-              <button class="close-btn" onclick="closeProduct('productContainerAOI')">X</button> <!-- Nút đóng -->
-          </div>
-  
-          <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
-          <div class="main-content">
-              <!-- Phần sắp xếp và phân trang -->
-              <div class="sort-pagination">
-                  <div class="sort">
-                      <label for="sort">Sắp xếp :</label>
-                      <select id="sort">
-                          <option value="default">Tùy chọn</option>
-                          <option value="low">Giá rẻ</option>
-                          <option value="high">Chất lượng cao</option>
-                      </select>
-                  </div>
-  
-                  <!-- Pagination -->
-                  <div class="pagination">
-                      <button class="active">1</button>
-                  </div>
-              </div>
-  
-              <!-- Khung chứa các sản phẩm -->
-              <div class="product-container">
-                  <!-- Product 1 -->
-                  <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-5160-rog-ryujin-ii-240-argb-1.jpg" width="100"/>
-                    <div class="product-details">
-                        <h3>Tản nhiệt nước CPU ASUS ROG RYUJIN</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: AIOI9149KB</p>
-                        <p class="price">2.990.000đ</p>
-                    </div>
-                </div>
 
-                <!-- Product 2 -->
-                <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-757-478c035888b3d31e4ff2b995049cd65a.jpg" width="100"/>
-                    <div class="product-details">
-                        <h3>Tản nhiệt nước NZXT KRAKEN 240 RGB</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: AIO20149KB</p>
-                        <p class="price">3.490.000đ</p>                       
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="product">
-                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-6483-rog-ryujin-iii-360-extreme-1.jpg" width="100"/>
+              <!-- Product 2 -->
+              <div class="product" onclick="selectProduct(this)">
+                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6549-ssd-samsung-t7-shield-usb-3-2-gen2-4tb-1j.jpg" width="100"/>
                   <div class="product-details">
-                    <h3>Tản nhiệt nước Asus ROG Ryujin III</h3>
-                    <p>Bảo hành: 36 Tháng</p>
-                    <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: AIOL13145B</p>
-                    <p class="price">10.490.000đ</p>
+                      <h3>Ổ Cứng Di Động SSD Samsung T7</h3>
+                      <p>Bảo hành: 36 Tháng</p>
+                      <p>Kho hàng: Còn hàng</p>
+                      <p>Mã SP: SSD20149KB</p>
+                      <p class="price">6.190.000đ</p>                       
                   </div>
               </div>
-              <!-- Product 4 -->
-              <div class="product">
-                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-5114-2.jpg" width="100"/>
+              <!-- Product 3 -->
+              <div class="product" onclick="selectProduct(this)">
+                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6286-ssd-t9-portable-7.jpg" width="100"/>
                 <div class="product-details">
-                    <h3>Tản nhiệt nước Segotep Kunlun</h3>
-                    <p>Bảo hành: 36 Tháng</p>
-                    <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: AIO4ER49KFB</p>
-                    <p class="price">4.590.000đ</p>
+                  <h3>Ổ Cứng Di Động SSD Samsung BLACK</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: SSDBL13145B</p>
+                  <p class="price">6.120.000đ</p>
                 </div>
             </div>
-            <!-- Product 5 -->
-            <div class="product">
-              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-5102-01.jpg" width="100"/>
+            <!-- Product 4 -->
+            <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4937-ssd-samsung-870-evo-1-copy.jpg" width="100"/>
               <div class="product-details">
-                <h3>Tản nhiệt nước CPU Thermalright Aqua</h3>
+                  <h3>Ổ cứng SSD GIGABYTE AI TOP</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: SSDA4ER49KFB</p>
+                  <p class="price">7.900.000đ</p>
+              </div>
+          </div>
+          <!-- Product 5 -->
+          <div class="product" onclick="selectProduct(this)">
+            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6562-samsung-t7-usb-c-3-2-gen2-1tb-black-2j.jpg" width="100"/>
+            <div class="product-details">
+                <h3>Ổ Cứng SSD SamSung 990 PRO</h3>
                 <p>Bảo hành: 36 Tháng</p>
                 <p>Kho hàng: Còn hàng</p>
-                <p>Mã SP: AIO4ER49KFB</p>
-                <p class="price">1.250.000đ</p>
-                </div>
-            </div>
+                <p>Mã SP: SSDPRO145B</p>
+                <p class="price">12.930.000đ</p>
               </div>
           </div>
-      </div>
-  </div>     
-              <!-- tạo cho custom -->
-    <div id="productContainerCUSTOM" class="modal" style="display: none;">
-      <div class="modal-content">
-          <!-- Header chứa thanh tìm kiếm và nút đóng -->
-          <div class="header1">
-              <div class="search-bar1">
-                  <input placeholder="Tìm kiếm " type="text"/>
-                  <button>Tìm kiếm</button>
-              </div>
-              <button class="close-btn" onclick="closeProduct('productContainerCUSTOM')">X</button> <!-- Nút đóng -->
-          </div>
-  
-          <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
-          <div class="main-content">
-              <!-- Phần sắp xếp và phân trang -->
-              <div class="sort-pagination">
-                  <div class="sort">
-                      <label for="sort">Sắp xếp :</label>
-                      <select id="sort">
-                          <option value="default">Tùy chọn</option>
-                          <option value="low">Giá rẻ</option>
-                          <option value="high">Chất lượng cao</option>
-                      </select>
-                  </div>
-  
-                  <!-- Pagination -->
-                  <div class="pagination">
-                      <button class="active">1</button>
-                  </div>
-              </div>
-  
-              <!-- Khung chứa các sản phẩm -->
-              <div class="product-container">
-                  <!-- Product 1 -->
-                  <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://hanoicomputercdn.com/media/product/250_72443_anh_dai_dien_tron_bo_tan_nhiet_nuoc_custom_bykski_x_asus_gt501vc_diy_kit_black_0001_layer_14.jpg" width="100"/>
-                    <div class="product-details">
-                        <h3>Tản nhiệt nước Custom cho thùng bể cá Mini</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: CUSTOMI9149KB</p>
-                        <p class="price">3.900.000đ</p>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product">
-                    <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://hanoicomputercdn.com/media/product/250_72441_7000d_diy_kit__2_.jpg" width="100"/>
-                    <div class="product-details">
-                        <h3>Tản nhiệt nước Custom TEKCORE 360 Digital</h3>
-                        <p>Bảo hành: 36 Tháng</p>
-                        <p>Kho hàng: Còn hàng</p>
-                        <p>Mã SP: CUSTOM20149KB</p>
-                        <p class="price">4.300.000đ</p>                       
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="product">
-                  <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://hanoicomputercdn.com/media/product/250_72440_5000d_diy__1_.jpg" width="100"/>
-                  <div class="product-details">
-                    <h3>Tản nhiệt nước Custom 240 cho MIK LV12 Mini</h3>
-                    <p>Bảo hành: 36 Tháng</p>
-                    <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: CUSTOML13145B</p>
-                    <p class="price">4.490.000đ</p>
-                  </div>
-              </div>
-              <!-- Product 4 -->
-              <div class="product">
-                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://hanoicomputercdn.com/media/product/250_72439_web_1920_____4.png" width="100"/>
-                <div class="product-details">
-                    <h3>Tản nhiệt nước Custom máy MIK</h3>
-                    <p>Bảo hành: 36 Tháng</p>
-                    <p>Kho hàng: Còn hàng</p>
-                    <p>Mã SP: CUSTOM4ER49KFB</p>
-                    <p class="price">4.990.000đ</p>
-                </div>
             </div>
-            <!-- Product 5 -->
-            <div class="product">
-              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://hanoicomputercdn.com/media/product/250_72445__bykski_grazon_x_asus_gr701_diy_kit___black__1_.jpg" width="100"/>
-              <div class="product-details">
-                <h3>Tản nhiệt nước Custom ROG STRIX</h3>
-                <p>Bảo hành: 36 Tháng</p>
-                <p>Kho hàng: Còn hàng</p>
-                <p>Mã SP: CUSTOM4ER49KFB</p>
-                <p class="price">6.700.000đ</p>
-                </div>
-            </div>
-              </div>
-          </div>
-      </div>
-  </div>     
-  <footer class="footer">
-    <div class="container">
-      <div>
-        <h3>GROUP 14</h3>
-        <p>
-          Linh Trung Ward<br />
-          Thu Duc - Ho Chi Minh City - Viet Nam<br />
-          <strong>Phone:</strong> +0862210723<br />
-          <strong>Email:</strong> group14@gmail.com
-        </p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-skype"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
-      </div>
-      <div>
-        <h3>Useful Links</h3>
-        <p><a href="#">Home</a></p>
-        <p><a href="#">About us</a></p>
-        <p><a href="#">Services</a></p>
-        <p><a href="#">Terms of service</a></p>
-        <p><a href="#">Privacy policy</a></p>
-      </div>
-      <div>
-        <h3>Our Services</h3>
-        <p><a href="#">Web Design</a></p>
-        <p><a href="#">Web Development</a></p>
-        <p><a href="#">Product Management</a></p>
-        <p><a href="#">Marketing</a></p>
-        <p><a href="#">Graphic Design</a></p>
-      </div>
-      <div>
-        <h3>Our Newsletter</h3>
-        <p>
-          Your support is our greatest motivation. Join us for the best
-          experience
-        </p>
-        <form class="newsletter">
-          <input type="email" placeholder="Email" />
-          <input type="submit" value="Subscribe" />
-        </form>
-      </div>
     </div>
-  </footer>
-  <div class="footer-bottom">
-    <p>© Copyright <strong>GROUP 14</strong>. All Rights Reserved</p>
-    <p>Designed by GROUP 14</p>
+</div>         
+<!-- tạo cho HDD -->
+<div id="productContainerHDD" class="modal" style="display: none;">
+  <div class="modal-content">
+      <!-- Header chứa thanh tìm kiếm và nút đóng -->
+      <div class="header1">
+          <div class="search-bar1">
+              <input placeholder="Tìm kiếm " type="text"/>
+              <button>Tìm kiếm</button>
+          </div>
+          <button class="close-btn" onclick="closeProduct('productContainerHDD')">X</button> <!-- Nút đóng -->
+      </div>
+
+      <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+      <div class="main-content">
+          <!-- Phần sắp xếp và phân trang -->
+          <div class="sort-pagination">
+              <div class="sort">
+                  <label for="sort">Sắp xếp :</label>
+                  <select id="sort">
+                      <option value="default">Tùy chọn</option>
+                      <option value="low">Giá rẻ</option>
+                      <option value="high">Chất lượng cao</option>
+                  </select>
+              </div>
+
+              <!-- Pagination -->
+              <div class="pagination">
+                  <button class="active">1</button>
+              </div>
+          </div>
+
+          <!-- Khung chứa các sản phẩm -->
+          <div class="product-container">
+              <!-- Product 1 -->
+              <div class="product" onclick="selectProduct(this)">
+                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6093-wd-purple-pro-3-5.jpg" width="100"/>
+                <div class="product-details">
+                    <h3>Ổ cứng HDD Seagate 500GB 16MB</h3>
+                    <p>Bảo hành: 36 Tháng</p>
+                    <p>Kho hàng: Còn hàng</p>
+                    <p>Mã SP: HDDI9149KB</p>
+                    <p class="price">3.390.000đ</p>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product" onclick="selectProduct(this)">
+                <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6104-wd-gold-3-5.jpg" width="100"/>
+                <div class="product-details">
+                    <h3>Ổ cứng HDD Enterprise WD Gold</h3>
+                    <p>Bảo hành: 36 Tháng</p>
+                    <p>Kho hàng: Còn hàng</p>
+                    <p>Mã SP: HDDG0149KB</p>
+                    <p class="price">15.190.000đ</p>                       
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6108-wd-ultrastar-dc-hc560-1.jpg" width="100"/>
+              <div class="product-details">
+                <h3>Ổ cứng HDD Camera WD Purple Pro</h3>
+                <p>Bảo hành: 36 Tháng</p>
+                <p>Kho hàng: Còn hàng</p>
+                <p>Mã SP: HDDP13145B</p>
+                <p class="price">19.490.000đ</p>
+              </div>
+          </div>
+          <!-- Product 4 -->
+          <div class="product" onclick="selectProduct(this)">
+            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/2094-wd-blue-3-5-1.jpg" width="100"/>
+            <div class="product-details">
+                <h3>Ổ cứng HDD Enterprise Ultrastar</h3>
+                <p>Bảo hành: 36 Tháng</p>
+                <p>Kho hàng: Còn hàng</p>
+                <p>Mã SP: HDDC49KFB</p>
+                <p class="price">14.250.000đ</p>
+            </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product" onclick="selectProduct(this)">
+          <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/2421-wd-red-plus-3-5.jpg" width="100"/>
+          <div class="product-details">
+              <h3>Ổ cứng HDD WD Red Plus 8TB</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: HDDRRO145B</p>
+              <p class="price">6.190.000đ</p>
+            </div>
+        </div>
+          </div>
+      </div>
   </div>
+</div>      
+<!-- tạo cho VGA -->
+<div id="productContainerVGA" class="modal" style="display: none;">
+<div class="modal-content">
+    <!-- Header chứa thanh tìm kiếm và nút đóng -->
+    <div class="header1">
+        <div class="search-bar1">
+            <input placeholder="Tìm kiếm " type="text"/>
+            <button>Tìm kiếm</button>
+        </div>
+        <button class="close-btn" onclick="closeProduct('productContainerVGA')">X</button> <!-- Nút đóng -->
+    </div>
+
+    <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+    <div class="main-content">
+        <!-- Phần sắp xếp và phân trang -->
+        <div class="sort-pagination">
+            <div class="sort">
+                <label for="sort">Sắp xếp :</label>
+                <select id="sort">
+                    <option value="default">Tùy chọn</option>
+                    <option value="low">Giá rẻ</option>
+                    <option value="high">Chất lượng cao</option>
+                </select>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="active">1</button>
+            </div>
+        </div>
+
+        <!-- Khung chứa các sản phẩm -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-4846-tuf-rtx4070s-12g-gaming.jpg" width="100"/>
+              <div class="product-details">
+                  <h3>Card màn hình ASUS TUF GeForce RTX</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: VGAI9149KB</p>
+                  <p class="price">20.790.000đ</p>
+              </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5509-dual-rx-6600-v3-1.jpg" width="100"/>
+              <div class="product-details">
+                  <h3>Card màn hình Asus Dual GeForce RTX</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: VGA20149KB</p>
+                  <p class="price">7.690.000đ</p>                       
+              </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="product" onclick="selectProduct(this)">
+            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/2954-2954-asus-rog-strix-geforce-rtx-4090-24gb-gddr6x.jpg" width="100"/>
+            <div class="product-details">
+              <h3>Card màn hình ASUS ROG Strix GeForce</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: VGAL13145B</p>
+              <p class="price">22.890.000đ</p>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product" onclick="selectProduct(this)">
+          <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3628-dual-4060ti-oc-8g-white.jpg" width="100"/>
+          <div class="product-details">
+              <h3>Card Màn Hình TUF Pro GeForce RTX™</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: VGA4ER49KFB</p>
+              <p class="price">26.990.000đ</p>
+          </div>
+      </div>
+      <!-- Product 5 -->
+      <div class="product" onclick="selectProduct(this)">
+        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5053-dual-3050-6gb-oc-1.jpg" width="100"/>
+        <div class="product-details">
+            <h3>Card màn hình ASUS ROG Strix GeForce</h3>
+            <p>Bảo hành: 36 Tháng</p>
+            <p>Kho hàng: Còn hàng</p>
+            <p>Mã SP: SSDPRO145B</p>
+            <p class="price">64.490.000đ</p>
+          </div>
+      </div>
+        </div>
+    </div>
+</div>
+</div>            
+      <!-- tạo cho PSU -->
+<div id="productContainerPSU" class="modal" style="display: none;">
+<div class="modal-content">
+    <!-- Header chứa thanh tìm kiếm và nút đóng -->
+    <div class="header1">
+        <div class="search-bar1">
+            <input placeholder="Tìm kiếm " type="text"/>
+            <button>Tìm kiếm</button>
+        </div>
+        <button class="close-btn" onclick="closeProduct('productContainerPSU')">X</button> <!-- Nút đóng -->
+    </div>
+
+    <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+    <div class="main-content">
+        <!-- Phần sắp xếp và phân trang -->
+        <div class="sort-pagination">
+            <div class="sort">
+                <label for="sort">Sắp xếp :</label>
+                <select id="sort">
+                    <option value="default">Tùy chọn</option>
+                    <option value="low">Giá rẻ</option>
+                    <option value="high">Chất lượng cao</option>
+                </select>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="active">1</button>
+            </div>
+        </div>
+
+        <!-- Khung chứa các sản phẩm -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5367-leadex-iii-gold-argb-750w-black-1.jpg    " width="100"/>
+              <div class="product-details">
+                  <h3>Nguồn máy tính Super Flower III</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: PSUI9149KB</p>
+                  <p class="price">3.290.000đ</p>
+              </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5555-rog-thor-1600w-titanium-iii-01.png" width="100"/>
+              <div class="product-details">
+                  <h3>Nguồn máy tính Super Flower VII</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: PSU20149KB</p>
+                  <p class="price">4.250.000đ</p>                       
+              </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="product" onclick="selectProduct(this)">
+            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5369-leadex-iii-gold-argb-750w-white-1.jpg" width="100"/>
+            <div class="product-details">
+              <h3>Nguồn Máy Tính ASUS ROG THOR</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: PSU13145B</p>
+              <p class="price">16.490.000đ</p>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product" onclick="selectProduct(this)">
+          <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5367-leadex-iii-gold-argb-750w-black-1.jpg" width="100"/>
+          <div class="product-details">
+              <h3>Nguồn máy tính Super Flower Leadex</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: PSU4ER49KFB</p>
+              <p class="price">5.050.000đ</p>
+          </div>
+      </div>
+      <!-- Product 5 -->
+      <div class="product" onclick="selectProduct(this)">
+        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/5363-leadex-iii-gold-850w-pcie-5-0--wh--1.jpg" width="100"/>
+        <div class="product-details">
+            <h3>Nguồn máy tính Super Flower Leadex</h3>
+            <p>Bảo hành: 36 Tháng</p>
+            <p>Kho hàng: Còn hàng</p>
+            <p>Mã SP: PSURO145B</p>
+            <p class="price">3.290.000đ</p>
+          </div>
+      </div>
+        </div>
+    </div>
+</div>
+</div>     
+      <!-- tạo cho CASE -->
+<div id="productContainerCASE" class="modal" style="display: none;">
+<div class="modal-content">
+    <!-- Header chứa thanh tìm kiếm và nút đóng -->
+    <div class="header1">
+        <div class="search-bar1">
+            <input placeholder="Tìm kiếm " type="text"/>
+            <button>Tìm kiếm</button>
+        </div>
+        <button class="close-btn" onclick="closeProduct('productContainerCASE')">X</button> <!-- Nút đóng -->
+    </div>
+
+    <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+    <div class="main-content">
+        <!-- Phần sắp xếp và phân trang -->
+        <div class="sort-pagination">
+            <div class="sort">
+                <label for="sort">Sắp xếp :</label>
+                <select id="sort">
+                    <option value="default">Tùy chọn</option>
+                    <option value="low">Giá rẻ</option>
+                    <option value="high">Chất lượng cao</option>
+                </select>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="active">1</button>
+            </div>
+        </div>
+
+        <!-- Khung chứa các sản phẩm -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3865-montech-air-903-max-white.jpg" width="100"/>
+              <div class="product-details">
+                  <h3>Vỏ case máy tính Montech Air</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: CASEI9149KB</p>
+                  <p class="price">1.890.000đ</p>
+              </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3905-c--2-.jpg" width="100"/>
+              <div class="product-details">
+                  <h3>Vỏ case Segotep Gank 360S-APE (B)</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: CASE20149KB</p>
+                  <p class="price">1.960.000đ</p>                       
+              </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="product" onclick="selectProduct(this)">
+            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/3906-4.jpg" width="100"/>
+            <div class="product-details">
+              <h3>Vỏ case Segotep Gank 360S-APE (W)</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: CASEL13145B</p>
+              <p class="price">1.450.000đ</p>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product" onclick="selectProduct(this)">
+          <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-4316-1.jpg" width="100"/>
+          <div class="product-details">
+              <h3>Vỏ case Hyte Y60 - (Đen)</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: CASE4ER49KFB</p>
+              <p class="price">5.500.000đ</p>
+          </div>
+      </div>
+      <!-- Product 5 -->
+      <div class="product" onclick="selectProduct(this)">
+        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/4906-king95-wht-1.jpg" width="100"/>
+        <div class="product-details">
+          <h3>Vỏ case Hyte Y60 - (Trắng)</h3>
+          <p>Bảo hành: 36 Tháng</p>
+          <p>Kho hàng: Còn hàng</p>
+          <p>Mã SP: CASE4ER49KFB</p>
+          <p class="price">5.500.000đ</p>
+          </div>
+      </div>
+        </div>
+    </div>
+</div>
+</div>     
+    <!-- tạo cho Khí -->
+<div id="productContainerAIR" class="modal" style="display: none;">
+<div class="modal-content">
+    <!-- Header chứa thanh tìm kiếm và nút đóng -->
+    <div class="header1">
+        <div class="search-bar1">
+            <input placeholder="Tìm kiếm " type="text"/>
+            <button>Tìm kiếm</button>
+        </div>
+        <button class="close-btn" onclick="closeProduct('productContainerAIR')">X</button> <!-- Nút đóng -->
+    </div>
+
+    <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+    <div class="main-content">
+        <!-- Phần sắp xếp và phân trang -->
+        <div class="sort-pagination">
+            <div class="sort">
+                <label for="sort">Sắp xếp :</label>
+                <select id="sort">
+                    <option value="default">Tùy chọn</option>
+                    <option value="low">Giá rẻ</option>
+                    <option value="high">Chất lượng cao</option>
+                </select>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="active">1</button>
+            </div>
+        </div>
+
+        <!-- Khung chứa các sản phẩm -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6324-peerless-assasin-120-se-argb-black-1.jpg" width="100"/>
+              <div class="product-details">
+                  <h3>Tản nhiệt Thermalright Peerless - (Đen)</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: AIRI9149KB</p>
+                  <p class="price">890.000đ</p>
+              </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6325-peerless-assasin-120-se-argb-white-1.jpg" width="100"/>
+              <div class="product-details">
+                <h3>Tản nhiệt Thermalright Peerless - (Trắng)</h3>
+                <p>Bảo hành: 36 Tháng</p>
+                <p>Kho hàng: Còn hàng</p>
+                <p>Mã SP: AIRI9149KB</p>
+                <p class="price">890.000đ</p>                    
+              </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="product" onclick="selectProduct(this)">
+            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6318-deepcool-ak620-1.jpg" width="100"/>
+            <div class="product-details">
+              <h3>Tản nhiệt khí CPU Thermalright AXP90-X47</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: AIRL13145B</p>
+              <p class="price">1.390.000đ</p>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product" onclick="selectProduct(this)">
+          <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/6326-frost-commander-140-black-1.jpg" width="100"/>
+          <div class="product-details">
+              <h3>Tản nhiệt CPU DeepCool Lightning AK620</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: AIR4ER49KFB</p>
+              <p class="price">1.790.000đ</p>
+          </div>
+      </div>
+      <!-- Product 5 -->
+      <div class="product" onclick="selectProduct(this)">
+        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/2675-cr-1000-evo-black-1.jpg" width="100"/>
+        <div class="product-details">
+          <h3>Tản nhiệt CPU DeepCool Assasin Lightning IV</h3>
+          <p>Bảo hành: 36 Tháng</p>
+          <p>Kho hàng: Còn hàng</p>
+          <p>Mã SP: AIR4ER49KFB</p>
+          <p class="price">2.790.000đ</p>
+          </div>
+      </div>
+        </div>
+    </div>
+</div>
+</div>     
+        <!-- tạo cho AOI -->
+<div id="productContainerAOI" class="modal" style="display: none;">
+<div class="modal-content">
+    <!-- Header chứa thanh tìm kiếm và nút đóng -->
+    <div class="header1">
+        <div class="search-bar1">
+            <input placeholder="Tìm kiếm " type="text"/>
+            <button>Tìm kiếm</button>
+        </div>
+        <button class="close-btn" onclick="closeProduct('productContainerAOI')">X</button> <!-- Nút đóng -->
+    </div>
+
+    <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+    <div class="main-content">
+        <!-- Phần sắp xếp và phân trang -->
+        <div class="sort-pagination">
+            <div class="sort">
+                <label for="sort">Sắp xếp :</label>
+                <select id="sort">
+                    <option value="default">Tùy chọn</option>
+                    <option value="low">Giá rẻ</option>
+                    <option value="high">Chất lượng cao</option>
+                </select>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="active">1</button>
+            </div>
+        </div>
+
+        <!-- Khung chứa các sản phẩm -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-5160-rog-ryujin-ii-240-argb-1.jpg" width="100"/>
+              <div class="product-details">
+                  <h3>Tản nhiệt nước CPU ASUS ROG RYUJIN</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: AIOI9149KB</p>
+                  <p class="price">2.990.000đ</p>
+              </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-757-478c035888b3d31e4ff2b995049cd65a.jpg" width="100"/>
+              <div class="product-details">
+                  <h3>Tản nhiệt nước NZXT KRAKEN 240 RGB</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: AIO20149KB</p>
+                  <p class="price">3.490.000đ</p>                       
+              </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="product" onclick="selectProduct(this)">
+            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-6483-rog-ryujin-iii-360-extreme-1.jpg" width="100"/>
+            <div class="product-details">
+              <h3>Tản nhiệt nước Asus ROG Ryujin III</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: AIOL13145B</p>
+              <p class="price">10.490.000đ</p>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product" onclick="selectProduct(this)">
+          <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-5114-2.jpg" width="100"/>
+          <div class="product-details">
+              <h3>Tản nhiệt nước Segotep Kunlun</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: AIO4ER49KFB</p>
+              <p class="price">4.590.000đ</p>
+          </div>
+      </div>
+      <!-- Product 5 -->
+      <div class="product" onclick="selectProduct(this)">
+        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://mygear.vn/media/product/250-5102-01.jpg" width="100"/>
+        <div class="product-details">
+          <h3>Tản nhiệt nước CPU Thermalright Aqua</h3>
+          <p>Bảo hành: 36 Tháng</p>
+          <p>Kho hàng: Còn hàng</p>
+          <p>Mã SP: AIO4ER49KFB</p>
+          <p class="price">1.250.000đ</p>
+          </div>
+      </div>
+        </div>
+    </div>
+</div>
+</div>     
+        <!-- tạo cho custom -->
+<div id="productContainerCUSTOM" class="modal" style="display: none;">
+<div class="modal-content">
+    <!-- Header chứa thanh tìm kiếm và nút đóng -->
+    <div class="header1">
+        <div class="search-bar1">
+            <input placeholder="Tìm kiếm " type="text"/>
+            <button>Tìm kiếm</button>
+        </div>
+        <button class="close-btn" onclick="closeProduct('productContainerCUSTOM')">X</button> <!-- Nút đóng -->
+    </div>
+
+    <!-- Khung chứa sắp xếp, phân trang và sản phẩm -->
+    <div class="main-content">
+        <!-- Phần sắp xếp và phân trang -->
+        <div class="sort-pagination">
+            <div class="sort">
+                <label for="sort">Sắp xếp :</label>
+                <select id="sort">
+                    <option value="default">Tùy chọn</option>
+                    <option value="low">Giá rẻ</option>
+                    <option value="high">Chất lượng cao</option>
+                </select>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="active">1</button>
+            </div>
+        </div>
+
+        <!-- Khung chứa các sản phẩm -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://hanoicomputercdn.com/media/product/250_72443_anh_dai_dien_tron_bo_tan_nhiet_nuoc_custom_bykski_x_asus_gt501vc_diy_kit_black_0001_layer_14.jpg" width="100"/>
+              <div class="product-details">
+                  <h3>Tản nhiệt nước Custom cho thùng bể cá Mini</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: CUSTOMI9149KB</p>
+                  <p class="price">3.900.000đ</p>
+              </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product" onclick="selectProduct(this)">
+              <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://hanoicomputercdn.com/media/product/250_72441_7000d_diy_kit__2_.jpg" width="100"/>
+              <div class="product-details">
+                  <h3>Tản nhiệt nước Custom TEKCORE 360 Digital</h3>
+                  <p>Bảo hành: 36 Tháng</p>
+                  <p>Kho hàng: Còn hàng</p>
+                  <p>Mã SP: CUSTOM20149KB</p>
+                  <p class="price">4.300.000đ</p>                       
+              </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="product" onclick="selectProduct(this)">
+            <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://hanoicomputercdn.com/media/product/250_72440_5000d_diy__1_.jpg" width="100"/>
+            <div class="product-details">
+              <h3>Tản nhiệt nước Custom 240 cho MIK LV12 Mini</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: CUSTOML13145B</p>
+              <p class="price">4.490.000đ</p>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product" onclick="selectProduct(this)">
+          <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://hanoicomputercdn.com/media/product/250_72439_web_1920_____4.png" width="100"/>
+          <div class="product-details">
+              <h3>Tản nhiệt nước Custom máy MIK</h3>
+              <p>Bảo hành: 36 Tháng</p>
+              <p>Kho hàng: Còn hàng</p>
+              <p>Mã SP: CUSTOM4ER49KFB</p>
+              <p class="price">4.990.000đ</p>
+          </div>
+      </div>
+      <!-- Product 5 -->
+      <div class="product" onclick="selectProduct(this)">
+        <img alt="Image of CPU Intel Core Ultra 5 245K" height="150" src="https://hanoicomputercdn.com/media/product/250_72445__bykski_grazon_x_asus_gr701_diy_kit___black__1_.jpg" width="100"/>
+        <div class="product-details">
+          <h3>Tản nhiệt nước Custom ROG STRIX</h3>
+          <p>Bảo hành: 36 Tháng</p>
+          <p>Kho hàng: Còn hàng</p>
+          <p>Mã SP: CUSTOM4ER49KFB</p>
+          <p class="price">6.700.000đ</p>
+          </div>
+      </div>
+        </div>
+    </div>
+</div>
+</div>     
+<footer class="footer">
+<div class="container">
+<div>
+  <h3>GROUP 14</h3>
+  <p>
+    Linh Trung Ward<br />
+    Thu Duc - Ho Chi Minh City - Viet Nam<br />
+    <strong>Phone:</strong> +0862210723<br />
+    <strong>Email:</strong> group14@gmail.com
+  </p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-skype"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
+<div>
+  <h3>Useful Links</h3>
+  <p><a href="#">Home</a></p>
+  <p><a href="#">About us</a></p>
+  <p><a href="#">Services</a></p>
+  <p><a href="#">Terms of service</a></p>
+  <p><a href="#">Privacy policy</a></p>
+</div>
+<div>
+  <h3>Our Services</h3>
+  <p><a href="#">Web Design</a></p>
+  <p><a href="#">Web Development</a></p>
+  <p><a href="#">Product Management</a></p>
+  <p><a href="#">Marketing</a></p>
+  <p><a href="#">Graphic Design</a></p>
+</div>
+<div>
+  <h3>Our Newsletter</h3>
+  <p>
+    Your support is our greatest motivation. Join us for the best
+    experience
+  </p>
+  <form class="newsletter">
+    <input type="email" placeholder="Email" />
+    <input type="submit" value="Subscribe" />
+  </form>
+</div>
+</div>
+</footer>
+<div class="footer-bottom">
+<p>© Copyright <strong>GROUP 14</strong>. All Rights Reserved</p>
+<p>Designed by GROUP 14</p>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- nút GotoTop -->
@@ -1314,13 +1317,14 @@ function topFunction() {
 }
 
 // làm model
-function showProduct(modalId) {
-  const modal = document.getElementById(modalId);
-  modal.classList.add("show"); // Thêm lớp show để kích hoạt hiệu ứng
-  setTimeout(() => {
-    modal.style.display = "block"; // Đảm bảo modal hiển thị
-  }, 10); // Cho CSS kích hoạt hiệu ứng đầu tiên
-  document.body.style.overflow = "hidden";
+function showProduct(modalId, currentComponentId) {
+    const modal = document.getElementById(modalId);
+    modal.classList.add("show");
+    modal.setAttribute("data-current-component", currentComponentId); // Lưu ID khung hiện tại
+    setTimeout(() => {
+        modal.style.display = "block";
+    }, 10);
+    document.body.style.overflow = "hidden";
 }
 
 function closeProduct(modalId) {
@@ -1332,6 +1336,44 @@ function closeProduct(modalId) {
   document.body.style.overflow = "auto";
 }
 
+let totalCost = 0;  // Biến lưu trữ tổng chi phí
+
+// Hàm cập nhật tổng chi phí
+function updateCost() {
+  const costElement = document.querySelector('.cost');
+  if (costElement) {
+    costElement.innerHTML = `Chi phí dự tính: ${totalCost.toLocaleString()} đ`; // Cập nhật chi phí vào div
+  }
+}
+
+// Hàm tính tổng chi phí và cập nhật thông tin sản phẩm khi chọn sản phẩm
+function selectProduct(productElement) {
+    // Lấy thông tin sản phẩm
+    const imgSrc = productElement.querySelector("img").src;
+    const title = productElement.querySelector("h3").innerText;
+    const priceText = productElement.querySelector(".price").innerText;
+    const price = parseInt(priceText.replace(/[^\d]/g, '')); // Lấy giá trị số từ chuỗi và chuyển thành số nguyên
+
+    // Xác định khung hiện tại
+    const modal = productElement.closest(".modal");
+    const currentComponentId = modal.getAttribute("data-current-component");
+    const titleElement = document.querySelector(`#${currentComponentId} .title`);
+
+    // Cập nhật thông tin sản phẩm trong khung
+    titleElement.innerHTML = `
+        <img src="${imgSrc}" alt="Selected Product" style="width: 40px; height: 40px; margin-right: 10px;"/>
+        ${title} - <span class="selected-price" style="color: #ff5722;">${priceText}</span>
+    `;
+
+    // Cập nhật tổng chi phí
+    totalCost += price;
+
+    // Cập nhật giao diện chi phí
+    updateCost();
+
+    // Đóng modal
+    closeProduct(modal.id);
+}
 
         </script>
   </body>
