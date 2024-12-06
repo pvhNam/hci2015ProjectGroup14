@@ -42,7 +42,7 @@
       <a href="Computercooling.html" class="nav-link">Linh kiện PC▾</a>
       <a href="laptop.html" class="nav-link">Laptop</a>
       <div class="dropdown">
-        <a href="#" class="nav-link active">Bàn phím chuột Tai nghe</a>
+        <a href="#" class="nav-link active">Bàn phím chuột Tai nghe▾</a>
         <div class="dropdown-content">
           <a href=""> Bàn phím</a>
           <a href="Mouse.html"> Chuột</a>
@@ -57,69 +57,138 @@
       <div class="sidebar">
         <h3>Lọc sản phẩm</h3>
 
-        <!-- Price Range -->
-        <div class="filter-group price-range">
-          <h4>Giá tiền</h4>
-          <input type="text" placeholder="Từ (VNĐ)" />
-          <input type="text" placeholder="Đến (VNĐ)" />
-          <button>Lọc</button>
-        </div>
-
         <!-- Brand -->
         <div class="filter-group">
           <h4>Hãng</h4>
-          <label><input type="checkbox" /> Wooting</label>
-          <label><input type="checkbox" /> Melgeek</label>
-          <label><input type="checkbox" /> Daeru</label>
-          <label><input type="checkbox" /> Razer</label>
-          <label><input type="checkbox" /> Asus</label>
-          <label><input type="checkbox" /> Akko</label>
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="brand"
+              value="Asus"
+            />
+            Asus</label
+          >
+
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="brand"
+              value="Wooting"
+            />
+            Wooting</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="brand"
+              value="MelGeek"
+            />
+            MelGeek</label
+          ><label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="brand"
+              value="Dell"
+            />
+            Dell</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="brand"
+              value="Razer"
+            />
+            Razer</label
+          >
         </div>
 
         <!-- Other Filters -->
         <div class="filter-group">
-          <h4>Khuyến mãi</h4>
-          <label><input type="checkbox" /> Trả góp 0%</label>
-          <label><input type="checkbox" /> Giá rẻ quá</label>
+          <h4>Lọc giá</h4>
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="price"
+              value="1000000-2000000"
+            />
+            1.000.000đ - 2.000.000đ</label
+          >
+          <label
+            ><input type="checkbox" class="filter-checkbox" data-type="price"
+            value=20000000-3000000" /> 2.000.000đ - 3.000.000đ</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="price"
+              value="3000000-4000000"
+            />
+            3.000.000đ - 4.000.000đ</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="price"
+              value="4000000-5000000"
+            />
+            4.000.000đ - 5.000.000đ</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="price"
+              value="5000000+"
+            />
+            Trên 5.000.000đ</label
+          >
         </div>
       </div>
 
       <!-- Product Grid -->
 
       <div class="product-grid">
-        <div class="product-card">
+        <div class="product-card" onclick="showProduct('modal1')">
           <img
             src="https://techspace.vn/wp-content/uploads/2023/08/Anh-Website-TSVN.png"
             alt="Keyboard"
           />
 
           <div class="product-info">
-            <h4>Bàn phím cơ từ tính Wootting 60HE</h4>
+            <h4>Wooting 60HE</h4>
             <p>Rapid trigger | 8000 HZ</p>
             <div class="stars">★★★★★</div>
             <div class="price">6.400.000đ</div>
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" onclick="showProduct('modal2')">
           <img
             src="https://techspace.vn/wp-content/uploads/2024/06/1-7-768x768.webp"
             alt="Keyboard"
           />
           <div class="product-info">
-            <h4>Bàn phím từ HE MelGeek Made68 Rapid Trigger</h4>
+            <h4>MelGeek Made68</h4>
             <p>Magnetic Keyboard</p>
             <div class="stars">★★★★★</div>
             <div class="price">3.290.000đ</div>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" onclick="showProduct('modal3')">
           <img
             src="https://techspace.vn/wp-content/uploads/2022/10/huntsman_v2_tkl_1_9c5e01fffd6343a884c0ea69ad2c722c_master.jpg"
             alt="Keyboard"
           />
           <div class="product-info">
-            <h4>Bàn phím Razer Huntsman V2 Tenkeyless</h4>
+            <h4>Razer Huntsman V2 Tenkeyless</h4>
             <p>Razer Clicky Purple Optical</p>
             <div class="stars">★★★★☆</div>
             <div class="price">3.290.000đ</div>
@@ -131,7 +200,7 @@
             alt="Keyboard"
           />
           <div class="product-info">
-            <h4>Bàn phím cơ Razer Blackwidow V3 Tenkeyless</h4>
+            <h4>Razer Blackwidow V3 Tenkeyless</h4>
             <p>Razer Yellow | Razer Green</p>
             <div class="stars">★★★★☆</div>
             <div class="price">2.790.000đ</div>
@@ -143,7 +212,7 @@
             alt="Keyboard"
           />
           <div class="product-info">
-            <h4>Bàn phím cơ Razer BlackWidow V3 Mini HyperSpeed</h4>
+            <h4>Razer BlackWidow V3 Mini HyperSpeed</h4>
             <p>Razer Mechanical Green/ Yellow</p>
             <div class="stars">★★★★☆</div>
             <div class="price">2.190.000đ</div>
@@ -155,7 +224,7 @@
             alt="Keyboard"
           />
           <div class="product-info">
-            <h4>Bàn phím cơ Dell Inspiron 15 mini</h4>
+            <h4>Dell Inspiron 15 mini</h4>
             <p>RAM 16GB | SSD 512GB</p>
             <div class="stars">★★★★☆</div>
             <div class="price">4.590.000đ</div>
@@ -168,7 +237,7 @@
           />
 
           <div class="product-info">
-            <h4>Bàn phím Gaming Custom ASUS ROG Azoth</h4>
+            <h4>Asus ROG Azoth</h4>
             <p>1000 Hz</p>
             <div class="stars">★★★★☆</div>
             <div class="price">6.900.000đ</div>
@@ -180,7 +249,7 @@
             alt="Keyboard"
           />
           <div class="product-info">
-            <h4>Bàn phím cơ DareU EK75 White Black</h4>
+            <h4>DareU EK75 White Black</h4>
             <p>DAREU customized Dream switch</p>
             <div class="stars">★★★★☆</div>
             <div class="price">699.000đ</div>
@@ -188,26 +257,26 @@
         </div>
         <div class="product-card">
           <img
-            src="https://techspace.vn/wp-content/uploads/2023/03/1-6-768x768.webp"
+            src="https://techspace.vn/wp-content/uploads/2024/12/1-6-768x768.webp"
             alt="Keyboard"
           />
           <div class="product-info">
-            <h4>Bàn Phím Cơ IQUNIX Q66 Happy Ape Wireless</h4>
+            <h4>MelGeek Made68 Ultra</h4>
             <p>Cherry MX / TTC</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">3.562.000đ</div>
+            <div class="price">5.390.000đ</div>
           </div>
         </div>
         <div class="product-card">
           <img
-            src="https://techspace.vn/wp-content/uploads/2023/05/1-92-768x768.jpg"
+            src="https://product.hstatic.net/200000637319/product/3_75898d2ea8dd4090a2ae5f346dcb0b23_master.png"
             alt="Keyboard"
           />
           <div class="product-info">
-            <h4>Bàn phím gaming Rapoo MT510PRO – White Milk</h4>
+            <h4>Wooting 80HE</h4>
             <p>Bluetooth, USB, Wireless</p>
             <div class="stars">★★★★☆</div>
-            <div class="price">2.050.000đ</div>
+            <div class="price">7,990,000đ</div>
           </div>
         </div>
         <div class="product-card">
@@ -216,7 +285,7 @@
             alt="Keyboard"
           />
           <div class="product-info">
-            <h4>Bàn Phím Asus ROG Strix Scope TKL Gundam Edition</h4>
+            <h4>Asus ROG Strix Scope TKL Gundam Edition</h4>
             <p>AKKO CS Switch Silver / Wine Red</p>
             <div class="stars">★★★★☆</div>
             <div class="price">3.990.000đ</div>
@@ -228,7 +297,7 @@
             alt="Keyboard"
           />
           <div class="product-info">
-            <h4>Bàn phím cơ AKKO MOD007v3 HE Year of Dragon</h4>
+            <h4>AKKO MOD007v3 HE Year of Dragon</h4>
             <p>Hotswap,RGB / Magnetic Switch</p>
             <div class="stars">★★★★☆</div>
             <div class="price">4,990,000</div>
@@ -237,6 +306,123 @@
         <!-- Add more products -->
       </div>
     </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeProduct('modal2')">
+          &times;
+        </button>
+        <img
+          src="https://techspace.vn/wp-content/uploads/2024/06/1-7-768x768.webp"
+          alt="Made68 Keyboard"
+        />
+        <div class="modal-details">
+          <h4>Bàn phím từ tính Melgeek Made68</h4>
+          <p>Magnetic Keyboard | Layout 65%</p>
+          <p class="price">3.290.000đ</p>
+          <table>
+            <tr>
+              <td><strong>Thương hiệu:</strong></td>
+              <td>Melgeek</td>
+            </tr>
+            <tr>
+              <td><strong>Loại bàn phím:</strong></td>
+              <td>Magnetic Keyboard</td>
+            </tr>
+            <tr>
+              <td><strong>Tên:</strong></td>
+              <td>Made68</td>
+            </tr>
+            <tr>
+              <td><strong>Layout:</strong></td>
+              <td>65%</td>
+            </tr>
+            <tr>
+              <td><strong>PCB:</strong></td>
+              <td>Hỗ trợ Hot-swap</td>
+            </tr>
+            <tr>
+              <td><strong>Kiểu kết nối:</strong></td>
+              <td>Dây Type-C</td>
+            </tr>
+            <tr>
+              <td><strong>Hỗ trợ hệ điều hành:</strong></td>
+              <td>Windows/Mac OS/Linux</td>
+            </tr>
+            <tr>
+              <td><strong>Đèn nền:</strong></td>
+              <td>RGB</td>
+            </tr>
+            <tr>
+              <td><strong>Anti-Ghosting:</strong></td>
+              <td>Có</td>
+            </tr>
+            <tr>
+              <td><strong>Cân nặng:</strong></td>
+              <td>0.85kg</td>
+            </tr>
+            <tr>
+              <td><strong>Kích thước (L x W x H):</strong></td>
+              <td>31.2*11.5*3.2cm</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeProduct('modal1')">
+          &times;
+        </button>
+        <img
+          src="https://techspace.vn/wp-content/uploads/2023/08/Anh-Website-TSVN.png"
+          alt="Keyboard"
+        />
+        <div class="modal-details">
+          <h4>Bàn phím cơ từ tính Wootting 60HE</h4>
+          <p>Rapid trigger | 8000 HZ</p>
+          <p class="price">6.400.000đ</p>
+          <table>
+            <tr>
+              <td><strong>Kích thước:</strong></td>
+              <td>296.5 x 104 x 35 mm</td>
+            </tr>
+            <tr>
+              <td><strong>Trọng lượng:</strong></td>
+              <td>725g</td>
+            </tr>
+            <tr>
+              <td><strong>Chất liệu:</strong></td>
+              <td>Nhôm (khung), PBT (phím)</td>
+            </tr>
+            <tr>
+              <td><strong>Loại switch:</strong></td>
+              <td>Lekker (cơ học, quang học)</td>
+            </tr>
+            <tr>
+              <td><strong>Lực nhấn:</strong></td>
+              <td>45g - 75g (có thể điều chỉnh)</td>
+            </tr>
+            <tr>
+              <td><strong>Điểm phản hồi:</strong></td>
+              <td>0.7mm - 3.6mm (có thể điều chỉnh)</td>
+            </tr>
+            <tr>
+              <td><strong>Keycap:</strong></td>
+              <td>PBT Doubleshot</td>
+            </tr>
+            <tr>
+              <td><strong>Kết nối:</strong></td>
+              <td>USB Type-C</td>
+            </tr>
+            <tr>
+              <td><strong>Phần mềm:</strong></td>
+              <td>Wooting Wootility</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
     <script>
       // Lấy nút
       var mybutton = document.getElementById("goTopBtn");
@@ -346,27 +532,92 @@
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
-
-      // làm model
+    </script>
+    <script>
+      // Show the modal
       function showProduct(modalId) {
         const modal = document.getElementById(modalId);
-        modal.classList.add("show"); // Thêm lớp show để kích hoạt hiệu ứng
-        setTimeout(() => {
-          modal.style.display = "block"; // Đảm bảo modal hiển thị
-        }, 10); // Cho CSS kích hoạt hiệu ứng đầu tiên
-        document.body.style.overflow = "hidden";
+        modal.style.display = "flex"; // Show the modal
+        document.body.style.overflow = "hidden"; // Disable scrolling when modal is active
       }
 
+      // Close the modal
       function closeProduct(modalId) {
         const modal = document.getElementById(modalId);
-        modal.classList.remove("show"); // Xóa lớp show để bắt đầu hiệu ứng ẩn
-        setTimeout(() => {
-          modal.style.display = "none"; // Ẩn hoàn toàn sau khi hiệu ứng kết thúc
-        }, 300); // Thời gian khớp với transition CSS
-        document.body.style.overflow = "auto";
+        modal.style.display = "none"; // Hide the modal
+        document.body.style.overflow = "auto"; // Enable scrolling again
       }
+
+      // Close modal when clicking outside
+      window.onclick = function (event) {
+        const modals = document.querySelectorAll(".modal");
+        modals.forEach((modal) => {
+          if (event.target === modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Enable scrolling again
+          }
+        });
+      };
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const checkboxes = document.querySelectorAll(".filter-checkbox");
+      const products = document.querySelectorAll(".product-card");
+
+      // Lắng nghe sự kiện thay đổi trên các checkbox
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", filterProducts);
+      });
+
+      function filterProducts() {
+        // Lấy tất cả các giá trị được chọn từ các checkbox
+        const selectedBrands = [];
+        const selectedPrices = [];
+
+        checkboxes.forEach((checkbox) => {
+          if (checkbox.checked) {
+            if (checkbox.dataset.type === "brand") {
+              selectedBrands.push(checkbox.value);
+            } else if (checkbox.dataset.type === "price") {
+              selectedPrices.push(checkbox.value);
+            }
+          }
+        });
+
+        // Lọc các sản phẩm dựa trên lựa chọn của người dùng
+        products.forEach((product) => {
+          const productBrand = product
+            .querySelector(".product-info h4")
+            .textContent.split(" ")[0]; // Lấy tên hãng
+          const productPriceText = product
+            .querySelector(".price")
+            .textContent.replace(/[^\d]/g, ""); // Lấy giá
+          const productPrice = parseInt(productPriceText); // Chuyển giá sang số
+
+          const matchesBrand =
+            selectedBrands.length === 0 ||
+            selectedBrands.includes(productBrand);
+          const matchesPrice =
+            selectedPrices.length === 0 ||
+            selectedPrices.some((range) => {
+              const [min, max] = range
+                .split("-")
+                .map((value) => (value === "+" ? Infinity : parseInt(value)));
+
+              return (
+                productPrice >= min && (max === Infinity || productPrice <= max)
+              );
+            });
+
+          // Hiển thị hoặc ẩn sản phẩm dựa trên các tiêu chí lọc
+          if (matchesBrand && matchesPrice) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      }
+    </script>
   </body>
 </html>

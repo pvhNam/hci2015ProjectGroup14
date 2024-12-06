@@ -182,7 +182,7 @@ button {
 }
 
 .product-card img {
-  width: 100%;
+  width: 70%;
   height: auto;
 }
 
@@ -250,82 +250,70 @@ button {
 .product-info .add-to-cart:hover {
   background-color: #004c99;
 }
-/* Popup styles */
-.popup {
+/* pop up */
+.modal {
+  display: none;
   position: fixed;
-  top: 0;
+  z-index: 1000;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  z-index: 9999;
 }
 
-.popup.hidden {
-  display: none;
-}
-
-.popup-content {
-  background: white;
-  width: 70%;
+.modal-content {
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 450px;
   position: relative;
-}
-.popup-content img {
-  width: 60%;
-  height: auto;
-  margin-bottom: 15px;
-}
-.popup-content h2 {
-  margin-top: 0;
+  display: flex;
+  gap: 20px;
 }
 
-.close-btn {
+.modal-close {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 24px;
   background: none;
   border: none;
+  font-size: 20px;
   cursor: pointer;
 }
 
-.accordion .accordion-item {
-  border-bottom: 1px solid #ccc;
+.modal img {
+  max-width: 40%;
+  height: auto;
 }
 
-.accordion-header {
-  background: #f1f1f1;
-  padding: 10px;
-  width: 100%;
+.modal-details {
   text-align: left;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  cursor: pointer;
+  flex: 1;
 }
 
-.accordion-body {
-  padding: 10px;
-  display: none;
+.modal h4 {
+  margin: 10px 0;
 }
 
-.accordion-header.active + .accordion-body {
-  display: block;
-}
-/* Khóa cuộn cho body */
-body.no-scroll {
-  overflow: hidden; /* Ngăn cuộn */
+.modal .price {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-/* Nội dung bên trong popup có thể cuộn */
-.popup-content {
-  max-height: 80vh; /* Chiều cao tối đa của popup */
-  overflow-y: auto; /* Bật cuộn dọc khi nội dung dài */
+.modal table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.modal table td {
+  padding: 5px 0;
 }
 /* button go to top*/
 #goTopBtn {
@@ -502,7 +490,7 @@ body.no-scroll {
   display: none;
   position: absolute;
   background-color: #fff;
-  min-width: 220px;
+  min-width: 210px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   border: 1px solid #ddd;
@@ -516,7 +504,7 @@ body.no-scroll {
 /* Dropdown content links */
 .dropdown-content a {
   color: #444;
-  padding: 12px 18px;
+  padding: 10px 15px;
   text-decoration: none;
   display: block;
   transition: all 0.3s ease;
@@ -542,7 +530,7 @@ body.no-scroll {
   font-weight: bold;
   padding: 10px 15px;
   text-transform: none;
-  font-size: 14px;
+  font-size: 16px;
   transition: all 0.3s ease-in;
   border-radius: 5px;
 }
