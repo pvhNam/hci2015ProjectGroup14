@@ -42,11 +42,11 @@
       <a href="Computercooling.html" class="nav-link">Linh kiện PC▾</a>
       <a href="laptop.html" class="nav-link">Laptop</a>
       <div class="dropdown">
-        <a href="#" class="nav-link active">Bàn phím chuột Tai nghe</a>
+        <a href="#" class="nav-link active">Bàn phím chuột Tai nghe▾</a>
         <div class="dropdown-content">
           <a href="Gear.html"> Bàn phím</a>
           <a href="Mouse.html"> Chuột</a>
-          <a href="#"><i class="fa fa-chair"></i> Tai nghe</a>
+          <a href="#"> Tai nghe</a>
         </div>
       </div>
     </div>
@@ -60,29 +60,97 @@
         <!-- Price Range -->
         <div class="filter-group price-range">
           <h4>Giá tiền</h4>
-          <input type="text" placeholder="Từ (VNĐ)" />
-          <input type="text" placeholder="Đến (VNĐ)" />
-          <button>Lọc</button>
         </div>
 
         <!-- Brand -->
         <div class="filter-group">
-          <h4>Nhà cung cấp</h4>
-          <label><input type="checkbox" /> Asus</label>
-          <label><input type="checkbox" /> Logitech</label>
-          <label><input type="checkbox" /> Razer</label>
-          <label><input type="checkbox" /> HyperX</label>
-          <label><input type="checkbox" /> Steelseries</label>
+          <h4>Hãng</h4>
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="brand"
+              value="Asus"
+            />
+            Asus</label
+          >
+
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="brand"
+              value="Logitech"
+            />
+            Logitech</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="brand"
+              value="HyperX"
+            />HyperX
+          </label>
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="brand"
+              value="Razer"
+            />
+            Razer</label
+          >
         </div>
 
         <!-- Other Filters -->
         <div class="filter-group">
           <h4>Lọc giá</h4>
-          <label><input type="checkbox" /> Dưới 1.000.000₫</label>
-          <label><input type="checkbox" /> 1.000.000₫ - 2.000.000₫</label>
-          <label><input type="checkbox" /> 2.000.000₫ - 3.000.000₫</label>
-          <label><input type="checkbox" /> 3.000.000₫ - 4.000.000₫</label>
-          <label><input type="checkbox" /> Trên 4.000.000₫</label>
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="price"
+              value="0-1000000"
+            />
+            Dưới 1.000.000đ</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="price"
+              value="1000000-2000000"
+            />
+            1.000.000đ - 2.000.000đ</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="price"
+              value="2000000-3000000"
+            />
+            2.000.000đ - 3.000.000đ</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="price"
+              value="3000000-4000000"
+            />
+            3.000.000đ - 4.000.000đ</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              class="filter-checkbox"
+              data-type="price"
+              value="4000000-100000000"
+            />
+            Trên 4.000.000đ</label
+          >
         </div>
       </div>
 
@@ -95,7 +163,7 @@
             alt="Mouse"
           />
           <div class="product-info">
-            <h4>Tai nghe Asus ROG Cetra True Wireless SpeedNova</h4>
+            <h4>Asus ROG Cetra True Wireless SpeedNova</h4>
             <p>Không dây 2.4GHz, Bluetooth</p>
             <div class="stars">★★★★★</div>
             <div class="price">4,890,000đ</div>
@@ -108,7 +176,7 @@
             alt="Mouse"
           />
           <div class="product-info">
-            <h4>Tai nghe Razer Barracuda X Chroma</h4>
+            <h4>Razer Barracuda X Chroma</h4>
             <p>Razer™ SmartSwitch Dual Wireless</p>
             <div class="stars">★★★★★</div>
             <div class="price">3,590,000đ</div>
@@ -120,7 +188,7 @@
             alt="Mouse"
           />
           <div class="product-info">
-            <h4>Tai nghe Logitech G Pro X SE</h4>
+            <h4>Logitech G Pro X SE</h4>
             <p>4K Polling Rate</p>
             <div class="stars">★★★★☆</div>
             <div class="price">2,290,000đ</div>
@@ -132,7 +200,7 @@
             alt="Mouse"
           />
           <div class="product-info">
-            <h4>Tai nghe HyperX Cloud Earbuds II Red</h4>
+            <h4>HyperX Cloud Earbuds II Red</h4>
             <p>8000 Hz</p>
             <div class="stars">★★★★☆</div>
             <div class="price">890,000đ</div>
@@ -144,7 +212,7 @@
             alt="Mouse"
           />
           <div class="product-info">
-            <h4>Tai nghe HyperX Cloud III Wireless Red</h4>
+            <h4>HyperX Cloud III Wireless Red</h4>
             <p>10Hz-21.000Hz</p>
             <div class="stars">★★★★☆</div>
             <div class="price">3,890,000đ</div>
@@ -156,7 +224,7 @@
             alt="Mouse"
           />
           <div class="product-info">
-            <h4>Tai nghe Logitech G Pro X 2 LIGHTSPEED Hồng</h4>
+            <h4>Logitech G Pro X 2 LIGHTSPEED Hồng</h4>
             <p>16KHz</p>
             <div class="stars">★★★★☆</div>
             <div class="price">5,990,000</div>
@@ -169,7 +237,7 @@
           />
 
           <div class="product-info">
-            <h4>Tai nghe Asus ROG Delta S Eva Edition</h4>
+            <h4>Asus ROG Delta S Eva Edition</h4>
             <p></p>
             <div class="stars">★★★★☆</div>
             <div class="price">5,590,000đ</div>
@@ -181,7 +249,7 @@
             alt="Mouse"
           />
           <div class="product-info">
-            <h4>Tai nghe chơi game in-ear steelseri TUSQ</h4>
+            <h4>Steelseri TUSQ</h4>
             <p>SteelSeri</p>
             <div class="stars">★★★★☆</div>
             <div class="price">890,000đ</div>
@@ -346,5 +414,63 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const checkboxes = document.querySelectorAll(".filter-checkbox");
+      const products = document.querySelectorAll(".product-card");
+
+      // Lắng nghe sự kiện thay đổi trên các checkbox
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", filterProducts);
+      });
+
+      function filterProducts() {
+        // Lấy tất cả các giá trị được chọn từ các checkbox
+        const selectedBrands = [];
+        const selectedPrices = [];
+
+        checkboxes.forEach((checkbox) => {
+          if (checkbox.checked) {
+            if (checkbox.dataset.type === "brand") {
+              selectedBrands.push(checkbox.value);
+            } else if (checkbox.dataset.type === "price") {
+              selectedPrices.push(checkbox.value);
+            }
+          }
+        });
+
+        // Lọc các sản phẩm dựa trên lựa chọn của người dùng
+        products.forEach((product) => {
+          const productBrand = product
+            .querySelector(".product-info h4")
+            .textContent.split(" ")[0]; // Lấy tên hãng
+          const productPriceText = product
+            .querySelector(".price")
+            .textContent.replace(/[^\d]/g, ""); // Lấy giá
+          const productPrice = parseInt(productPriceText); // Chuyển giá sang số
+
+          const matchesBrand =
+            selectedBrands.length === 0 ||
+            selectedBrands.includes(productBrand);
+          const matchesPrice =
+            selectedPrices.length === 0 ||
+            selectedPrices.some((range) => {
+              const [min, max] = range
+                .split("-")
+                .map((value) => (value === "+" ? Infinity : parseInt(value)));
+
+              return (
+                productPrice >= min && (max === Infinity || productPrice <= max)
+              );
+            });
+
+          // Hiển thị hoặc ẩn sản phẩm dựa trên các tiêu chí lọc
+          if (matchesBrand && matchesPrice) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      }
+    </script>
   </body>
 </html>
