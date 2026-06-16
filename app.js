@@ -11,6 +11,17 @@
   const K_SESSION = "pcshop_session";
   const K_CART = "pcshop_cart";
   const K_RETURN = "pcshop_return";
+  const K_COUPON = "pcshop_coupon";
+
+  /* Mã giảm giá khả dụng */
+  const COUPONS = {
+    WELCOME: { type: "percent", value: 15, label: "Giảm 15% cho thành viên mới" },
+    GIAM10: { type: "percent", value: 10, label: "Giảm 10% toàn đơn" },
+    GIAM20: { type: "percent", value: 20, label: "Giảm 20% toàn đơn" },
+    SINHVIEN: { type: "percent", value: 12, label: "Ưu đãi sinh viên -12%" },
+    GIAM50K: { type: "fixed", value: 50000, label: "Giảm 50.000đ" },
+    FREESHIP: { type: "fixed", value: 30000, label: "Miễn phí ship -30.000đ" },
+  };
 
   const $ = (s, ctx = document) => ctx.querySelector(s);
   const $$ = (s, ctx = document) => Array.from(ctx.querySelectorAll(s));
@@ -112,7 +123,31 @@
     },
     clear() {
       write(K_CART, []);
+      localStorage.removeItem(K_COUPON);
       sync();
+    },
+    coupon: () => read(K_COUPON, null),
+    applyCoupon(code) {
+      code = (code || "").trim().toUpperCase();
+      if (!code) return { ok: false, msg: "Vui lòng nhập mã giảm giá." };
+      if (!COUPONS[code]) return { ok: false, msg: "Mã không hợp lệ hoặc đã hết hạn." };
+      if (this.total() === 0) return { ok: false, msg: "Giỏ hàng đang trống." };
+      write(K_COUPON, code);
+      return { ok: true, msg: COUPONS[code].label };
+    },
+    removeCoupon() {
+      localStorage.removeItem(K_COUPON);
+    },
+    discount() {
+      const code = this.coupon();
+      const c = code && COUPONS[code];
+      if (!c) return 0;
+      const sub = this.total();
+      const d = c.type === "percent" ? Math.round((sub * c.value) / 100) : c.value;
+      return Math.min(d, sub);
+    },
+    grandTotal() {
+      return Math.max(0, this.total() - this.discount());
     },
   };
 
@@ -138,7 +173,7 @@
     }
     const css = `
 :root{
-  --app-grad: var(--grad, linear-gradient(135deg,#6d5cd6,#574fc7));
+  --app-grad: var(--grad, linear-gradient(135deg,#2563eb,#0ea5e9));
   --app-ink: var(--ink, #1e1b2e);
   --app-danger: var(--danger, #e11d48);
 }
@@ -152,28 +187,28 @@
   font-size:14px;cursor:pointer;position:relative;user-select:none;}
 .pc-account .pc-name{max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .pc-menu{position:absolute;top:130%;right:0;background:#fff;border-radius:14px;min-width:200px;
-  box-shadow:0 20px 44px -18px rgba(30,27,75,.4);padding:8px;opacity:0;visibility:hidden;
+  box-shadow:0 20px 44px -18px rgba(15, 23, 42,.4);padding:8px;opacity:0;visibility:hidden;
   transform:translateY(8px);transition:.25s cubic-bezier(.22,1,.36,1);z-index:2000;}
 .pc-account.open .pc-menu{opacity:1;visibility:visible;transform:translateY(0);}
 .pc-menu a,.pc-menu button{display:block;width:100%;text-align:left;background:none;border:none;
   padding:11px 14px;border-radius:9px;color:var(--app-ink);font:inherit;font-weight:600;cursor:pointer;
   transition:background .2s;}
-.pc-menu a:hover,.pc-menu button:hover{background:rgba(124,58,237,.1);}
+.pc-menu a:hover,.pc-menu button:hover{background:rgba(37, 99, 235,.1);}
 .pc-menu .pc-muted{font-weight:400;color:#6b7280;font-size:12px;padding:6px 14px 2px;}
 
 /* Quick add button on product cards */
 .pc-add{margin-top:12px;width:100%;padding:11px 14px;border:none;border-radius:11px;
   background:var(--app-grad);color:#fff;font:inherit;font-weight:700;cursor:pointer;
-  box-shadow:0 8px 18px -10px rgba(49,46,129,.7);transition:transform .25s,filter .25s;}
+  box-shadow:0 8px 18px -10px rgba(30, 58, 138,.7);transition:transform .25s,filter .25s;}
 .pc-add:hover{transform:translateY(-2px);filter:brightness(1.06);}
 .pc-add i{margin-right:7px;}
 
 /* Drawer */
-.pc-overlay{position:fixed;inset:0;background:rgba(20,18,40,.5);backdrop-filter:blur(4px);
+.pc-overlay{position:fixed;inset:0;background:rgba(8, 18, 35,.5);backdrop-filter:blur(4px);
   opacity:0;visibility:hidden;transition:.35s;z-index:5000;}
 .pc-overlay.open{opacity:1;visibility:visible;}
 .pc-drawer{position:fixed;top:0;right:0;height:100%;width:420px;max-width:92vw;background:#f7f7fb;
-  box-shadow:-20px 0 50px -20px rgba(30,27,75,.5);transform:translateX(100%);
+  box-shadow:-20px 0 50px -20px rgba(15, 23, 42,.5);transform:translateX(100%);
   transition:transform .4s cubic-bezier(.22,1,.36,1);z-index:5001;display:flex;flex-direction:column;
   font-family:inherit;}
 .pc-drawer.open{transform:translateX(0);}
@@ -189,7 +224,7 @@
 .pc-line{display:flex;gap:12px;background:#fff;border:1px solid #ece9f5;border-radius:14px;
   padding:12px;margin-bottom:12px;align-items:center;animation:pcIn .35s cubic-bezier(.22,1,.36,1);}
 @keyframes pcIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
-.pc-line img{width:58px;height:58px;object-fit:contain;border-radius:9px;background:#f3f1fb;padding:5px;}
+.pc-line img{width:58px;height:58px;object-fit:contain;border-radius:9px;background:#eaf2fd;padding:5px;}
 .pc-line .pc-li-info{flex:1;min-width:0;}
 .pc-line h4{margin:0 0 4px;font-size:14px;font-weight:700;color:var(--app-ink);line-height:1.3;
   overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
@@ -205,8 +240,25 @@
 .pc-tot{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;}
 .pc-tot span{color:#6b7280;font-weight:600;}
 .pc-tot b{font-size:22px;color:var(--app-danger);}
+.pc-tot.sub{margin-bottom:6px;}
+.pc-tot.sub b,.pc-tot.disc b{font-size:15px;}
+.pc-tot.sub b{color:var(--app-ink);}
+.pc-tot.disc b{color:var(--success,#0ea371);}
+.pc-coupon{display:flex;gap:8px;margin-bottom:8px;}
+.pc-coupon input{flex:1;padding:10px 12px;border:1.5px solid #e2e0ec;border-radius:11px;font:inherit;
+  outline:none;text-transform:uppercase;transition:.25s;}
+.pc-coupon input:focus{border-color:var(--primary,#2563eb);box-shadow:0 0 0 4px rgba(37,99,235,.12);}
+.pc-coupon button{padding:0 16px;border:none;border-radius:11px;background:var(--app-ink);color:#fff;
+  font:inherit;font-weight:700;cursor:pointer;transition:.25s;white-space:nowrap;}
+.pc-coupon button:hover{filter:brightness(1.15);}
+.pc-coupon.applied{align-items:center;background:rgba(14,163,113,.1);border:1px dashed #0ea371;
+  border-radius:12px;padding:10px 12px;justify-content:space-between;}
+.pc-coupon.applied b{color:#0ea371;} .pc-coupon.applied span{color:#6b7280;font-size:12px;}
+.pc-coupon.applied button{background:none;color:#9094a6;padding:4px 8px;font-size:15px;}
+.pc-coupon.applied button:hover{color:var(--app-danger);filter:none;}
+.pc-coupon-hint{font-size:11.5px;color:#9094a6;margin-bottom:12px;}
 .pc-btn{width:100%;padding:14px;border:none;border-radius:13px;background:var(--app-grad);color:#fff;
-  font:inherit;font-weight:800;font-size:15px;cursor:pointer;box-shadow:0 12px 26px -12px rgba(49,46,129,.8);
+  font:inherit;font-weight:800;font-size:15px;cursor:pointer;box-shadow:0 12px 26px -12px rgba(30, 58, 138,.8);
   transition:transform .25s,filter .25s;}
 .pc-btn:hover{transform:translateY(-2px);filter:brightness(1.07);}
 .pc-btn.ghost{background:#f1f0f7;color:var(--app-ink);box-shadow:none;margin-top:8px;}
@@ -214,8 +266,8 @@
 .pc-field label{display:block;font-size:13px;font-weight:600;color:var(--app-ink);margin-bottom:5px;}
 .pc-field input,.pc-field textarea{width:100%;padding:11px 13px;border:1.5px solid #e2e0ec;border-radius:11px;
   font:inherit;outline:none;transition:.25s;resize:vertical;}
-.pc-field input:focus,.pc-field textarea:focus{border-color:var(--primary,#5b54d6);
-  box-shadow:0 0 0 4px rgba(91,84,214,.12);}
+.pc-field input:focus,.pc-field textarea:focus{border-color:var(--primary,#2563eb);
+  box-shadow:0 0 0 4px rgba(37, 99, 235,.12);}
 
 /* Toast */
 .pc-toasts{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);z-index:9000;
@@ -256,6 +308,29 @@
   /* ============================================================
      HEADER (account + cart)
      ============================================================ */
+  function wireNav() {
+    // Thêm link "Trang chủ" nếu chưa có
+    const nav = $(".nav");
+    if (nav && !nav.querySelector('a[href="home.html"]')) {
+      const a = document.createElement("a");
+      a.href = "home.html";
+      a.className = "nav-link";
+      a.textContent = "Trang chủ";
+      nav.insertBefore(a, nav.firstChild);
+    }
+    // Logo dẫn về trang chủ
+    const logo = $(".logo");
+    if (logo && !logo.querySelector("a")) {
+      const img = logo.querySelector("img");
+      if (img) {
+        const a = document.createElement("a");
+        a.href = "home.html";
+        img.parentNode.insertBefore(a, img);
+        a.appendChild(img);
+      }
+    }
+  }
+
   function buildHeader() {
     const icons = $(".icons");
     if (!icons) return;
@@ -346,6 +421,30 @@
     drawer.classList.remove("open");
   }
 
+  function couponRow() {
+    const code = Cart.coupon();
+    if (code && COUPONS[code]) {
+      return `<div class="pc-coupon applied">
+        <div><i class="fa-solid fa-ticket"></i> <b>${code}</b> &nbsp;<span>${COUPONS[code].label}</span></div>
+        <button data-rmcoupon title="Bỏ mã"><i class="fa-solid fa-xmark"></i></button></div>`;
+    }
+    return `<div class="pc-coupon">
+        <input id="pc-coupon-input" placeholder="Nhập mã giảm giá" autocomplete="off">
+        <button data-applycoupon>Áp dụng</button></div>
+      <div class="pc-coupon-hint">Mã gợi ý: WELCOME · GIAM10 · GIAM50K · FREESHIP</div>`;
+  }
+
+  function cartFoot() {
+    const disc = Cart.discount();
+    return `<div class="pc-drawer-foot">
+      ${couponRow()}
+      <div class="pc-tot sub"><span>Tạm tính</span><b>${fmt(Cart.total())}</b></div>
+      ${disc ? `<div class="pc-tot disc"><span>Giảm giá</span><b>− ${fmt(disc)}</b></div>` : ""}
+      <div class="pc-tot"><span>Tổng cộng</span><b>${fmt(Cart.grandTotal())}</b></div>
+      <button class="pc-btn" data-checkout><i class="fa-solid fa-credit-card" style="margin-right:8px"></i>Thanh toán</button>
+    </div>`;
+  }
+
   function renderCart() {
     const items = Cart.items();
     let body;
@@ -373,14 +472,7 @@
       <div class="pc-drawer-head"><h3><i class="fa-solid fa-cart-shopping" style="margin-right:8px"></i>Giỏ hàng</h3>
         <button data-close>&times;</button></div>
       <div class="pc-drawer-body">${body}</div>
-      ${
-        items.length
-          ? `<div class="pc-drawer-foot">
-        <div class="pc-tot"><span>Tổng cộng</span><b>${fmt(Cart.total())}</b></div>
-        <button class="pc-btn" data-checkout><i class="fa-solid fa-credit-card" style="margin-right:8px"></i>Thanh toán</button>
-      </div>`
-          : ""
-      }`;
+      ${items.length ? cartFoot() : ""}`;
     wireDrawer();
   }
 
@@ -407,6 +499,22 @@
       })
     );
     $("[data-checkout]", drawer)?.addEventListener("click", renderCheckout);
+    const applyBtn = $("[data-applycoupon]", drawer);
+    if (applyBtn) {
+      const apply = () => {
+        const r = Cart.applyCoupon($("#pc-coupon-input", drawer).value);
+        toast(r.msg, r.ok ? "ok" : "warn");
+        if (r.ok) renderCart();
+      };
+      applyBtn.addEventListener("click", apply);
+      $("#pc-coupon-input", drawer).addEventListener("keydown", (e) => {
+        if (e.key === "Enter") apply();
+      });
+    }
+    $("[data-rmcoupon]", drawer)?.addEventListener("click", () => {
+      Cart.removeCoupon();
+      renderCart();
+    });
   }
 
   function renderCheckout() {
@@ -422,7 +530,9 @@
         <div class="pc-field"><label>Địa chỉ nhận hàng</label><textarea id="ck-addr" rows="3" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành">${user.address || ""}</textarea></div>
       </div>
       <div class="pc-drawer-foot">
-        <div class="pc-tot"><span>Thanh toán</span><b>${fmt(Cart.total())}</b></div>
+        <div class="pc-tot sub"><span>Tạm tính</span><b>${fmt(Cart.total())}</b></div>
+        ${Cart.discount() ? `<div class="pc-tot disc"><span>Giảm giá${Cart.coupon() ? " (" + Cart.coupon() + ")" : ""}</span><b>− ${fmt(Cart.discount())}</b></div>` : ""}
+        <div class="pc-tot"><span>Thanh toán</span><b>${fmt(Cart.grandTotal())}</b></div>
         <button class="pc-btn" data-place><i class="fa-solid fa-check" style="margin-right:8px"></i>Đặt hàng</button>
         <button class="pc-btn ghost" data-back>Quay lại giỏ hàng</button>
       </div>`;
@@ -441,7 +551,7 @@
         return;
       }
       Auth.save({ name, phone, address: addr });
-      const total = Cart.total();
+      const total = Cart.grandTotal();
       Cart.clear();
       drawer.innerHTML = `
         <div class="pc-drawer-head"><h3>Đặt hàng thành công</h3><button data-close>&times;</button></div>
@@ -587,7 +697,7 @@
   function afterAuth() {
     const ret = read(K_RETURN, null);
     localStorage.removeItem(K_RETURN);
-    location.href = ret || "BuildPC.html";
+    location.href = ret || "home.html";
   }
 
   /* ============================================================
@@ -596,6 +706,7 @@
   function init() {
     injectStyles();
     if (wireAuthPage()) return; // trang đăng nhập: chỉ cần auth
+    wireNav();
     buildHeader();
     buildDrawer();
     wireProducts();

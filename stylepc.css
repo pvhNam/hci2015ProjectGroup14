@@ -4,25 +4,25 @@
    DESIGN SYSTEM  —  Premium UI tokens
    ============================================================ */
 :root {
-  --primary: #5b54d6;
-  --primary-d: #4338ca;
-  --primary-2: #6366f1;
-  --grad: linear-gradient(135deg, #6d5cd6 0%, #574fc7 100%);
-  --grad-soft: linear-gradient(135deg, #8b87e0, #6f6ad6);
-  --accent: #db2777;
+  --primary: #2563eb;
+  --primary-d: #1e40af;
+  --primary-2: #0ea5e9;
+  --grad: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  --grad-soft: linear-gradient(135deg, #3b82f6, #22d3ee);
+  --accent: #f97316;
   --danger: #e11d48;
   --success: #0ea371;
   --gold: #f59e0b;
-  --ink: #211f33;
+  --ink: #1e293b;
   --muted: #6b7280;
   --bg: #f6f7fb;
   --card: #ffffff;
   --line: #ece9f5;
   --radius: 18px;
   --radius-sm: 12px;
-  --shadow-sm: 0 1px 3px rgba(30, 27, 75, 0.05), 0 6px 16px -8px rgba(30, 27, 75, 0.08);
-  --shadow: 0 10px 30px -16px rgba(49, 46, 129, 0.22);
-  --shadow-lg: 0 22px 46px -20px rgba(49, 46, 129, 0.3);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05), 0 6px 16px -8px rgba(15, 23, 42, 0.08);
+  --shadow: 0 10px 30px -16px rgba(30, 58, 138, 0.22);
+  --shadow-lg: 0 22px 46px -20px rgba(30, 58, 138, 0.3);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --t: 0.35s var(--ease);
 }
@@ -42,12 +42,12 @@ body {
   background-color: var(--bg);
   background-image: radial-gradient(
       1200px 600px at 10% -10%,
-      rgba(124, 58, 237, 0.05),
+      rgba(37, 99, 235, 0.05),
       transparent 60%
     ),
     radial-gradient(
       1000px 500px at 110% 0%,
-      rgba(99, 102, 241, 0.05),
+      rgba(14, 165, 233, 0.05),
       transparent 55%
     );
   background-attachment: fixed;
@@ -84,7 +84,7 @@ button {
   background: linear-gradient(var(--primary-d), var(--primary));
 }
 ::selection {
-  background: rgba(124, 58, 237, 0.25);
+  background: rgba(37, 99, 235, 0.25);
 }
 
 /* ============================================================
@@ -100,7 +100,7 @@ button {
   position: sticky;
   top: 0;
   z-index: 500;
-  box-shadow: 0 10px 30px -14px rgba(76, 29, 149, 0.6);
+  box-shadow: 0 10px 30px -14px rgba(30, 64, 175, 0.6);
 }
 .logo img {
   border-radius: 12px;
@@ -182,7 +182,7 @@ button {
   position: sticky;
   top: 74px;
   z-index: 400;
-  box-shadow: 0 6px 20px -10px rgba(76, 29, 149, 0.25);
+  box-shadow: 0 6px 20px -10px rgba(30, 64, 175, 0.25);
   border-bottom: 1px solid var(--line);
 }
 .nav a,
@@ -214,7 +214,7 @@ button {
 .dropdown .nav-link:hover {
   color: var(--primary);
   transform: translateY(-1px);
-  background: rgba(124, 58, 237, 0.08);
+  background: rgba(37, 99, 235, 0.08);
 }
 .nav a:hover::after {
   width: 55%;
@@ -223,7 +223,7 @@ button {
 .dropdown .nav-link.active {
   background: var(--grad);
   color: white;
-  box-shadow: 0 10px 22px -8px rgba(109, 40, 217, 0.7);
+  box-shadow: 0 10px 22px -8px rgba(29, 78, 216, 0.7);
 }
 .nav a.active::after {
   width: 0;
@@ -257,7 +257,7 @@ button {
   transition: background var(--t), color var(--t), padding-left var(--t);
 }
 .dropdown-content a:hover {
-  background: rgba(124, 58, 237, 0.1);
+  background: rgba(37, 99, 235, 0.1);
   color: var(--primary);
   padding-left: 22px;
 }
@@ -308,7 +308,7 @@ button {
   border-radius: 40px;
   background: #fff;
   color: var(--primary);
-  border: 2px solid rgba(124, 58, 237, 0.35);
+  border: 2px solid rgba(37, 99, 235, 0.35);
   font-weight: 700;
   box-shadow: var(--shadow-sm);
   transition: all var(--t);
@@ -319,7 +319,7 @@ button {
   color: white;
   border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 12px 26px -10px rgba(109, 40, 217, 0.8);
+  box-shadow: 0 12px 26px -10px rgba(29, 78, 216, 0.8);
 }
 .config-buttons .reset {
   background: #f1f0f6;
@@ -370,12 +370,12 @@ button {
   padding: 14px 16px;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: linear-gradient(160deg, #fbfaff, #f6f4fd);
+  background: linear-gradient(160deg, #f4f9ff, #eef5fd);
   transition: transform var(--t), box-shadow var(--t), border-color var(--t);
 }
 .component:hover {
   transform: translateX(4px);
-  border-color: rgba(124, 58, 237, 0.35);
+  border-color: rgba(37, 99, 235, 0.35);
   box-shadow: var(--shadow-sm);
 }
 
@@ -416,7 +416,7 @@ button {
   border-radius: 40px;
   background: #fff;
   color: var(--primary);
-  border: 2px solid rgba(124, 58, 237, 0.4);
+  border: 2px solid rgba(37, 99, 235, 0.4);
   font-weight: 700;
   transition: all var(--t);
 }
@@ -425,7 +425,7 @@ button {
   color: white;
   border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 12px 24px -10px rgba(109, 40, 217, 0.8);
+  box-shadow: 0 12px 24px -10px rgba(29, 78, 216, 0.8);
 }
 
 .button {
@@ -450,7 +450,7 @@ button {
   font-size: 20px;
   font-weight: 800;
   text-align: center;
-  box-shadow: 0 16px 34px -14px rgba(109, 40, 217, 0.8);
+  box-shadow: 0 16px 34px -14px rgba(29, 78, 216, 0.8);
 }
 
 /* ============================================================
@@ -475,7 +475,7 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 27, 46, 0.55);
+  background-color: rgba(15, 23, 42, 0.55);
   backdrop-filter: blur(6px);
   opacity: 0;
   transform: translateY(-30px);
@@ -562,7 +562,7 @@ button {
   margin-bottom: 22px;
   border-radius: 14px;
   background: var(--grad);
-  box-shadow: 0 10px 24px -12px rgba(109, 40, 217, 0.8);
+  box-shadow: 0 10px 24px -12px rgba(29, 78, 216, 0.8);
 }
 .header1 input[type="text"] {
   width: 80%;
@@ -600,7 +600,7 @@ button {
   transition: all var(--t);
 }
 .search-bar1 button:hover {
-  background: #f0ecfb;
+  background: #e6f0fb;
   transform: scale(1.04);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
@@ -663,7 +663,7 @@ button {
 }
 .sort select:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.12);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
 }
 
 .pagination button {
@@ -695,7 +695,7 @@ button {
 .product:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(124, 58, 237, 0.4);
+  border-color: rgba(37, 99, 235, 0.4);
 }
 .product img {
   width: 100%;
@@ -705,7 +705,7 @@ button {
   margin-bottom: 12px;
   border-radius: 12px;
   padding: 8px;
-  background: linear-gradient(160deg, #faf9ff, #f1effb);
+  background: linear-gradient(160deg, #f4f9ff, #eaf2fd);
   transition: transform 0.5s var(--ease);
 }
 .product:hover img {
@@ -726,7 +726,7 @@ button {
   border: 1px solid var(--line);
   padding: 14px;
   border-radius: 14px;
-  background: linear-gradient(160deg, #fbfaff, #f6f4fd);
+  background: linear-gradient(160deg, #f4f9ff, #eef5fd);
   display: flex;
   align-items: center;
   gap: 15px;
@@ -766,7 +766,7 @@ button {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  box-shadow: 0 12px 28px -8px rgba(109, 40, 217, 0.8);
+  box-shadow: 0 12px 28px -8px rgba(29, 78, 216, 0.8);
   transition: transform var(--t), filter var(--t);
 }
 #goTopBtn:hover {
@@ -786,7 +786,7 @@ button {
    FOOTER
    ============================================================ */
 .footer {
-  background: linear-gradient(180deg, #2a2342, #1c1830);
+  background: linear-gradient(180deg, #1e293b, #0f172a);
   color: #e7e3f3;
   padding: 56px 0 36px;
   margin-top: auto;
@@ -875,7 +875,7 @@ button {
   filter: brightness(1.12);
 }
 .footer-bottom {
-  background: #15111f;
+  background: #0b1220;
   color: #b9b3cf;
   text-align: center;
   padding: 20px 0;
